@@ -1,0 +1,740 @@
+{
+  "symbol": "TSLA",
+  "generatedAt": "2026-01-18T05:06:18.926Z",
+  "researchInput": {
+    "symbol": "TSLA",
+    "companyName": "Tesla, Inc.",
+    "sector": "Consumer Cyclical",
+    "industry": "Auto Manufacturers",
+    "marketCap": 1580396052480,
+    "marketCapBucket": "large",
+    "growthValueScore": {
+      "classification": "GROWTH",
+      "score": 27,
+      "reasons": [
+        "peRatioTTM is weak vs sector peers",
+        "priceToSalesRatioTTM is weak vs sector peers",
+        "priceToBookRatioTTM is weak vs sector peers",
+        "enterpriseValueOverEBITTTM is weak vs sector peers",
+        "enterpriseValueOverEBITDATTM is weak vs sector peers",
+        "enterpriseValueToSalesTTM is weak vs sector peers",
+        "valuationExtras.pegRatio is weak vs sector peers",
+        "growth.revenueGrowthTTM is strong vs sector peers",
+        "growth.epsGrowthTTM is weak vs sector peers",
+        "growth.ebitGrowthTTM is weak vs sector peers",
+        "profitability.roic is weak vs sector peers",
+        "financialHealth.debtToEquity is strong vs sector peers",
+        "cashFlow.fcfYield is weak vs sector peers",
+        "financialHealth.ocfToDebt is strong vs sector peers"
+      ]
+    },
+    "metrics": [
+      {
+        "key": "peRatioTTM",
+        "label": "P/E Ratio (TTM)",
+        "section": "valuation",
+        "value": 316.79,
+        "industryMedian": 16.2,
+        "industryP25": 5.78,
+        "industryP75": 29.07,
+        "classification": "WAY_ABOVE",
+        "direction": "lower_better"
+      },
+      {
+        "key": "priceToSalesRatioTTM",
+        "label": "P/S Ratio (TTM)",
+        "section": "valuation",
+        "value": 16.53,
+        "industryMedian": 1.19,
+        "industryP25": 0.56,
+        "industryP75": 2.53,
+        "classification": "WAY_ABOVE",
+        "direction": "lower_better"
+      },
+      {
+        "key": "priceToBookRatioTTM",
+        "label": "P/B Ratio (TTM)",
+        "section": "valuation",
+        "value": 19.76,
+        "industryMedian": 2.06,
+        "industryP25": 1.02,
+        "industryP75": 5.09,
+        "classification": "WAY_ABOVE",
+        "direction": "lower_better"
+      },
+      {
+        "key": "enterpriseValueOverEBITTTM",
+        "label": "EV/EBIT (TTM)",
+        "section": "valuation",
+        "value": 275.56646806507445,
+        "industryMedian": 17.75758272826576,
+        "industryP25": 10.701875649307647,
+        "industryP75": 27.129643021582734,
+        "classification": "WAY_ABOVE",
+        "direction": "lower_better"
+      },
+      {
+        "key": "enterpriseValueOverEBITDATTM",
+        "label": "EV/EBITDA (TTM)",
+        "section": "valuation",
+        "value": 117.57665429626347,
+        "industryMedian": 12.915573182369592,
+        "industryP25": 8.514687825255972,
+        "industryP75": 19.419234546870616,
+        "classification": "WAY_ABOVE",
+        "direction": "lower_better"
+      },
+      {
+        "key": "enterpriseValueToSalesTTM",
+        "label": "EV/Sales (TTM)",
+        "section": "valuation",
+        "value": 16.649305704934488,
+        "industryMedian": 2.0120264921780104,
+        "industryP25": 1.091974180638258,
+        "industryP75": 3.571894502718821,
+        "classification": "WAY_ABOVE",
+        "direction": "lower_better"
+      },
+      {
+        "key": "valuationExtras.forwardPE",
+        "label": "Forward P/E",
+        "section": "valuation",
+        "value": 1357.6857142857143,
+        "industryMedian": 203.66666666666669,
+        "industryP25": 17.527950310559003,
+        "industryP75": 776.4444444444445,
+        "classification": "ABOVE",
+        "direction": "lower_better"
+      },
+      {
+        "key": "valuationExtras.pegRatio",
+        "label": "PEG Ratio",
+        "section": "valuation",
+        "value": 27.38,
+        "industryMedian": 1.47,
+        "industryP25": -1.17,
+        "industryP75": 4.54,
+        "classification": "WAY_ABOVE",
+        "direction": "lower_better"
+      },
+      {
+        "key": "profitability.roe",
+        "label": "Return on Equity",
+        "section": "profitability",
+        "value": 0.0175,
+        "industryMedian": 0.0243,
+        "industryP25": -0.0169,
+        "industryP75": 0.0576,
+        "classification": "AVERAGE",
+        "direction": "higher_better"
+      },
+      {
+        "key": "profitability.roa",
+        "label": "Return on Assets",
+        "section": "profitability",
+        "value": 0.0105,
+        "industryMedian": 0.0109,
+        "industryP25": 0.0006,
+        "industryP75": 0.0251,
+        "classification": "AVERAGE",
+        "direction": "higher_better"
+      },
+      {
+        "key": "profitability.roic",
+        "label": "Return on Invested Capital",
+        "section": "profitability",
+        "value": 0.0168,
+        "industryMedian": 0.0237,
+        "industryP25": 0.0093,
+        "industryP75": 0.0428,
+        "classification": "AVERAGE",
+        "direction": "higher_better"
+      },
+      {
+        "key": "profitability.grossMargin",
+        "label": "Gross Margin",
+        "section": "profitability",
+        "value": 0.1799,
+        "industryMedian": 0.3467,
+        "industryP25": 0.2062,
+        "industryP75": 0.4821,
+        "classification": "BELOW",
+        "direction": "higher_better"
+      },
+      {
+        "key": "profitability.operatingMargin",
+        "label": "Operating Margin",
+        "section": "profitability",
+        "value": 0.0663,
+        "industryMedian": 0.0795,
+        "industryP25": 0.0313,
+        "industryP75": 0.1415,
+        "classification": "AVERAGE",
+        "direction": "higher_better"
+      },
+      {
+        "key": "profitability.netMargin",
+        "label": "Net Margin",
+        "section": "profitability",
+        "value": 0.0489,
+        "industryMedian": 0.0458,
+        "industryP25": 0.0014,
+        "industryP75": 0.0954,
+        "classification": "AVERAGE",
+        "direction": "higher_better"
+      },
+      {
+        "key": "profitability.ebitdaMargin",
+        "label": "EBITDA Margin",
+        "section": "profitability",
+        "value": 0.1303,
+        "industryMedian": 0.1159,
+        "industryP25": 0.0562,
+        "industryP75": 0.18,
+        "classification": "AVERAGE",
+        "direction": "higher_better"
+      },
+      {
+        "key": "financialHealth.debtToEquity",
+        "label": "Debt to Equity",
+        "section": "financial_health",
+        "value": 0.18489413680781758,
+        "industryMedian": 0.735772709568529,
+        "industryP25": 0.18598578580170672,
+        "industryP75": 1.7007186461633568,
+        "classification": "BELOW",
+        "direction": "lower_better"
+      },
+      {
+        "key": "financialHealth.interestCoverage",
+        "label": "Interest Coverage",
+        "section": "financial_health",
+        "value": 4.451463790446842,
+        "industryMedian": 4.451463790446842,
+        "industryP25": 1.7334235453315292,
+        "industryP75": 11.265843803619859,
+        "classification": "AVERAGE",
+        "direction": "higher_better"
+      },
+      {
+        "key": "financialHealth.currentRatio",
+        "label": "Current Ratio",
+        "section": "financial_health",
+        "value": 3.856358645928637,
+        "industryMedian": 1.1898022821505672,
+        "industryP25": 0.473474801061008,
+        "industryP75": 3.028208944645262,
+        "classification": "ABOVE",
+        "direction": "depends"
+      },
+      {
+        "key": "financialHealth.quickRatio",
+        "label": "Quick Ratio",
+        "section": "financial_health",
+        "value": -7.138151875571821,
+        "industryMedian": -2.480269989615784,
+        "industryP25": -13.743654026950798,
+        "industryP75": 0.26466928881040297,
+        "classification": "AVERAGE",
+        "direction": "depends"
+      },
+      {
+        "key": "financialHealth.ocfToDebt",
+        "label": "OCF to Debt",
+        "section": "financial_health",
+        "value": 1.1572340894076194,
+        "industryMedian": 0.2008282774101109,
+        "industryP25": 0.09273661538900418,
+        "industryP75": 0.432537674207803,
+        "classification": "WAY_ABOVE",
+        "direction": "higher_better"
+      },
+      {
+        "key": "cashFlow.fcfTTM",
+        "label": "Free Cash Flow (TTM)",
+        "section": "cash_flow",
+        "value": 5586000000,
+        "industryMedian": 158800000,
+        "industryP25": 19981000,
+        "industryP75": 600700000,
+        "classification": "WAY_ABOVE",
+        "direction": "higher_better"
+      },
+      {
+        "key": "cashFlow.fcfMargin",
+        "label": "FCF Margin",
+        "section": "cash_flow",
+        "value": 0.05841079961937825,
+        "industryMedian": 0.05343165179230753,
+        "industryP25": 0.014541558242767488,
+        "industryP75": 0.10190389564227309,
+        "classification": "AVERAGE",
+        "direction": "higher_better"
+      },
+      {
+        "key": "cashFlow.fcfYield",
+        "label": "FCF Yield",
+        "section": "cash_flow",
+        "value": 0.003534557044251217,
+        "industryMedian": 0.038926243458745916,
+        "industryP25": 0.008343389359270415,
+        "industryP75": 0.0800048405660415,
+        "classification": "BELOW",
+        "direction": "higher_better"
+      },
+      {
+        "key": "cashFlow.ocfTTM",
+        "label": "Operating Cash Flow (TTM)",
+        "section": "cash_flow",
+        "value": 15765000000,
+        "industryMedian": 332086000,
+        "industryP25": 85105000,
+        "industryP75": 961100000,
+        "classification": "WAY_ABOVE",
+        "direction": "higher_better"
+      },
+      {
+        "key": "growth.revenueGrowthTTM",
+        "label": "Revenue Growth (YoY)",
+        "section": "growth",
+        "value": 0.1157,
+        "industryMedian": 0.06,
+        "industryP25": 0.0105,
+        "industryP75": 0.1164,
+        "classification": "AVERAGE",
+        "direction": "higher_better"
+      },
+      {
+        "key": "growth.ebitGrowthTTM",
+        "label": "EBIT Growth (YoY)",
+        "section": "growth",
+        "value": -0.3283,
+        "industryMedian": 0.0564,
+        "industryP25": -0.1968,
+        "industryP75": 0.2998,
+        "classification": "BELOW",
+        "direction": "higher_better"
+      },
+      {
+        "key": "growth.epsGrowthTTM",
+        "label": "EPS Growth (YoY)",
+        "section": "growth",
+        "value": -0.5946,
+        "industryMedian": 0.051,
+        "industryP25": -0.2967,
+        "industryP75": 0.4457,
+        "classification": "BELOW",
+        "direction": "higher_better"
+      },
+      {
+        "key": "growth.fcfGrowthTTM",
+        "label": "FCF Growth (YoY)",
+        "section": "growth",
+        "value": 0.4551,
+        "industryMedian": 0.1722,
+        "industryP25": -0.3906,
+        "industryP75": 0.7583,
+        "classification": "AVERAGE",
+        "direction": "higher_better"
+      }
+    ],
+    "peerContext": {
+      "sector": "Consumer Cyclical",
+      "industry": "Auto Manufacturers",
+      "scoreRank": {
+        "rank": 17,
+        "total": 19
+      },
+      "betterPeers": [
+        {
+          "symbol": "ZK",
+          "score": 85,
+          "classification": "VALUE"
+        },
+        {
+          "symbol": "XPEV",
+          "score": 85,
+          "classification": "GROWTH"
+        },
+        {
+          "symbol": "F",
+          "score": 65,
+          "classification": "GROWTH"
+        },
+        {
+          "symbol": "CYD",
+          "score": 60,
+          "classification": "BLEND"
+        },
+        {
+          "symbol": "PSNYW",
+          "score": 60,
+          "classification": "VALUE"
+        }
+      ]
+    },
+    "factorRanking": {
+      "bucket": "large",
+      "sectorRank": {
+        "rank": null,
+        "total": 50
+      }
+    },
+    "filingInsights": [
+      {
+        "symbol": "TSLA",
+        "cik": "0001318605",
+        "accession": "0001628280-25-045968",
+        "filingType": "10-Q",
+        "filedAt": "2025-10-23",
+        "businessUpdates": [
+          {
+            "theme": "Production and Delivery",
+            "summary": "Tesla produced approximately 1,220,000 consumer vehicles and delivered approximately 1,218,000 through Q3 2025.",
+            "driver": "Increased manufacturing capacity and new vehicle options.",
+            "impact": "Supports revenue growth and market expansion.",
+            "confidence": "high"
+          },
+          {
+            "theme": "Energy Storage Growth",
+            "summary": "Tesla deployed 32.5 GWh of energy storage products through Q3 2025.",
+            "driver": "Ramp in production and market penetration.",
+            "impact": "Enhances revenue from energy generation and storage segment.",
+            "confidence": "medium"
+          }
+        ],
+        "riskChanges": [
+          {
+            "theme": "Risk factors",
+            "change": "unspecified",
+            "summary": "Our operations and financial results are subject to various risks and uncertainties, including the factors discussed in Part I, Item 1A, Risk Factors in our Annual Report on Form 10-K for the year ended December 31, 2024, and Part II, Item 1A, Risk Factors in our Quarterly Reports on Form 10-Q for the quarters ended March 31, 2025 and June 30, 2025, which could adversely affect our business, financial conditions and future results.",
+            "impact": ""
+          },
+          {
+            "theme": "Risk factors",
+            "change": "unspecified",
+            "summary": "Other than the risk factors set forth below, there have been no material changes from the risk factors discussed in our Annual and Quarterly Reports.",
+            "impact": ""
+          }
+        ],
+        "liquidityAndCapital": [
+          {
+            "summary": "Tesla ended Q3 2025 with $41.65 billion in cash and cash equivalents, an increase of $5.08 billion from 2024.",
+            "liquidity": "Strong liquidity position.",
+            "leverage": "Maintaining a strong balance sheet.",
+            "capitalAllocation": "Focused on critical high-value investments."
+          }
+        ],
+        "accountingFlags": [
+          {
+            "area": "Accounting policy",
+            "summary": "Note 1 – Summary of Significant Accounting Policies"
+          },
+          {
+            "area": "Accounting policy",
+            "summary": "Recent Accounting Pronouncements"
+          },
+          {
+            "area": "Accounting policy",
+            "summary": "Recently issued accounting pronouncements not yet adopted"
+          }
+        ],
+        "otherHighlights": [
+          {
+            "category": "Filing highlight",
+            "summary": "Restructuring and Other",
+            "details": ""
+          }
+        ],
+        "productSegments": [
+          {
+            "name": "Automotive Segment",
+            "description": "Includes electric vehicles and related services.",
+            "performance": "Increased production and delivery.",
+            "revenueContribution": "Significant contributor to overall revenue."
+          },
+          {
+            "name": "Energy Generation and Storage Segment",
+            "description": "Includes solar energy systems and energy storage products.",
+            "performance": "Increased deployment and production.",
+            "revenueContribution": "Growing segment with high demand."
+          }
+        ],
+        "forwardGuidance": [
+          {
+            "metric": "Revenue",
+            "guidance": "Expect continued growth driven by increased vehicle production and energy storage deployments.",
+            "timeframe": "FY2025",
+            "confidence": "high"
+          }
+        ],
+        "categorizedRisks": [
+          {
+            "category": "Supply Chain",
+            "risk": "Uncertainty in global supply chain and cost structure due to evolving trade policies.",
+            "severity": "high",
+            "mitigation": "Focus on vertical integration and localization of supply chain."
+          },
+          {
+            "category": "Regulatory",
+            "risk": "Changes in government incentives and tariffs impacting production costs.",
+            "severity": "medium",
+            "mitigation": "Adjust operational strategies to mitigate impacts."
+          }
+        ]
+      },
+      {
+        "symbol": "TSLA",
+        "cik": "0001318605",
+        "accession": "0001628280-25-035806",
+        "filingType": "10-Q",
+        "filedAt": "2025-07-24",
+        "businessUpdates": [
+          {
+            "theme": "Production and Delivery",
+            "summary": "Tesla produced approximately 773,000 consumer vehicles and delivered about 721,000 through Q2 2025.",
+            "driver": "Increased manufacturing capacity and new product introductions.",
+            "impact": "Focus on profitable growth and operational efficiencies.",
+            "confidence": "medium"
+          },
+          {
+            "theme": "Energy Storage Growth",
+            "summary": "Tesla deployed 20.0 GWh of energy storage products in the first half of 2025.",
+            "driver": "Ramp-up of Megafactories and increased market penetration.",
+            "impact": "Potential for stabilizing the grid and providing additional power capacity.",
+            "confidence": "medium"
+          },
+          {
+            "theme": "Robotaxi Launch",
+            "summary": "Tesla launched its Robotaxi service in Austin in June 2025.",
+            "driver": "Investments in AI and scalable mobility infrastructure.",
+            "impact": "Advancement of a service-driven business model.",
+            "confidence": "medium"
+          }
+        ],
+        "riskChanges": [
+          {
+            "theme": "Government Incentives",
+            "change": "higher",
+            "summary": "Reduction or elimination of government incentives for electric vehicles may negatively impact sales.",
+            "impact": "Potential decrease in demand for vehicles."
+          },
+          {
+            "theme": "Tariffs and Trade Policy",
+            "change": "higher",
+            "summary": "Changes in tariffs and trade policies may increase costs and affect supply chain.",
+            "impact": "Adverse effects on production and profitability."
+          }
+        ],
+        "liquidityAndCapital": [
+          {
+            "summary": "Tesla ended Q2 2025 with $36.78 billion in cash and cash equivalents.",
+            "liquidity": "Strong liquidity position with increased cash flow from operations.",
+            "leverage": "Maintaining a strong balance sheet with prudent investments.",
+            "capitalAllocation": "Focus on high-value investments while managing capital expenditures."
+          }
+        ],
+        "accountingFlags": [
+          {
+            "area": "Accounting policy",
+            "summary": "Note 1 – Summary of Significant Accounting Policies"
+          },
+          {
+            "area": "Accounting policy",
+            "summary": "Recent Accounting Pronouncements"
+          },
+          {
+            "area": "Accounting policy",
+            "summary": "Recently issued accounting pronouncements not yet adopted"
+          }
+        ],
+        "otherHighlights": [
+          {
+            "category": "Filing highlight",
+            "summary": "Restructuring and Other",
+            "details": ""
+          }
+        ],
+        "productSegments": [
+          {
+            "name": "Automotive",
+            "description": "High-performance fully electric vehicles.",
+            "performance": "Decreased revenues compared to prior year.",
+            "revenueContribution": "Significant portion of total revenues."
+          },
+          {
+            "name": "Energy Generation and Storage",
+            "description": "Solar energy generation systems and energy storage products.",
+            "performance": "Increased production and deployment.",
+            "revenueContribution": "Growing segment with high demand."
+          }
+        ],
+        "forwardGuidance": [
+          {
+            "metric": "Revenue",
+            "guidance": "Expect continued revenue growth despite challenges.",
+            "timeframe": "FY2025",
+            "confidence": "medium"
+          }
+        ],
+        "categorizedRisks": [
+          {
+            "category": "Regulatory",
+            "risk": "Changes in government incentives and tax credits.",
+            "severity": "high",
+            "mitigation": "Adjust pricing and operational strategies."
+          },
+          {
+            "category": "Supply Chain",
+            "risk": "Tariffs impacting cost structure and availability.",
+            "severity": "high",
+            "mitigation": "Focus on vertical integration and localization."
+          }
+        ]
+      }
+    ],
+    "transcriptInsights": [
+      {
+        "symbol": "TSLA",
+        "fiscalYear": 2025,
+        "fiscalQuarter": 3,
+        "callDate": "2025-10-22",
+        "guidanceChanges": [],
+        "drivers": [
+          {
+            "area": "Deliveries",
+            "summary": "Record deliveries were achieved across all regions, with significant growth in Greater China, North America, and EMEA.",
+            "positive": true,
+            "detail": "Greater China and APAC were up 33%, North America was up 28%, and EMEA was up 25%."
+          },
+          {
+            "area": "Energy Products",
+            "summary": "Strong demand for Megapack and Powerwall is expected to continue into next year.",
+            "positive": true,
+            "detail": "Positive customer feedback on Mega Block product and surge in residential solar demand."
+          }
+        ],
+        "tone": {
+          "management": "optimistic",
+          "analysts": "curious",
+          "confidence": "high"
+        },
+        "executionFlags": [
+          {
+            "issue": "Regulatory challenges",
+            "severity": "medium",
+            "summary": "Regulatory approvals are necessary for expanding robotaxi operations in new metro areas."
+          }
+        ],
+        "keyQuotes": [
+          {
+            "speaker": "Elon Musk",
+            "sentiment": "positive",
+            "summary": "Tesla is at a critical inflection point with AI, confident in expanding production and achieving full self-driving capabilities."
+          },
+          {
+            "speaker": "Vaibhav Taneja",
+            "sentiment": "positive",
+            "summary": "Q3 was a special quarter with record deliveries and financial metrics, reflecting customer confidence."
+          }
+        ]
+      },
+      {
+        "symbol": "TSLA",
+        "fiscalYear": 2025,
+        "fiscalQuarter": 2,
+        "callDate": "2025-07-23",
+        "guidanceChanges": [],
+        "drivers": [
+          {
+            "area": "Robotaxi Expansion",
+            "summary": "Successful launch of robotaxi service in Austin with plans for rapid expansion.",
+            "positive": true,
+            "detail": "Expecting to expand service area significantly and launch in multiple states."
+          },
+          {
+            "area": "Model Y Sales",
+            "summary": "Model Y became the best-selling car in several countries.",
+            "positive": true,
+            "detail": "Autonomy is a key selling point contributing to its success."
+          },
+          {
+            "area": "Production of Affordable Models",
+            "summary": "Production of more affordable models is ramping up.",
+            "positive": true,
+            "detail": "Goal to maximize production without negatively impacting revenue."
+          }
+        ],
+        "tone": {
+          "management": "Optimistic",
+          "analysts": "Curious",
+          "confidence": "High"
+        },
+        "executionFlags": [
+          {
+            "issue": "IRA EV Credit Repeal",
+            "severity": "High",
+            "summary": "The repeal of the $7,500 EV credit is expected to limit vehicle supply in the U.S."
+          }
+        ],
+        "keyQuotes": [
+          {
+            "speaker": "Elon R. Musk",
+            "sentiment": "Positive",
+            "summary": "Confident in achieving significant autonomy and robotaxi expansion by the end of the year."
+          },
+          {
+            "speaker": "Vaibhav Taneja",
+            "sentiment": "Cautious",
+            "summary": "Emphasized the need for safety before broadening the availability of unsupervised FSD."
+          },
+          {
+            "speaker": "Michael Snyder",
+            "sentiment": "Positive",
+            "summary": "Forecasting a strong second half of the year for Megapack deployments despite challenges."
+          }
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "buy": 20,
+        "hold": 21,
+        "period": "2026-01-01",
+        "sell": 9,
+        "strongBuy": 7,
+        "strongSell": 2,
+        "symbol": "TSLA"
+      },
+      {
+        "buy": 22,
+        "hold": 20,
+        "period": "2025-12-01",
+        "sell": 9,
+        "strongBuy": 8,
+        "strongSell": 2,
+        "symbol": "TSLA"
+      },
+      {
+        "buy": 22,
+        "hold": 19,
+        "period": "2025-11-01",
+        "sell": 10,
+        "strongBuy": 8,
+        "strongSell": 2,
+        "symbol": "TSLA"
+      },
+      {
+        "buy": 20,
+        "hold": 20,
+        "period": "2025-10-01",
+        "sell": 9,
+        "strongBuy": 9,
+        "strongSell": 2,
+        "symbol": "TSLA"
+      }
+    ]
+  },
+  "systemPrompt": "You are a conservative, fact-based equity analyst specializing in fundamental analysis. Write a balanced, educational research note (~2-3 pages) for an intermediate retail investor. Use ONLY the JSON input (metrics, peer context, factor scores, DCF valuation, investment signal, filing/transcript insights, analyst estimates, revenue breakdown, risks). Do NOT invent facts, business descriptions, news, or recommendations beyond what is provided in the investment signal. Tie quantitative movements to the qualitative insights when possible (e.g., link margin changes to disclosed drivers). If data is missing, explicitly say so instead of guessing. Focus on forward-looking catalysts, product-level competitive dynamics, risk-adjusted valuation, and DCF intrinsic value analysis. The investment signal (BUY_CANDIDATE/WATCHLIST/AVOID) is generated from a systematic multi-factor analysis - present it objectively with supporting reasoning.",
+  "userPrompt": "Using ONLY the following JSON input, write a structured research summary for this stock.\nTarget audience: retail investor with intermediate experience. Tone: neutral, clear, and educational.\nStructure the answer into these sections with short paragraphs and occasional bullets:\nA. Snapshot & peer positioning – company name/ticker, sector/industry, size/bucket, peer rank context (score rank, factor ranking, better peers if any). If productSegments are available, briefly mention key business segments.\nB. Valuation analysis - **START WITH DCF INTRINSIC VALUE if available in comprehensiveAnalysis.dcf_valuation**: CRITICAL - Use ONLY the value from comprehensiveAnalysis.dcf_valuation.intrinsic_value_per_share (this is the correct per-share value). Do NOT calculate or modify this value. Present it exactly as: \"DCF Intrinsic Value: $X.XX per share\" where X.XX is the intrinsic_value_per_share value. Then present the upside_downside_pct and rating directly from the JSON. Explain key assumptions (WACC, terminal growth, FCF margin, revenue growth rate) from comprehensiveAnalysis.dcf_valuation.assumptions. Note: revenue_growth_rate is an annualized assumption; do NOT describe it as cumulative multi-year growth. Then discuss relative valuation metrics (P/E, P/S, P/B, EV/EBIT, Forward P/E). If priceTarget data available, compare to analyst consensus targets. If factorScores.valuation is available, reference the percentile score vs peers. If beta available, discuss risk-adjusted valuation. Explain WHY the stock trades cheap/average/expensive relative to growth, profitability, and risk profile. If disconnect between growth and valuation, explain using risk insights and competitive position.\nC. Product & competitive positioning - If productSegments or revenue breakdown (geography/segments) are available, analyze revenue diversification, segment performance, and concentration risk. Use revenueBreakdown for segment/geography amounts; only use filingInsights.productSegments for qualitative context unless those amounts are explicitly provided there. Discuss competitive strengths/weaknesses at the product level. If categorizedRisks includes \"Competitive\" risks, tie them to specific product lines or markets.\nD. Profitability & quality – margins/returns vs peers plus any relevant filing/transcript drivers (e.g., product mix, cost commentary). If profitability is above/below industry average, explain the structural reasons (pricing power, cost structure, economies of scale).\nE. Balance sheet & liquidity – leverage, coverage, liquidity ratios, and any liquidity/capital-allocation commentary from filings. If dividend history is available, discuss payout sustainability and dividend growth trends.\nF. Cash flow & capital efficiency – FCF/OCF metrics, capex/capital allocation notes from filings. If capital allocation priorities are mentioned (buybacks, acquisitions, debt reduction), evaluate alignment with shareholder value creation.\nG. Growth trajectory & forward catalysts – Discuss revenue/EBIT/EPS/FCF growth vs peers. If forwardGuidance is available, analyze management expectations and confidence level. If revenueEstimates are available, compare historical growth to analyst forward estimates. Identify key near-term catalysts (product launches, market expansions, margin improvement initiatives) from filing/transcript insights. Evaluate if current growth justifies valuation multiples.\nH. Risk framework - If categorizedRisks are available, organize key risks by category (Geopolitical, Supply Chain, Competitive, Regulatory, Technology, Financial) with severity assessment. For each high-severity risk, note mitigation strategies if disclosed. Compare risk profile to industry peers and assess if risks are priced in. If earningsCalendar is available, note upcoming earnings dates as potential volatility events.\nI. Recent news (last 90 days) - Write a single paragraph summarizing the overall news sentiment and key themes from the news list (if provided). Do NOT use bullet points or list headlines; synthesize the themes (e.g., earnings, guidance, product launches, analyst actions, macro). If news coverage is limited, state that explicitly.\nJ. Management & disclosure quality - use filing/transcript insights (risk changes, accounting flags, tone, execution flags) to discuss transparency, capital allocation philosophy, and execution track record. If recommendations data is available, summarize analyst sentiment trends (improving/deteriorating).\nK. Top 5-7 investment considerations - bullet list combining valuation thesis, competitive moat assessment, key growth drivers, major risk factors, and catalysts. Frame in terms of what would make the stock attractive vs concerning (e.g., \"Attractive IF margins expand as guided; Concerning IF competitive pressures intensify\").\nL. Peer ranking explanation - Provide detailed reasoning for why this stock ranks above/below key peers. Reference specific metrics, product positioning, risk profile, and growth outlook that drive the ranking. If betterPeers are listed, explain what they do better (valuation, growth, profitability, balance sheet).\nM. Investment Signal & Integrated summary - **IF comprehensiveAnalysis.investment_signal is available, lead with it**: Present the signal (BUY_CANDIDATE/WATCHLIST/AVOID), confidence level, and recommendation text. List positive_reasons, negative_reasons, and neutral_reasons from the signal. If factor scores are available (comprehensiveAnalysis.factor_scores), reference the composite score and individual factor interpretations (valuation, quality, growth, momentum, sentiment, risk). Then provide 4-7 additional bullets summarizing investment thesis, relative attractiveness vs peers, and key monitoring points. If no investment signal available, provide traditional neutral summary.\nN. Limitations/disclaimer - remind reader that inputs are historical/quantitative and not investment advice. Note any critical missing data (e.g., no DCF model, no insider trading data, limited forward estimates).\nImportant rules: (1) Use plain language, explain ratios briefly when first used; (2) Cite the insight fields (\"comprehensiveAnalysis.dcf_valuation\", \"comprehensiveAnalysis.investment_signal\", \"comprehensiveAnalysis.factor_scores\", \"filingInsights.productSegments\", \"filingInsights.forwardGuidance\", \"filingInsights.categorizedRisks\", \"priceTarget\", \"revenueEstimates\", \"dividends\", \"beta\", \"news\") when referencing data; (3) Add a short source tag at the end of each paragraph that uses data, e.g., [source: revenueBreakdown] or [source: filingInsights.productSegments]; (4) Keep overall length around 1200-1800 words for comprehensive coverage; (5) Never quote verbatim text-always paraphrase; (6) Prioritize forward-looking analysis over historical description; (7) Always connect valuation to fundamentals (growth, risks, competitive position); (8) The investment signal is algorithmically generated from DCF valuation + factor scores + risk assessment - present it as a systematic output, not a personal recommendation.\n\nJSON INPUT (do not repeat verbatim in the answer, just use it for analysis):\n```json\n{\"symbol\":\"TSLA\",\"companyName\":\"Tesla, Inc.\",\"sector\":\"Consumer Cyclical\",\"industry\":\"Auto Manufacturers\",\"marketCap\":1580396052480,\"marketCapBucket\":\"large\",\"growthValueScore\":{\"classification\":\"GROWTH\",\"score\":27,\"reasons\":[\"peRatioTTM is weak vs sector peers\",\"priceToSalesRatioTTM is weak vs sector peers\",\"priceToBookRatioTTM is weak vs sector peers\",\"enterpriseValueOverEBITTTM is weak vs sector peers\",\"enterpriseValueOverEBITDATTM is weak vs sector peers\",\"enterpriseValueToSalesTTM is weak vs sector peers\",\"valuationExtras.pegRatio is weak vs sector peers\",\"growth.revenueGrowthTTM is strong vs sector peers\",\"growth.epsGrowthTTM is weak vs sector peers\",\"growth.ebitGrowthTTM is weak vs sector peers\",\"profitability.roic is weak vs sector peers\",\"financialHealth.debtToEquity is strong vs sector peers\",\"cashFlow.fcfYield is weak vs sector peers\",\"financialHealth.ocfToDebt is strong vs sector peers\"]},\"metrics\":[{\"key\":\"peRatioTTM\",\"label\":\"P/E Ratio (TTM)\",\"section\":\"valuation\",\"value\":316.79,\"industryMedian\":16.2,\"industryP25\":5.78,\"industryP75\":29.07,\"classification\":\"WAY_ABOVE\",\"direction\":\"lower_better\"},{\"key\":\"priceToSalesRatioTTM\",\"label\":\"P/S Ratio (TTM)\",\"section\":\"valuation\",\"value\":16.53,\"industryMedian\":1.19,\"industryP25\":0.56,\"industryP75\":2.53,\"classification\":\"WAY_ABOVE\",\"direction\":\"lower_better\"},{\"key\":\"priceToBookRatioTTM\",\"label\":\"P/B Ratio (TTM)\",\"section\":\"valuation\",\"value\":19.76,\"industryMedian\":2.06,\"industryP25\":1.02,\"industryP75\":5.09,\"classification\":\"WAY_ABOVE\",\"direction\":\"lower_better\"},{\"key\":\"enterpriseValueOverEBITTTM\",\"label\":\"EV/EBIT (TTM)\",\"section\":\"valuation\",\"value\":275.56646806507445,\"industryMedian\":17.75758272826576,\"industryP25\":10.701875649307647,\"industryP75\":27.129643021582734,\"classification\":\"WAY_ABOVE\",\"direction\":\"lower_better\"},{\"key\":\"enterpriseValueOverEBITDATTM\",\"label\":\"EV/EBITDA (TTM)\",\"section\":\"valuation\",\"value\":117.57665429626347,\"industryMedian\":12.915573182369592,\"industryP25\":8.514687825255972,\"industryP75\":19.419234546870616,\"classification\":\"WAY_ABOVE\",\"direction\":\"lower_better\"},{\"key\":\"enterpriseValueToSalesTTM\",\"label\":\"EV/Sales (TTM)\",\"section\":\"valuation\",\"value\":16.649305704934488,\"industryMedian\":2.0120264921780104,\"industryP25\":1.091974180638258,\"industryP75\":3.571894502718821,\"classification\":\"WAY_ABOVE\",\"direction\":\"lower_better\"},{\"key\":\"valuationExtras.forwardPE\",\"label\":\"Forward P/E\",\"section\":\"valuation\",\"value\":1357.6857142857143,\"industryMedian\":203.66666666666669,\"industryP25\":17.527950310559003,\"industryP75\":776.4444444444445,\"classification\":\"ABOVE\",\"direction\":\"lower_better\"},{\"key\":\"valuationExtras.pegRatio\",\"label\":\"PEG Ratio\",\"section\":\"valuation\",\"value\":27.38,\"industryMedian\":1.47,\"industryP25\":-1.17,\"industryP75\":4.54,\"classification\":\"WAY_ABOVE\",\"direction\":\"lower_better\"},{\"key\":\"profitability.roe\",\"label\":\"Return on Equity\",\"section\":\"profitability\",\"value\":0.0175,\"industryMedian\":0.0243,\"industryP25\":-0.0169,\"industryP75\":0.0576,\"classification\":\"AVERAGE\",\"direction\":\"higher_better\"},{\"key\":\"profitability.roa\",\"label\":\"Return on Assets\",\"section\":\"profitability\",\"value\":0.0105,\"industryMedian\":0.0109,\"industryP25\":0.0006,\"industryP75\":0.0251,\"classification\":\"AVERAGE\",\"direction\":\"higher_better\"},{\"key\":\"profitability.roic\",\"label\":\"Return on Invested Capital\",\"section\":\"profitability\",\"value\":0.0168,\"industryMedian\":0.0237,\"industryP25\":0.0093,\"industryP75\":0.0428,\"classification\":\"AVERAGE\",\"direction\":\"higher_better\"},{\"key\":\"profitability.grossMargin\",\"label\":\"Gross Margin\",\"section\":\"profitability\",\"value\":0.1799,\"industryMedian\":0.3467,\"industryP25\":0.2062,\"industryP75\":0.4821,\"classification\":\"BELOW\",\"direction\":\"higher_better\"},{\"key\":\"profitability.operatingMargin\",\"label\":\"Operating Margin\",\"section\":\"profitability\",\"value\":0.0663,\"industryMedian\":0.0795,\"industryP25\":0.0313,\"industryP75\":0.1415,\"classification\":\"AVERAGE\",\"direction\":\"higher_better\"},{\"key\":\"profitability.netMargin\",\"label\":\"Net Margin\",\"section\":\"profitability\",\"value\":0.0489,\"industryMedian\":0.0458,\"industryP25\":0.0014,\"industryP75\":0.0954,\"classification\":\"AVERAGE\",\"direction\":\"higher_better\"},{\"key\":\"profitability.ebitdaMargin\",\"label\":\"EBITDA Margin\",\"section\":\"profitability\",\"value\":0.1303,\"industryMedian\":0.1159,\"industryP25\":0.0562,\"industryP75\":0.18,\"classification\":\"AVERAGE\",\"direction\":\"higher_better\"},{\"key\":\"financialHealth.debtToEquity\",\"label\":\"Debt to Equity\",\"section\":\"financial_health\",\"value\":0.18489413680781758,\"industryMedian\":0.735772709568529,\"industryP25\":0.18598578580170672,\"industryP75\":1.7007186461633568,\"classification\":\"BELOW\",\"direction\":\"lower_better\"},{\"key\":\"financialHealth.interestCoverage\",\"label\":\"Interest Coverage\",\"section\":\"financial_health\",\"value\":4.451463790446842,\"industryMedian\":4.451463790446842,\"industryP25\":1.7334235453315292,\"industryP75\":11.265843803619859,\"classification\":\"AVERAGE\",\"direction\":\"higher_better\"},{\"key\":\"financialHealth.currentRatio\",\"label\":\"Current Ratio\",\"section\":\"financial_health\",\"value\":3.856358645928637,\"industryMedian\":1.1898022821505672,\"industryP25\":0.473474801061008,\"industryP75\":3.028208944645262,\"classification\":\"ABOVE\",\"direction\":\"depends\"},{\"key\":\"financialHealth.quickRatio\",\"label\":\"Quick Ratio\",\"section\":\"financial_health\",\"value\":-7.138151875571821,\"industryMedian\":-2.480269989615784,\"industryP25\":-13.743654026950798,\"industryP75\":0.26466928881040297,\"classification\":\"AVERAGE\",\"direction\":\"depends\"},{\"key\":\"financialHealth.ocfToDebt\",\"label\":\"OCF to Debt\",\"section\":\"financial_health\",\"value\":1.1572340894076194,\"industryMedian\":0.2008282774101109,\"industryP25\":0.09273661538900418,\"industryP75\":0.432537674207803,\"classification\":\"WAY_ABOVE\",\"direction\":\"higher_better\"},{\"key\":\"cashFlow.fcfTTM\",\"label\":\"Free Cash Flow (TTM)\",\"section\":\"cash_flow\",\"value\":5586000000,\"industryMedian\":158800000,\"industryP25\":19981000,\"industryP75\":600700000,\"classification\":\"WAY_ABOVE\",\"direction\":\"higher_better\"},{\"key\":\"cashFlow.fcfMargin\",\"label\":\"FCF Margin\",\"section\":\"cash_flow\",\"value\":0.05841079961937825,\"industryMedian\":0.05343165179230753,\"industryP25\":0.014541558242767488,\"industryP75\":0.10190389564227309,\"classification\":\"AVERAGE\",\"direction\":\"higher_better\"},{\"key\":\"cashFlow.fcfYield\",\"label\":\"FCF Yield\",\"section\":\"cash_flow\",\"value\":0.003534557044251217,\"industryMedian\":0.038926243458745916,\"industryP25\":0.008343389359270415,\"industryP75\":0.0800048405660415,\"classification\":\"BELOW\",\"direction\":\"higher_better\"},{\"key\":\"cashFlow.ocfTTM\",\"label\":\"Operating Cash Flow (TTM)\",\"section\":\"cash_flow\",\"value\":15765000000,\"industryMedian\":332086000,\"industryP25\":85105000,\"industryP75\":961100000,\"classification\":\"WAY_ABOVE\",\"direction\":\"higher_better\"},{\"key\":\"growth.revenueGrowthTTM\",\"label\":\"Revenue Growth (YoY)\",\"section\":\"growth\",\"value\":0.1157,\"industryMedian\":0.06,\"industryP25\":0.0105,\"industryP75\":0.1164,\"classification\":\"AVERAGE\",\"direction\":\"higher_better\"},{\"key\":\"growth.ebitGrowthTTM\",\"label\":\"EBIT Growth (YoY)\",\"section\":\"growth\",\"value\":-0.3283,\"industryMedian\":0.0564,\"industryP25\":-0.1968,\"industryP75\":0.2998,\"classification\":\"BELOW\",\"direction\":\"higher_better\"},{\"key\":\"growth.epsGrowthTTM\",\"label\":\"EPS Growth (YoY)\",\"section\":\"growth\",\"value\":-0.5946,\"industryMedian\":0.051,\"industryP25\":-0.2967,\"industryP75\":0.4457,\"classification\":\"BELOW\",\"direction\":\"higher_better\"},{\"key\":\"growth.fcfGrowthTTM\",\"label\":\"FCF Growth (YoY)\",\"section\":\"growth\",\"value\":0.4551,\"industryMedian\":0.1722,\"industryP25\":-0.3906,\"industryP75\":0.7583,\"classification\":\"AVERAGE\",\"direction\":\"higher_better\"}],\"peerContext\":{\"sector\":\"Consumer Cyclical\",\"industry\":\"Auto Manufacturers\",\"scoreRank\":{\"rank\":17,\"total\":19},\"betterPeers\":[{\"symbol\":\"ZK\",\"score\":85,\"classification\":\"VALUE\"},{\"symbol\":\"XPEV\",\"score\":85,\"classification\":\"GROWTH\"},{\"symbol\":\"F\",\"score\":65,\"classification\":\"GROWTH\"},{\"symbol\":\"CYD\",\"score\":60,\"classification\":\"BLEND\"},{\"symbol\":\"PSNYW\",\"score\":60,\"classification\":\"VALUE\"}]},\"factorRanking\":{\"bucket\":\"large\",\"sectorRank\":{\"rank\":null,\"total\":50}},\"filingInsights\":[{\"symbol\":\"TSLA\",\"cik\":\"0001318605\",\"accession\":\"0001628280-25-045968\",\"filingType\":\"10-Q\",\"filedAt\":\"2025-10-23\",\"businessUpdates\":[{\"theme\":\"Production and Delivery\",\"summary\":\"Tesla produced approximately 1,220,000 consumer vehicles and delivered approximately 1,218,000 through Q3 2025.\",\"driver\":\"Increased manufacturing capacity and new vehicle options.\",\"impact\":\"Supports revenue growth and market expansion.\",\"confidence\":\"high\"},{\"theme\":\"Energy Storage Growth\",\"summary\":\"Tesla deployed 32.5 GWh of energy storage products through Q3 2025.\",\"driver\":\"Ramp in production and market penetration.\",\"impact\":\"Enhances revenue from energy generation and storage segment.\",\"confidence\":\"medium\"}],\"riskChanges\":[{\"theme\":\"Risk factors\",\"change\":\"unspecified\",\"summary\":\"Our operations and financial results are subject to various risks and uncertainties, including the factors discussed in Part I, Item 1A, Risk Factors in our Annual Report on Form 10-K for the year ended December 31, 2024, and Part II, Item 1A, Risk Factors in our Quarterly Reports on Form 10-Q for the quarters ended March 31, 2025 and June 30, 2025, which could adversely affect our business, financial conditions and future results.\",\"impact\":\"\"},{\"theme\":\"Risk factors\",\"change\":\"unspecified\",\"summary\":\"Other than the risk factors set forth below, there have been no material changes from the risk factors discussed in our Annual and Quarterly Reports.\",\"impact\":\"\"}],\"liquidityAndCapital\":[{\"summary\":\"Tesla ended Q3 2025 with $41.65 billion in cash and cash equivalents, an increase of $5.08 billion from 2024.\",\"liquidity\":\"Strong liquidity position.\",\"leverage\":\"Maintaining a strong balance sheet.\",\"capitalAllocation\":\"Focused on critical high-value investments.\"}],\"accountingFlags\":[{\"area\":\"Accounting policy\",\"summary\":\"Note 1 – Summary of Significant Accounting Policies\"},{\"area\":\"Accounting policy\",\"summary\":\"Recent Accounting Pronouncements\"},{\"area\":\"Accounting policy\",\"summary\":\"Recently issued accounting pronouncements not yet adopted\"}],\"otherHighlights\":[{\"category\":\"Filing highlight\",\"summary\":\"Restructuring and Other\",\"details\":\"\"}],\"productSegments\":[{\"name\":\"Automotive Segment\",\"description\":\"Includes electric vehicles and related services.\",\"performance\":\"Increased production and delivery.\",\"revenueContribution\":\"Significant contributor to overall revenue.\"},{\"name\":\"Energy Generation and Storage Segment\",\"description\":\"Includes solar energy systems and energy storage products.\",\"performance\":\"Increased deployment and production.\",\"revenueContribution\":\"Growing segment with high demand.\"}],\"forwardGuidance\":[{\"metric\":\"Revenue\",\"guidance\":\"Expect continued growth driven by increased vehicle production and energy storage deployments.\",\"timeframe\":\"FY2025\",\"confidence\":\"high\"}],\"categorizedRisks\":[{\"category\":\"Supply Chain\",\"risk\":\"Uncertainty in global supply chain and cost structure due to evolving trade policies.\",\"severity\":\"high\",\"mitigation\":\"Focus on vertical integration and localization of supply chain.\"},{\"category\":\"Regulatory\",\"risk\":\"Changes in government incentives and tariffs impacting production costs.\",\"severity\":\"medium\",\"mitigation\":\"Adjust operational strategies to mitigate impacts.\"}]},{\"symbol\":\"TSLA\",\"cik\":\"0001318605\",\"accession\":\"0001628280-25-035806\",\"filingType\":\"10-Q\",\"filedAt\":\"2025-07-24\",\"businessUpdates\":[{\"theme\":\"Production and Delivery\",\"summary\":\"Tesla produced approximately 773,000 consumer vehicles and delivered about 721,000 through Q2 2025.\",\"driver\":\"Increased manufacturing capacity and new product introductions.\",\"impact\":\"Focus on profitable growth and operational efficiencies.\",\"confidence\":\"medium\"},{\"theme\":\"Energy Storage Growth\",\"summary\":\"Tesla deployed 20.0 GWh of energy storage products in the first half of 2025.\",\"driver\":\"Ramp-up of Megafactories and increased market penetration.\",\"impact\":\"Potential for stabilizing the grid and providing additional power capacity.\",\"confidence\":\"medium\"},{\"theme\":\"Robotaxi Launch\",\"summary\":\"Tesla launched its Robotaxi service in Austin in June 2025.\",\"driver\":\"Investments in AI and scalable mobility infrastructure.\",\"impact\":\"Advancement of a service-driven business model.\",\"confidence\":\"medium\"}],\"riskChanges\":[{\"theme\":\"Government Incentives\",\"change\":\"higher\",\"summary\":\"Reduction or elimination of government incentives for electric vehicles may negatively impact sales.\",\"impact\":\"Potential decrease in demand for vehicles.\"},{\"theme\":\"Tariffs and Trade Policy\",\"change\":\"higher\",\"summary\":\"Changes in tariffs and trade policies may increase costs and affect supply chain.\",\"impact\":\"Adverse effects on production and profitability.\"}],\"liquidityAndCapital\":[{\"summary\":\"Tesla ended Q2 2025 with $36.78 billion in cash and cash equivalents.\",\"liquidity\":\"Strong liquidity position with increased cash flow from operations.\",\"leverage\":\"Maintaining a strong balance sheet with prudent investments.\",\"capitalAllocation\":\"Focus on high-value investments while managing capital expenditures.\"}],\"accountingFlags\":[{\"area\":\"Accounting policy\",\"summary\":\"Note 1 – Summary of Significant Accounting Policies\"},{\"area\":\"Accounting policy\",\"summary\":\"Recent Accounting Pronouncements\"},{\"area\":\"Accounting policy\",\"summary\":\"Recently issued accounting pronouncements not yet adopted\"}],\"otherHighlights\":[{\"category\":\"Filing highlight\",\"summary\":\"Restructuring and Other\",\"details\":\"\"}],\"productSegments\":[{\"name\":\"Automotive\",\"description\":\"High-performance fully electric vehicles.\",\"performance\":\"Decreased revenues compared to prior year.\",\"revenueContribution\":\"Significant portion of total revenues.\"},{\"name\":\"Energy Generation and Storage\",\"description\":\"Solar energy generation systems and energy storage products.\",\"performance\":\"Increased production and deployment.\",\"revenueContribution\":\"Growing segment with high demand.\"}],\"forwardGuidance\":[{\"metric\":\"Revenue\",\"guidance\":\"Expect continued revenue growth despite challenges.\",\"timeframe\":\"FY2025\",\"confidence\":\"medium\"}],\"categorizedRisks\":[{\"category\":\"Regulatory\",\"risk\":\"Changes in government incentives and tax credits.\",\"severity\":\"high\",\"mitigation\":\"Adjust pricing and operational strategies.\"},{\"category\":\"Supply Chain\",\"risk\":\"Tariffs impacting cost structure and availability.\",\"severity\":\"high\",\"mitigation\":\"Focus on vertical integration and localization.\"}]}],\"transcriptInsights\":[{\"symbol\":\"TSLA\",\"fiscalYear\":2025,\"fiscalQuarter\":3,\"callDate\":\"2025-10-22\",\"guidanceChanges\":[],\"drivers\":[{\"area\":\"Deliveries\",\"summary\":\"Record deliveries were achieved across all regions, with significant growth in Greater China, North America, and EMEA.\",\"positive\":true,\"detail\":\"Greater China and APAC were up 33%, North America was up 28%, and EMEA was up 25%.\"},{\"area\":\"Energy Products\",\"summary\":\"Strong demand for Megapack and Powerwall is expected to continue into next year.\",\"positive\":true,\"detail\":\"Positive customer feedback on Mega Block product and surge in residential solar demand.\"}],\"tone\":{\"management\":\"optimistic\",\"analysts\":\"curious\",\"confidence\":\"high\"},\"executionFlags\":[{\"issue\":\"Regulatory challenges\",\"severity\":\"medium\",\"summary\":\"Regulatory approvals are necessary for expanding robotaxi operations in new metro areas.\"}],\"keyQuotes\":[{\"speaker\":\"Elon Musk\",\"sentiment\":\"positive\",\"summary\":\"Tesla is at a critical inflection point with AI, confident in expanding production and achieving full self-driving capabilities.\"},{\"speaker\":\"Vaibhav Taneja\",\"sentiment\":\"positive\",\"summary\":\"Q3 was a special quarter with record deliveries and financial metrics, reflecting customer confidence.\"}]},{\"symbol\":\"TSLA\",\"fiscalYear\":2025,\"fiscalQuarter\":2,\"callDate\":\"2025-07-23\",\"guidanceChanges\":[],\"drivers\":[{\"area\":\"Robotaxi Expansion\",\"summary\":\"Successful launch of robotaxi service in Austin with plans for rapid expansion.\",\"positive\":true,\"detail\":\"Expecting to expand service area significantly and launch in multiple states.\"},{\"area\":\"Model Y Sales\",\"summary\":\"Model Y became the best-selling car in several countries.\",\"positive\":true,\"detail\":\"Autonomy is a key selling point contributing to its success.\"},{\"area\":\"Production of Affordable Models\",\"summary\":\"Production of more affordable models is ramping up.\",\"positive\":true,\"detail\":\"Goal to maximize production without negatively impacting revenue.\"}],\"tone\":{\"management\":\"Optimistic\",\"analysts\":\"Curious\",\"confidence\":\"High\"},\"executionFlags\":[{\"issue\":\"IRA EV Credit Repeal\",\"severity\":\"High\",\"summary\":\"The repeal of the $7,500 EV credit is expected to limit vehicle supply in the U.S.\"}],\"keyQuotes\":[{\"speaker\":\"Elon R. Musk\",\"sentiment\":\"Positive\",\"summary\":\"Confident in achieving significant autonomy and robotaxi expansion by the end of the year.\"},{\"speaker\":\"Vaibhav Taneja\",\"sentiment\":\"Cautious\",\"summary\":\"Emphasized the need for safety before broadening the availability of unsupervised FSD.\"},{\"speaker\":\"Michael Snyder\",\"sentiment\":\"Positive\",\"summary\":\"Forecasting a strong second half of the year for Megapack deployments despite challenges.\"}]}],\"recommendations\":[{\"buy\":20,\"hold\":21,\"period\":\"2026-01-01\",\"sell\":9,\"strongBuy\":7,\"strongSell\":2,\"symbol\":\"TSLA\"},{\"buy\":22,\"hold\":20,\"period\":\"2025-12-01\",\"sell\":9,\"strongBuy\":8,\"strongSell\":2,\"symbol\":\"TSLA\"},{\"buy\":22,\"hold\":19,\"period\":\"2025-11-01\",\"sell\":10,\"strongBuy\":8,\"strongSell\":2,\"symbol\":\"TSLA\"},{\"buy\":20,\"hold\":20,\"period\":\"2025-10-01\",\"sell\":9,\"strongBuy\":9,\"strongSell\":2,\"symbol\":\"TSLA\"}]}\n```"
+}

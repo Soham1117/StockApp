@@ -1,0 +1,49 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app:*)",
+      "Bash(npx create-next-app@latest quantdash --typescript --eslint --tailwind --app --src-dir --import-alias \"@/*\" --no-git)",
+      "Bash(rm:*)",
+      "Bash(npm install:*)",
+      "Bash(npx shadcn@latest init)",
+      "Bash(npx shadcn@latest init:*)",
+      "Bash(npx shadcn@latest add:*)",
+      "Bash(npm run dev:*)",
+      "Bash(curl:*)",
+      "WebSearch",
+      "Bash(npm uninstall:*)",
+      "Bash(dir /B /A)",
+      "Bash(find:*)",
+      "Bash(wc -l:*)",
+      "Bash(tree:*)",
+      "Bash(dir /B /A \"d:\\Personal Projects\\StockApp\\fastapi_app\")",
+      "Bash(findstr:*)",
+      "Bash(python:*)",
+      "Bash(curl.exe:*)",
+      "Bash(powershell -Command \"$OutputEncoding = [Console]::OutputEncoding = [System.Text.Encoding]::UTF8; python test_dcf_data.py 2>&1 | Out-String\")",
+      "Bash(pip install:*)",
+      "Bash(del DCF_YAHOO_FINANCE_READY.md)",
+      "Bash(del test_yahoo_dcf.py test_finnhub_dcf.py test_dcf_data.py)",
+      "Bash(powershell -Command:*)",
+      "Bash(xargs:*)",
+      "Bash(npm run build:*)",
+      "Bash(npx tsc:*)",
+      "Bash(npm init:*)",
+      "Bash(chmod:*)",
+      "Bash(node index.js:*)",
+      "Bash(node:*)",
+      "Bash(dir:*)",
+      "Bash(npm update:*)",
+      "Bash(npm audit:*)",
+      "mcp__prompt-generator__generate_custom_prompt"
+    ],
+    "deny": [],
+    "ask": []
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "prompt-generator",
+    "next-devtools",
+    "shadcn"
+  ]
+}

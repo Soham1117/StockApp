@@ -1,0 +1,22 @@
+# Files/directories to ignore during type checking
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+.venv/
+env/
+.env
+node_modules/
+.next/
+dist/
+build/
+*.egg-info/
+
+# Third-party libraries (type checking not needed)
+defeatbeta_api/
+transformers/
+torch/
+nltk/
+

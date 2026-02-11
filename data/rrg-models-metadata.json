@@ -1,0 +1,403 @@
+{
+  "lookback_days": 360,
+  "models": {
+    "IYR_rsMomentum": {
+      "aic": 3661.1633951956505,
+      "lookback_days": 360,
+      "mae": 41.62609641873864,
+      "metric": "rsMomentum",
+      "model_path": "D:\\Personal Projects\\StockApp\\models\\rrg\\IYR_rsMomentum_360d.pkl",
+      "n_observations": 992,
+      "order": [
+        0,
+        0,
+        0
+      ],
+      "rmse": 48.757199885429486,
+      "symbol": "IYR",
+      "train_end_date": "2025-12-15",
+      "train_start_date": "2006-12-18",
+      "trained_at": "2025-12-16T09:27:34.909820"
+    },
+    "IYR_rsRatio": {
+      "aic": 4107.479357569893,
+      "lookback_days": 360,
+      "mae": 8.703421957512793,
+      "metric": "rsRatio",
+      "model_path": "D:\\Personal Projects\\StockApp\\models\\rrg\\IYR_rsRatio_360d.pkl",
+      "n_observations": 992,
+      "order": [
+        0,
+        0,
+        0
+      ],
+      "rmse": 10.395854781210893,
+      "symbol": "IYR",
+      "train_end_date": "2025-12-15",
+      "train_start_date": "2006-12-18",
+      "trained_at": "2025-12-16T09:27:28.591090"
+    },
+    "XLB_rsMomentum": {
+      "aic": 3109.596539735252,
+      "lookback_days": 360,
+      "mae": 38.22251602811444,
+      "metric": "rsMomentum",
+      "model_path": "D:\\Personal Projects\\StockApp\\models\\rrg\\XLB_rsMomentum_360d.pkl",
+      "n_observations": 992,
+      "order": [
+        0,
+        0,
+        0
+      ],
+      "rmse": 45.2843572903698,
+      "symbol": "XLB",
+      "train_end_date": "2025-12-15",
+      "train_start_date": "2006-12-18",
+      "trained_at": "2025-12-16T09:27:45.519030"
+    },
+    "XLB_rsRatio": {
+      "aic": 3470.148932479087,
+      "lookback_days": 360,
+      "mae": 8.316021491389806,
+      "metric": "rsRatio",
+      "model_path": "D:\\Personal Projects\\StockApp\\models\\rrg\\XLB_rsRatio_360d.pkl",
+      "n_observations": 992,
+      "order": [
+        0,
+        0,
+        0
+      ],
+      "rmse": 9.755611996341436,
+      "symbol": "XLB",
+      "train_end_date": "2025-12-15",
+      "train_start_date": "2006-12-18",
+      "trained_at": "2025-12-16T09:27:39.331468"
+    },
+    "XLC_rsMomentum": {
+      "aic": 1296.12723394038,
+      "lookback_days": 360,
+      "mae": 23.985499407477967,
+      "metric": "rsMomentum",
+      "model_path": "D:\\Personal Projects\\StockApp\\models\\rrg\\XLC_rsMomentum_360d.pkl",
+      "n_observations": 390,
+      "order": [
+        0,
+        0,
+        0
+      ],
+      "rmse": 33.52146815681288,
+      "symbol": "XLC",
+      "train_end_date": "2025-12-15",
+      "train_start_date": "2018-07-02",
+      "trained_at": "2025-12-16T09:27:48.531264"
+    },
+    "XLC_rsRatio": {
+      "aic": 1303.5664024214489,
+      "lookback_days": 360,
+      "mae": 3.7911506943616735,
+      "metric": "rsRatio",
+      "model_path": "D:\\Personal Projects\\StockApp\\models\\rrg\\XLC_rsRatio_360d.pkl",
+      "n_observations": 390,
+      "order": [
+        0,
+        0,
+        0
+      ],
+      "rmse": 4.520293680187719,
+      "symbol": "XLC",
+      "train_end_date": "2025-12-15",
+      "train_start_date": "2018-07-02",
+      "trained_at": "2025-12-16T09:27:47.126585"
+    },
+    "XLE_rsMomentum": {
+      "aic": 3893.807057073199,
+      "lookback_days": 360,
+      "mae": 90.99804006670196,
+      "metric": "rsMomentum",
+      "model_path": "D:\\Personal Projects\\StockApp\\models\\rrg\\XLE_rsMomentum_360d.pkl",
+      "n_observations": 992,
+      "order": [
+        0,
+        0,
+        0
+      ],
+      "rmse": 126.22962297474189,
+      "symbol": "XLE",
+      "train_end_date": "2025-12-15",
+      "train_start_date": "2006-12-18",
+      "trained_at": "2025-12-16T09:28:03.453346"
+    },
+    "XLE_rsRatio": {
+      "aic": 4258.338539497085,
+      "lookback_days": 360,
+      "mae": 21.816905984813275,
+      "metric": "rsRatio",
+      "model_path": "D:\\Personal Projects\\StockApp\\models\\rrg\\XLE_rsRatio_360d.pkl",
+      "n_observations": 992,
+      "order": [
+        0,
+        0,
+        0
+      ],
+      "rmse": 31.69015480866373,
+      "symbol": "XLE",
+      "train_end_date": "2025-12-15",
+      "train_start_date": "2006-12-18",
+      "trained_at": "2025-12-16T09:27:54.767403"
+    },
+    "XLF_rsMomentum": {
+      "aic": 3479.32931866309,
+      "lookback_days": 360,
+      "mae": 37.739465212273714,
+      "metric": "rsMomentum",
+      "model_path": "D:\\Personal Projects\\StockApp\\models\\rrg\\XLF_rsMomentum_360d.pkl",
+      "n_observations": 992,
+      "order": [
+        0,
+        0,
+        0
+      ],
+      "rmse": 46.51851972639142,
+      "symbol": "XLF",
+      "train_end_date": "2025-12-15",
+      "train_start_date": "2006-12-18",
+      "trained_at": "2025-12-16T09:28:16.491216"
+    },
+    "XLF_rsRatio": {
+      "aic": 3922.1064832231573,
+      "lookback_days": 360,
+      "mae": 8.333758691473642,
+      "metric": "rsRatio",
+      "model_path": "D:\\Personal Projects\\StockApp\\models\\rrg\\XLF_rsRatio_360d.pkl",
+      "n_observations": 992,
+      "order": [
+        0,
+        0,
+        0
+      ],
+      "rmse": 10.114795140852218,
+      "symbol": "XLF",
+      "train_end_date": "2025-12-15",
+      "train_start_date": "2006-12-18",
+      "trained_at": "2025-12-16T09:28:08.172218"
+    },
+    "XLI_rsMomentum": {
+      "aic": 2619.4480370486854,
+      "lookback_days": 360,
+      "mae": 22.693663462712273,
+      "metric": "rsMomentum",
+      "model_path": "D:\\Personal Projects\\StockApp\\models\\rrg\\XLI_rsMomentum_360d.pkl",
+      "n_observations": 992,
+      "order": [
+        0,
+        0,
+        0
+      ],
+      "rmse": 29.616126907241657,
+      "symbol": "XLI",
+      "train_end_date": "2025-12-15",
+      "train_start_date": "2006-12-18",
+      "trained_at": "2025-12-16T09:28:29.903748"
+    },
+    "XLI_rsRatio": {
+      "aic": 3019.2587368425993,
+      "lookback_days": 360,
+      "mae": 4.650941443985872,
+      "metric": "rsRatio",
+      "model_path": "D:\\Personal Projects\\StockApp\\models\\rrg\\XLI_rsRatio_360d.pkl",
+      "n_observations": 992,
+      "order": [
+        0,
+        0,
+        0
+      ],
+      "rmse": 5.997094133081635,
+      "symbol": "XLI",
+      "train_end_date": "2025-12-15",
+      "train_start_date": "2006-12-18",
+      "trained_at": "2025-12-16T09:28:23.968223"
+    },
+    "XLK_rsMomentum": {
+      "aic": 2579.699576188671,
+      "lookback_days": 360,
+      "mae": 37.021593372628836,
+      "metric": "rsMomentum",
+      "model_path": "D:\\Personal Projects\\StockApp\\models\\rrg\\XLK_rsMomentum_360d.pkl",
+      "n_observations": 992,
+      "order": [
+        0,
+        0,
+        0
+      ],
+      "rmse": 43.084154111450296,
+      "symbol": "XLK",
+      "train_end_date": "2025-12-15",
+      "train_start_date": "2006-12-18",
+      "trained_at": "2025-12-16T09:28:43.271876"
+    },
+    "XLK_rsRatio": {
+      "aic": 3066.695619059794,
+      "lookback_days": 360,
+      "mae": 6.941524133578111,
+      "metric": "rsRatio",
+      "model_path": "D:\\Personal Projects\\StockApp\\models\\rrg\\XLK_rsRatio_360d.pkl",
+      "n_observations": 992,
+      "order": [
+        0,
+        0,
+        0
+      ],
+      "rmse": 8.523526968549495,
+      "symbol": "XLK",
+      "train_end_date": "2025-12-15",
+      "train_start_date": "2006-12-18",
+      "trained_at": "2025-12-16T09:28:36.774662"
+    },
+    "XLP_rsMomentum": {
+      "aic": 3247.438216392642,
+      "lookback_days": 360,
+      "mae": 48.229763448075325,
+      "metric": "rsMomentum",
+      "model_path": "D:\\Personal Projects\\StockApp\\models\\rrg\\XLP_rsMomentum_360d.pkl",
+      "n_observations": 992,
+      "order": [
+        0,
+        0,
+        0
+      ],
+      "rmse": 56.773089305733315,
+      "symbol": "XLP",
+      "train_end_date": "2025-12-15",
+      "train_start_date": "2006-12-18",
+      "trained_at": "2025-12-16T09:28:56.755985"
+    },
+    "XLP_rsRatio": {
+      "aic": 3567.943210847343,
+      "lookback_days": 360,
+      "mae": 11.33277277002304,
+      "metric": "rsRatio",
+      "model_path": "D:\\Personal Projects\\StockApp\\models\\rrg\\XLP_rsRatio_360d.pkl",
+      "n_observations": 992,
+      "order": [
+        0,
+        0,
+        0
+      ],
+      "rmse": 12.809475233938834,
+      "symbol": "XLP",
+      "train_end_date": "2025-12-15",
+      "train_start_date": "2006-12-18",
+      "trained_at": "2025-12-16T09:28:48.737336"
+    },
+    "XLU_rsMomentum": {
+      "aic": 3679.6221280934983,
+      "lookback_days": 360,
+      "mae": 58.8749243686547,
+      "metric": "rsMomentum",
+      "model_path": "D:\\Personal Projects\\StockApp\\models\\rrg\\XLU_rsMomentum_360d.pkl",
+      "n_observations": 992,
+      "order": [
+        0,
+        0,
+        0
+      ],
+      "rmse": 70.4263095265131,
+      "symbol": "XLU",
+      "train_end_date": "2025-12-15",
+      "train_start_date": "2006-12-18",
+      "trained_at": "2025-12-16T09:29:11.229343"
+    },
+    "XLU_rsRatio": {
+      "aic": 3947.8191465109862,
+      "lookback_days": 360,
+      "mae": 12.6649870635521,
+      "metric": "rsRatio",
+      "model_path": "D:\\Personal Projects\\StockApp\\models\\rrg\\XLU_rsRatio_360d.pkl",
+      "n_observations": 992,
+      "order": [
+        0,
+        0,
+        0
+      ],
+      "rmse": 15.412915596602845,
+      "symbol": "XLU",
+      "train_end_date": "2025-12-15",
+      "train_start_date": "2006-12-18",
+      "trained_at": "2025-12-16T09:29:03.272756"
+    },
+    "XLV_rsMomentum": {
+      "aic": 3101.8071466517144,
+      "lookback_days": 360,
+      "mae": 51.662092519492134,
+      "metric": "rsMomentum",
+      "model_path": "D:\\Personal Projects\\StockApp\\models\\rrg\\XLV_rsMomentum_360d.pkl",
+      "n_observations": 992,
+      "order": [
+        0,
+        0,
+        0
+      ],
+      "rmse": 60.702578083954116,
+      "symbol": "XLV",
+      "train_end_date": "2025-12-15",
+      "train_start_date": "2006-12-18",
+      "trained_at": "2025-12-16T09:29:21.442617"
+    },
+    "XLV_rsRatio": {
+      "aic": 3460.872672897055,
+      "lookback_days": 360,
+      "mae": 12.532789690906442,
+      "metric": "rsRatio",
+      "model_path": "D:\\Personal Projects\\StockApp\\models\\rrg\\XLV_rsRatio_360d.pkl",
+      "n_observations": 992,
+      "order": [
+        0,
+        0,
+        0
+      ],
+      "rmse": 13.900080264269752,
+      "symbol": "XLV",
+      "train_end_date": "2025-12-15",
+      "train_start_date": "2006-12-18",
+      "trained_at": "2025-12-16T09:29:15.869810"
+    },
+    "XLY_rsMomentum": {
+      "aic": 2574.0236448630662,
+      "lookback_days": 360,
+      "mae": 44.81281857313214,
+      "metric": "rsMomentum",
+      "model_path": "D:\\Personal Projects\\StockApp\\models\\rrg\\XLY_rsMomentum_360d.pkl",
+      "n_observations": 992,
+      "order": [
+        0,
+        0,
+        0
+      ],
+      "rmse": 53.24487539354555,
+      "symbol": "XLY",
+      "train_end_date": "2025-12-15",
+      "train_start_date": "2006-12-18",
+      "trained_at": "2025-12-16T09:29:30.420954"
+    },
+    "XLY_rsRatio": {
+      "aic": 2985.7727375277964,
+      "lookback_days": 360,
+      "mae": 6.099891697051816,
+      "metric": "rsRatio",
+      "model_path": "D:\\Personal Projects\\StockApp\\models\\rrg\\XLY_rsRatio_360d.pkl",
+      "n_observations": 992,
+      "order": [
+        0,
+        0,
+        0
+      ],
+      "rmse": 7.513751572206536,
+      "symbol": "XLY",
+      "train_end_date": "2025-12-15",
+      "train_start_date": "2006-12-18",
+      "trained_at": "2025-12-16T09:29:24.807585"
+    }
+  },
+  "total_models": 22,
+  "trained_at": "2025-12-16T09:29:30.421927"
+}

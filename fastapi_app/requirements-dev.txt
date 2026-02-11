@@ -1,0 +1,5 @@
+# Development dependencies (install separately: pip install -r requirements-dev.txt)
+pyrefly>=0.1.0  # Fast type checker from Meta
+# Optional: for pre-commit hooks
+# pre-commit>=3.0.0
+

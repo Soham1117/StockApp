@@ -1,0 +1,38 @@
+# Pyrefly configuration for FastAPI app
+[tool.pyrefly]
+# Search paths for type checking
+search_path = ["."]
+
+# Python version to target
+python_version = "3.11"
+
+# Enable strict type checking
+strict = false
+
+# Include/exclude patterns
+include = ["*.py"]
+exclude = [
+    "**/__pycache__/**",
+    "**/node_modules/**",
+    "**/.venv/**",
+    "**/venv/**",
+]
+
+# Type checking mode
+# - "basic": Only check explicit type annotations
+# - "standard": Check types more thoroughly (recommended)
+# - "strict": Maximum type checking (may have false positives)
+type_checking_mode = "standard"
+
+# Report missing type annotations
+report_missing_type_annotations = true
+
+# Report unused imports
+report_unused_imports = true
+
+# Report unused variables
+report_unused_variables = false  # Set to true for stricter checking
+
+# Ignore specific error codes (if needed)
+# ignore = ["PYI001", "PYI002"]
+

@@ -1,0 +1,175 @@
+{
+  "IYR": {
+    "data_quality": "gaps_detected",
+    "fetched_at": "2025-12-15T15:47:41.976040",
+    "first_date": "2000-06-19",
+    "gaps": [
+      {
+        "days": 7,
+        "from": "2001-09-10",
+        "to": "2001-09-17"
+      }
+    ],
+    "last_date": "2025-12-15",
+    "symbol": "IYR",
+    "total_days": 6411
+  },
+  "SPY": {
+    "data_quality": "gaps_detected",
+    "fetched_at": "2025-12-15T15:47:31.472950",
+    "first_date": "1993-01-29",
+    "gaps": [
+      {
+        "days": 7,
+        "from": "2001-09-10",
+        "to": "2001-09-17"
+      }
+    ],
+    "last_date": "2025-12-15",
+    "symbol": "SPY",
+    "total_days": 8277
+  },
+  "XLB": {
+    "data_quality": "gaps_detected",
+    "fetched_at": "2025-12-15T15:47:39.627386",
+    "first_date": "1998-12-22",
+    "gaps": [
+      {
+        "days": 7,
+        "from": "2001-09-10",
+        "to": "2001-09-17"
+      }
+    ],
+    "last_date": "2025-12-15",
+    "symbol": "XLB",
+    "total_days": 6787
+  },
+  "XLC": {
+    "data_quality": "good",
+    "fetched_at": "2025-12-15T15:47:41.245544",
+    "first_date": "2018-06-19",
+    "last_date": "2025-12-15",
+    "symbol": "XLC",
+    "total_days": 1883
+  },
+  "XLE": {
+    "data_quality": "gaps_detected",
+    "fetched_at": "2025-12-15T15:47:37.712138",
+    "first_date": "1998-12-22",
+    "gaps": [
+      {
+        "days": 7,
+        "from": "2001-09-10",
+        "to": "2001-09-17"
+      }
+    ],
+    "last_date": "2025-12-15",
+    "symbol": "XLE",
+    "total_days": 6787
+  },
+  "XLF": {
+    "data_quality": "gaps_detected",
+    "fetched_at": "2025-12-15T15:47:33.342180",
+    "first_date": "1998-12-22",
+    "gaps": [
+      {
+        "days": 7,
+        "from": "2001-09-10",
+        "to": "2001-09-17"
+      }
+    ],
+    "last_date": "2025-12-15",
+    "symbol": "XLF",
+    "total_days": 6787
+  },
+  "XLI": {
+    "data_quality": "gaps_detected",
+    "fetched_at": "2025-12-15T15:47:36.691740",
+    "first_date": "1998-12-22",
+    "gaps": [
+      {
+        "days": 7,
+        "from": "2001-09-10",
+        "to": "2001-09-17"
+      }
+    ],
+    "last_date": "2025-12-15",
+    "symbol": "XLI",
+    "total_days": 6787
+  },
+  "XLK": {
+    "data_quality": "gaps_detected",
+    "fetched_at": "2025-12-15T15:47:32.428512",
+    "first_date": "1998-12-22",
+    "gaps": [
+      {
+        "days": 7,
+        "from": "2001-09-10",
+        "to": "2001-09-17"
+      }
+    ],
+    "last_date": "2025-12-15",
+    "symbol": "XLK",
+    "total_days": 6787
+  },
+  "XLP": {
+    "data_quality": "gaps_detected",
+    "fetched_at": "2025-12-15T15:47:35.667640",
+    "first_date": "1998-12-22",
+    "gaps": [
+      {
+        "days": 7,
+        "from": "2001-09-10",
+        "to": "2001-09-17"
+      }
+    ],
+    "last_date": "2025-12-15",
+    "symbol": "XLP",
+    "total_days": 6787
+  },
+  "XLU": {
+    "data_quality": "gaps_detected",
+    "fetched_at": "2025-12-15T15:47:40.707272",
+    "first_date": "1998-12-22",
+    "gaps": [
+      {
+        "days": 7,
+        "from": "2001-09-10",
+        "to": "2001-09-17"
+      }
+    ],
+    "last_date": "2025-12-15",
+    "symbol": "XLU",
+    "total_days": 6787
+  },
+  "XLV": {
+    "data_quality": "gaps_detected",
+    "fetched_at": "2025-12-15T15:47:38.747286",
+    "first_date": "1998-12-22",
+    "gaps": [
+      {
+        "days": 7,
+        "from": "2001-09-10",
+        "to": "2001-09-17"
+      }
+    ],
+    "last_date": "2025-12-15",
+    "symbol": "XLV",
+    "total_days": 6787
+  },
+  "XLY": {
+    "data_quality": "gaps_detected",
+    "fetched_at": "2025-12-15T15:47:34.487269",
+    "first_date": "1998-12-22",
+    "gaps": [
+      {
+        "days": 7,
+        "from": "2001-09-10",
+        "to": "2001-09-17"
+      }
+    ],
+    "last_date": "2025-12-15",
+    "symbol": "XLY",
+    "total_days": 6787
+  }
+}

@@ -1,0 +1,2417 @@
+{
+  "Basic Materials": {
+    "large": [
+      {
+        "symbol": "HMY",
+        "companyName": "HARMONY GOLD MINING CO LTD",
+        "marketCap": 12399747072.0,
+        "sector": "Basic Materials",
+        "industry": "Gold"
+      },
+      {
+        "symbol": "AU",
+        "companyName": "AngloGold Ashanti PLC",
+        "marketCap": 43258826752.0,
+        "sector": "Basic Materials",
+        "industry": "Gold"
+      },
+      {
+        "symbol": "CF",
+        "companyName": "CF Industries Holdings, Inc.",
+        "marketCap": 12747271168.0,
+        "sector": "Basic Materials",
+        "industry": "Agricultural Inputs"
+      },
+      {
+        "symbol": "BHP",
+        "companyName": "BHP Group Ltd",
+        "marketCap": 140593840128.0,
+        "sector": "Basic Materials",
+        "industry": "Other Industrial Metals & Mining"
+      },
+      {
+        "symbol": "B",
+        "companyName": "BARRICK MINING CORP",
+        "marketCap": 70684057600.0,
+        "sector": "Basic Materials",
+        "industry": "Gold"
+      },
+      {
+        "symbol": "NEM",
+        "companyName": "NEWMONT Corp /DE/",
+        "marketCap": 99662340096.0,
+        "sector": "Basic Materials",
+        "industry": "Gold"
+      },
+      {
+        "symbol": "KGC",
+        "companyName": "KINROSS GOLD CORP",
+        "marketCap": 34365140992.0,
+        "sector": "Basic Materials",
+        "industry": "Gold"
+      },
+      {
+        "symbol": "AEM",
+        "companyName": "AGNICO EAGLE MINES LTD",
+        "marketCap": 87571980288.0,
+        "sector": "Basic Materials",
+        "industry": "Gold"
+      },
+      {
+        "symbol": "SUZ",
+        "companyName": "Suzano S.A.",
+        "marketCap": 11121311744.0,
+        "sector": "Basic Materials",
+        "industry": "Paper & Paper Products"
+      },
+      {
+        "symbol": "RIO",
+        "companyName": "RIO TINTO PLC",
+        "marketCap": 117630615552.0,
+        "sector": "Basic Materials",
+        "industry": "Other Industrial Metals & Mining"
+      }
+    ],
+    "mid": [
+      {
+        "symbol": "SSL",
+        "companyName": "SASOL LTD",
+        "marketCap": 4143994880.0,
+        "sector": "Basic Materials",
+        "industry": "Specialty Chemicals"
+      },
+      {
+        "symbol": "CGAU",
+        "companyName": "Centerra Gold Inc.",
+        "marketCap": 2683686656.0,
+        "sector": "Basic Materials",
+        "industry": "Gold"
+      },
+      {
+        "symbol": "BTG",
+        "companyName": "B2GOLD CORP",
+        "marketCap": 6172956160.0,
+        "sector": "Basic Materials",
+        "industry": "Gold"
+      },
+      {
+        "symbol": "ORLA",
+        "companyName": "Orla Mining Ltd.",
+        "marketCap": 4792537088.0,
+        "sector": "Basic Materials",
+        "industry": "Gold"
+      },
+      {
+        "symbol": "SSRM",
+        "companyName": "SSR MINING INC.",
+        "marketCap": 4745556480.0,
+        "sector": "Basic Materials",
+        "industry": "Gold"
+      },
+      {
+        "symbol": "TGLS",
+        "companyName": "Tecnoglass Inc.",
+        "marketCap": 2318226944.0,
+        "sector": "Basic Materials",
+        "industry": "Building Materials"
+      },
+      {
+        "symbol": "FSM",
+        "companyName": "FORTUNA MINING CORP.",
+        "marketCap": 3111229184.0,
+        "sector": "Basic Materials",
+        "industry": "Gold"
+      },
+      {
+        "symbol": "NGD",
+        "companyName": "New Gold Inc. /FI",
+        "marketCap": 6653964288.0,
+        "sector": "Basic Materials",
+        "industry": "Gold"
+      },
+      {
+        "symbol": "CBT",
+        "companyName": "CABOT CORP",
+        "marketCap": 3328950784.0,
+        "sector": "Basic Materials",
+        "industry": "Specialty Chemicals"
+      },
+      {
+        "symbol": "MOS",
+        "companyName": "MOSAIC CO",
+        "marketCap": 7773318656.0,
+        "sector": "Basic Materials",
+        "industry": "Agricultural Inputs"
+      }
+    ],
+    "small": [
+      {
+        "symbol": "CMCL",
+        "companyName": "Caledonia Mining Corp Plc",
+        "marketCap": 594780416.0,
+        "sector": "Basic Materials",
+        "industry": "Gold"
+      },
+      {
+        "symbol": "UAN",
+        "companyName": "CVR PARTNERS, LP",
+        "marketCap": 1020604224.0,
+        "sector": "Basic Materials",
+        "industry": "Agricultural Inputs"
+      },
+      {
+        "symbol": "WLKP",
+        "companyName": "Westlake Chemical Partners LP",
+        "marketCap": 668261824.0,
+        "sector": "Basic Materials",
+        "industry": "Chemicals"
+      },
+      {
+        "symbol": "CPAC",
+        "companyName": "CEMENTOS PACASMAYO SAA",
+        "marketCap": 573663168.0,
+        "sector": "Basic Materials",
+        "industry": "Building Materials"
+      },
+      {
+        "symbol": "NEXA",
+        "companyName": "Nexa Resources S.A.",
+        "marketCap": 927070272.0,
+        "sector": "Basic Materials",
+        "industry": "Other Industrial Metals & Mining"
+      },
+      {
+        "symbol": "CLMT",
+        "companyName": "Calumet, Inc. /DE",
+        "marketCap": 1674358272.0,
+        "sector": "Basic Materials",
+        "industry": "Specialty Chemicals"
+      },
+      {
+        "symbol": "NGVT",
+        "companyName": "Ingevity Corp",
+        "marketCap": 1904633984.0,
+        "sector": "Basic Materials",
+        "industry": "Specialty Chemicals"
+      },
+      {
+        "symbol": "SLSR",
+        "companyName": "Solaris Resources Inc.",
+        "marketCap": 1318485760.0,
+        "sector": "Basic Materials",
+        "industry": "Other Precious Metals & Mining"
+      },
+      {
+        "symbol": "IOSP",
+        "companyName": "INNOSPEC INC.",
+        "marketCap": 1856527104.0,
+        "sector": "Basic Materials",
+        "industry": "Specialty Chemicals"
+      },
+      {
+        "symbol": "ODC",
+        "companyName": "Oil-Dri Corp of America",
+        "marketCap": 797020480.0,
+        "sector": "Basic Materials",
+        "industry": "Specialty Chemicals"
+      }
+    ]
+  },
+  "Communication Services": {
+    "large": [
+      {
+        "symbol": "BZ",
+        "companyName": "Kanzhun Ltd",
+        "marketCap": 10251505664.0,
+        "sector": "Communication Services",
+        "industry": "Internet Content & Information"
+      },
+      {
+        "symbol": "NTES",
+        "companyName": "NetEase, Inc.",
+        "marketCap": 88795414528.0,
+        "sector": "Communication Services",
+        "industry": "Electronic Gaming & Multimedia"
+      },
+      {
+        "symbol": "TME",
+        "companyName": "Tencent Music Entertainment Group",
+        "marketCap": 31073515520.0,
+        "sector": "Communication Services",
+        "industry": "Internet Content & Information"
+      },
+      {
+        "symbol": "TLK",
+        "companyName": "PERUSAHAAN PERSEROAN PERSERO PT TELEKOMUNIKASI INDONESIA TBK",
+        "marketCap": 21347905536.0,
+        "sector": "Communication Services",
+        "industry": "Telecom Services"
+      },
+      {
+        "symbol": "BCE",
+        "companyName": "BCE INC",
+        "marketCap": 21923682304.0,
+        "sector": "Communication Services",
+        "industry": "Telecom Services"
+      },
+      {
+        "symbol": "TIMB",
+        "companyName": "TIM S.A.",
+        "marketCap": 11308264448.0,
+        "sector": "Communication Services",
+        "industry": "Telecom Services"
+      },
+      {
+        "symbol": "CMCSA",
+        "companyName": "COMCAST CORP",
+        "marketCap": 98544992256.0,
+        "sector": "Communication Services",
+        "industry": "Telecom Services"
+      },
+      {
+        "symbol": "CHT",
+        "companyName": "CHUNGHWA TELECOM CO LTD",
+        "marketCap": 32558381056.0,
+        "sector": "Communication Services",
+        "industry": "Telecom Services"
+      },
+      {
+        "symbol": "VIV",
+        "companyName": "TELEFONICA BRASIL S.A.",
+        "marketCap": 21184817152.0,
+        "sector": "Communication Services",
+        "industry": "Telecom Services"
+      },
+      {
+        "symbol": "AMX",
+        "companyName": "AMERICA MOVIL SAB DE CV/",
+        "marketCap": 69591392256.0,
+        "sector": "Communication Services",
+        "industry": "Telecom Services"
+      }
+    ],
+    "mid": [
+      {
+        "symbol": "TEO",
+        "companyName": "TELECOM ARGENTINA SA",
+        "marketCap": 6152887808.0,
+        "sector": "Communication Services",
+        "industry": "Telecom Services"
+      },
+      {
+        "symbol": "SIRI",
+        "companyName": "SIRIUS XM HOLDINGS INC.",
+        "marketCap": 7159101952.0,
+        "sector": "Communication Services",
+        "industry": "Entertainment"
+      },
+      {
+        "symbol": "WB",
+        "companyName": "WEIBO Corp",
+        "marketCap": 2450880256.0,
+        "sector": "Communication Services",
+        "industry": "Internet Content & Information"
+      },
+      {
+        "symbol": "TKC",
+        "companyName": "TURKCELL ILETISIM HIZMETLERI A S",
+        "marketCap": 4871207936.0,
+        "sector": "Communication Services",
+        "industry": "Telecom Services"
+      },
+      {
+        "symbol": "TIGO",
+        "companyName": "MILLICOM INTERNATIONAL CELLULAR SA",
+        "marketCap": 8867200000.0,
+        "sector": "Communication Services",
+        "industry": "Telecom Services"
+      },
+      {
+        "symbol": "ATHM",
+        "companyName": "Autohome Inc.",
+        "marketCap": 2822834432.0,
+        "sector": "Communication Services",
+        "industry": "Internet Content & Information"
+      },
+      {
+        "symbol": "KT",
+        "companyName": "KT CORP",
+        "marketCap": 8853010432.0,
+        "sector": "Communication Services",
+        "industry": "Telecom Services"
+      },
+      {
+        "symbol": "SKM",
+        "companyName": "SK TELECOM CO LTD",
+        "marketCap": 7747950080.0,
+        "sector": "Communication Services",
+        "industry": "Telecom Services"
+      },
+      {
+        "symbol": "KYIV",
+        "companyName": "Kyivstar Group Ltd.",
+        "marketCap": 3271336192.0,
+        "sector": "Communication Services",
+        "industry": "Telecom Services"
+      },
+      {
+        "symbol": "PSO",
+        "companyName": "PEARSON PLC",
+        "marketCap": 8381302272.0,
+        "sector": "Communication Services",
+        "industry": "Publishing"
+      }
+    ],
+    "small": [
+      {
+        "symbol": "JFIN",
+        "companyName": "Jiayin Group Inc.",
+        "marketCap": 380524864.0,
+        "sector": "Communication Services",
+        "industry": "Internet Content & Information"
+      },
+      {
+        "symbol": "NEXN",
+        "companyName": "Nexxen International Ltd.",
+        "marketCap": 410307936.0,
+        "sector": "Communication Services",
+        "industry": "Advertising Agencies"
+      },
+      {
+        "symbol": "DDI",
+        "companyName": "DoubleDown Interactive Co., Ltd.",
+        "marketCap": 461342560.0,
+        "sector": "Communication Services",
+        "industry": "Electronic Gaming & Multimedia"
+      },
+      {
+        "symbol": "GRVY",
+        "companyName": "GRAVITY Co., Ltd.",
+        "marketCap": 399283776.0,
+        "sector": "Communication Services",
+        "industry": "Electronic Gaming & Multimedia"
+      },
+      {
+        "symbol": "CRTO",
+        "companyName": "Criteo S.A.",
+        "marketCap": 1044677248.0,
+        "sector": "Communication Services",
+        "industry": "Advertising Agencies"
+      },
+      {
+        "symbol": "GDEV",
+        "companyName": "GDEV Inc.",
+        "marketCap": 312018848.0,
+        "sector": "Communication Services",
+        "industry": "Electronic Gaming & Multimedia"
+      },
+      {
+        "symbol": "BMBL",
+        "companyName": "Bumble Inc.",
+        "marketCap": 564267840.0,
+        "sector": "Communication Services",
+        "industry": "Internet Content & Information"
+      },
+      {
+        "symbol": "YELP",
+        "companyName": "YELP INC",
+        "marketCap": 1823083520.0,
+        "sector": "Communication Services",
+        "industry": "Internet Content & Information"
+      },
+      {
+        "symbol": "EVER",
+        "companyName": "EverQuote, Inc.",
+        "marketCap": 963574272.0,
+        "sector": "Communication Services",
+        "industry": "Internet Content & Information"
+      },
+      {
+        "symbol": "MOMO",
+        "companyName": "Hello Group Inc.",
+        "marketCap": 1118259584.0,
+        "sector": "Communication Services",
+        "industry": "Internet Content & Information"
+      }
+    ]
+  },
+  "Consumer Cyclical": {
+    "large": [
+      {
+        "symbol": "TCOM",
+        "companyName": "Trip.com Group Ltd",
+        "marketCap": 45699952640.0,
+        "sector": "Consumer Cyclical",
+        "industry": "Travel Services"
+      },
+      {
+        "symbol": "PDD",
+        "companyName": "PDD Holdings Inc.",
+        "marketCap": 164792565760.0,
+        "sector": "Consumer Cyclical",
+        "industry": "Internet Retail"
+      },
+      {
+        "symbol": "DECK",
+        "companyName": "DECKERS OUTDOOR CORP",
+        "marketCap": 13058665472.0,
+        "sector": "Consumer Cyclical",
+        "industry": "Footwear & Accessories"
+      },
+      {
+        "symbol": "TOL",
+        "companyName": "Toll Brothers, Inc.",
+        "marketCap": 13728649216.0,
+        "sector": "Consumer Cyclical",
+        "industry": "Residential Construction"
+      },
+      {
+        "symbol": "XPEV",
+        "companyName": "XPENG INC.",
+        "marketCap": 21346469888.0,
+        "sector": "Consumer Cyclical",
+        "industry": "Auto Manufacturers"
+      },
+      {
+        "symbol": "PHM",
+        "companyName": "PULTEGROUP INC/MI/",
+        "marketCap": 25094279168.0,
+        "sector": "Consumer Cyclical",
+        "industry": "Residential Construction"
+      },
+      {
+        "symbol": "LULU",
+        "companyName": "lululemon athletica inc.",
+        "marketCap": 22074064896.0,
+        "sector": "Consumer Cyclical",
+        "industry": "Apparel Retail"
+      },
+      {
+        "symbol": "HTHT",
+        "companyName": "H World Group Ltd",
+        "marketCap": 14183499776.0,
+        "sector": "Consumer Cyclical",
+        "industry": "Lodging"
+      },
+      {
+        "symbol": "HAS",
+        "companyName": "HASBRO, INC.",
+        "marketCap": 11591837696.0,
+        "sector": "Consumer Cyclical",
+        "industry": "Leisure"
+      },
+      {
+        "symbol": "NVR",
+        "companyName": "NVR INC",
+        "marketCap": 20743424000.0,
+        "sector": "Consumer Cyclical",
+        "industry": "Residential Construction"
+      }
+    ],
+    "mid": [
+      {
+        "symbol": "ATAT",
+        "companyName": "Atour Lifestyle Holdings Ltd",
+        "marketCap": 5302194688.0,
+        "sector": "Consumer Cyclical",
+        "industry": "Lodging"
+      },
+      {
+        "symbol": "GTX",
+        "companyName": "Garrett Motion Inc.",
+        "marketCap": 3332042496.0,
+        "sector": "Consumer Cyclical",
+        "industry": "Auto Parts"
+      },
+      {
+        "symbol": "URBN",
+        "companyName": "URBAN OUTFITTERS INC",
+        "marketCap": 6645002240.0,
+        "sector": "Consumer Cyclical",
+        "industry": "Apparel Retail"
+      },
+      {
+        "symbol": "SGHC",
+        "companyName": "Super Group (SGHC) Ltd",
+        "marketCap": 5476055040.0,
+        "sector": "Consumer Cyclical",
+        "industry": "Gambling"
+      },
+      {
+        "symbol": "BBWI",
+        "companyName": "Bath & Body Works, Inc.",
+        "marketCap": 3564203008.0,
+        "sector": "Consumer Cyclical",
+        "industry": "Specialty Retail"
+      },
+      {
+        "symbol": "TMHC",
+        "companyName": "Taylor Morrison Home Corp",
+        "marketCap": 6126382592.0,
+        "sector": "Consumer Cyclical",
+        "industry": "Residential Construction"
+      },
+      {
+        "symbol": "MNSO",
+        "companyName": "MINISO Group Holding Ltd",
+        "marketCap": 6059333632.0,
+        "sector": "Consumer Cyclical",
+        "industry": "Specialty Retail"
+      },
+      {
+        "symbol": "VIPS",
+        "companyName": "Vipshop Holdings Ltd",
+        "marketCap": 9682520064.0,
+        "sector": "Consumer Cyclical",
+        "industry": "Internet Retail"
+      },
+      {
+        "symbol": "FTDR",
+        "companyName": "Frontdoor, Inc.",
+        "marketCap": 3928768256.0,
+        "sector": "Consumer Cyclical",
+        "industry": "Personal Services"
+      },
+      {
+        "symbol": "BYD",
+        "companyName": "BOYD GAMING CORP",
+        "marketCap": 6679344640.0,
+        "sector": "Consumer Cyclical",
+        "industry": "Resorts & Casinos"
+      }
+    ],
+    "small": [
+      {
+        "symbol": "QSG",
+        "companyName": "QuantaSing Group Ltd",
+        "marketCap": 326851552.0,
+        "sector": "Consumer Cyclical",
+        "industry": "Leisure"
+      },
+      {
+        "symbol": "CYD",
+        "companyName": "CHINA YUCHAI INTERNATIONAL LTD",
+        "marketCap": 1341655168.0,
+        "sector": "Consumer Cyclical",
+        "industry": "Auto Manufacturers"
+      },
+      {
+        "symbol": "RERE",
+        "companyName": "ATRenew Inc.",
+        "marketCap": 1008097024.0,
+        "sector": "Consumer Cyclical",
+        "industry": "Internet Retail"
+      },
+      {
+        "symbol": "STRT",
+        "companyName": "STRATTEC SECURITY CORP",
+        "marketCap": 313895328.0,
+        "sector": "Consumer Cyclical",
+        "industry": "Auto Parts"
+      },
+      {
+        "symbol": "ARCO",
+        "companyName": "Arcos Dorados Holdings Inc.",
+        "marketCap": 1598932608.0,
+        "sector": "Consumer Cyclical",
+        "industry": "Restaurants"
+      },
+      {
+        "symbol": "UXIN",
+        "companyName": "Uxin Ltd",
+        "marketCap": 571088768.0,
+        "sector": "Consumer Cyclical",
+        "industry": "Auto & Truck Dealerships"
+      },
+      {
+        "symbol": "NATH",
+        "companyName": "NATHANS FAMOUS, INC.",
+        "marketCap": 377298208.0,
+        "sector": "Consumer Cyclical",
+        "industry": "Restaurants"
+      },
+      {
+        "symbol": "BWMX",
+        "companyName": "BETTERWARE DE MEXICO, S.A.P.I. DE C.V",
+        "marketCap": 536985088.0,
+        "sector": "Consumer Cyclical",
+        "industry": "Specialty Retail"
+      },
+      {
+        "symbol": "TRIP",
+        "companyName": "TripAdvisor, Inc.",
+        "marketCap": 1738426880.0,
+        "sector": "Consumer Cyclical",
+        "industry": "Travel Services"
+      },
+      {
+        "symbol": "ZKH",
+        "companyName": "ZKH Group Ltd",
+        "marketCap": 530645696.0,
+        "sector": "Consumer Cyclical",
+        "industry": "Internet Retail"
+      }
+    ]
+  },
+  "Consumer Defensive": {
+    "large": [
+      {
+        "symbol": "ABEV",
+        "companyName": "AMBEV S.A.",
+        "marketCap": 40466485248.0,
+        "sector": "Consumer Defensive",
+        "industry": "Beverages-Brewers"
+      },
+      {
+        "symbol": "MO",
+        "companyName": "ALTRIA GROUP, INC.",
+        "marketCap": 99130359808.0,
+        "sector": "Consumer Defensive",
+        "industry": "Tobacco"
+      },
+      {
+        "symbol": "KOF",
+        "companyName": "COCA COLA FEMSA SAB DE CV",
+        "marketCap": 18426400768.0,
+        "sector": "Consumer Defensive",
+        "industry": "Beverages-Non-Alcoholic"
+      },
+      {
+        "symbol": "KHC",
+        "companyName": "Kraft Heinz Co",
+        "marketCap": 30195052544.0,
+        "sector": "Consumer Defensive",
+        "industry": "Packaged Foods"
+      },
+      {
+        "symbol": "BUD",
+        "companyName": "Anheuser-Busch InBev SA/NV",
+        "marketCap": 120532467712.0,
+        "sector": "Consumer Defensive",
+        "industry": "Beverages-Brewers"
+      },
+      {
+        "symbol": "BF-A",
+        "companyName": "BROWN FORMAN CORP",
+        "marketCap": 13478178816.0,
+        "sector": "Consumer Defensive",
+        "industry": "Beverages-Wineries & Distilleries"
+      },
+      {
+        "symbol": "MNST",
+        "companyName": "Monster Beverage Corp",
+        "marketCap": 73266814976.0,
+        "sector": "Consumer Defensive",
+        "industry": "Beverages-Non-Alcoholic"
+      },
+      {
+        "symbol": "BF-B",
+        "companyName": "BROWN FORMAN CORP",
+        "marketCap": 13714485248.0,
+        "sector": "Consumer Defensive",
+        "industry": "Beverages-Wineries & Distilleries"
+      },
+      {
+        "symbol": "COKE",
+        "companyName": "Coca-Cola Consolidated, Inc.",
+        "marketCap": 10854747136.0,
+        "sector": "Consumer Defensive",
+        "industry": "Beverages-Non-Alcoholic"
+      },
+      {
+        "symbol": "PM",
+        "companyName": "Philip Morris International Inc.",
+        "marketCap": 245139456000.0,
+        "sector": "Consumer Defensive",
+        "industry": "Tobacco"
+      }
+    ],
+    "mid": [
+      {
+        "symbol": "CALM",
+        "companyName": "CAL-MAINE FOODS INC",
+        "marketCap": 4040987392.0,
+        "sector": "Consumer Defensive",
+        "industry": "Farm Products"
+      },
+      {
+        "symbol": "LRN",
+        "companyName": "Stride, Inc.",
+        "marketCap": 2786415104.0,
+        "sector": "Consumer Defensive",
+        "industry": "Education & Training Services"
+      },
+      {
+        "symbol": "AKO-A",
+        "companyName": "ANDINA BOTTLING CO INC",
+        "marketCap": 3593550592.0,
+        "sector": "Consumer Defensive",
+        "industry": "Beverages-Non-Alcoholic"
+      },
+      {
+        "symbol": "AKO-B",
+        "companyName": "ANDINA BOTTLING CO INC",
+        "marketCap": 4289542400.0,
+        "sector": "Consumer Defensive",
+        "industry": "Beverages-Non-Alcoholic"
+      },
+      {
+        "symbol": "PPC",
+        "companyName": "PILGRIMS PRIDE CORP",
+        "marketCap": 9036305408.0,
+        "sector": "Consumer Defensive",
+        "industry": "Packaged Foods"
+      },
+      {
+        "symbol": "RLX",
+        "companyName": "RLX Technology Inc.",
+        "marketCap": 3191720448.0,
+        "sector": "Consumer Defensive",
+        "industry": "Tobacco"
+      },
+      {
+        "symbol": "SFD",
+        "companyName": "SMITHFIELD FOODS INC",
+        "marketCap": 8495165952.0,
+        "sector": "Consumer Defensive",
+        "industry": "Packaged Foods"
+      },
+      {
+        "symbol": "ATGE",
+        "companyName": "Adtalem Global Education Inc.",
+        "marketCap": 3362819072.0,
+        "sector": "Consumer Defensive",
+        "industry": "Education & Training Services"
+      },
+      {
+        "symbol": "SAM",
+        "companyName": "BOSTON BEER CO INC",
+        "marketCap": 2121103744.0,
+        "sector": "Consumer Defensive",
+        "industry": "Beverages-Brewers"
+      },
+      {
+        "symbol": "IPAR",
+        "companyName": "INTERPARFUMS INC",
+        "marketCap": 2605900288.0,
+        "sector": "Consumer Defensive",
+        "industry": "Household & Personal Products"
+      }
+    ],
+    "small": [
+      {
+        "symbol": "PXED",
+        "companyName": "Phoenix Education Partners, Inc.",
+        "marketCap": 1201861376.0,
+        "sector": "Consumer Defensive",
+        "industry": "Education & Training Services"
+      },
+      {
+        "symbol": "PRDO",
+        "companyName": "PERDOCEO EDUCATION Corp",
+        "marketCap": 1816096384.0,
+        "sector": "Consumer Defensive",
+        "industry": "Education & Training Services"
+      },
+      {
+        "symbol": "AFYA",
+        "companyName": "Afya Ltd",
+        "marketCap": 1374878848.0,
+        "sector": "Consumer Defensive",
+        "industry": "Education & Training Services"
+      },
+      {
+        "symbol": "VSTA",
+        "companyName": "Vasta Platform Ltd",
+        "marketCap": 398010112.0,
+        "sector": "Consumer Defensive",
+        "industry": "Education & Training Services"
+      },
+      {
+        "symbol": "HLF",
+        "companyName": "HERBALIFE LTD.",
+        "marketCap": 1315145472.0,
+        "sector": "Consumer Defensive",
+        "industry": "Packaged Foods"
+      },
+      {
+        "symbol": "SENEB",
+        "companyName": "Seneca Foods Corp",
+        "marketCap": 825587776.0,
+        "sector": "Consumer Defensive",
+        "industry": "Packaged Foods"
+      },
+      {
+        "symbol": "SENEA",
+        "companyName": "Seneca Foods Corp",
+        "marketCap": 833351552.0,
+        "sector": "Consumer Defensive",
+        "industry": "Packaged Foods"
+      },
+      {
+        "symbol": "WILC",
+        "companyName": "G WILLI FOOD INTERNATIONAL LTD",
+        "marketCap": 355463520.0,
+        "sector": "Consumer Defensive",
+        "industry": "Food Distribution"
+      },
+      {
+        "symbol": "JBSS",
+        "companyName": "SANFILIPPO JOHN B & SON INC",
+        "marketCap": 845722496.0,
+        "sector": "Consumer Defensive",
+        "industry": "Packaged Foods"
+      },
+      {
+        "symbol": "COUR",
+        "companyName": "Coursera, Inc.",
+        "marketCap": 1322880000.0,
+        "sector": "Consumer Defensive",
+        "industry": "Education & Training Services"
+      }
+    ]
+  },
+  "Energy": {
+    "large": [
+      {
+        "symbol": "WDS",
+        "companyName": "WOODSIDE ENERGY GROUP LTD",
+        "marketCap": 31101999104.0,
+        "sector": "Energy",
+        "industry": "Oil & Gas E&P"
+      },
+      {
+        "symbol": "EOG",
+        "companyName": "EOG RESOURCES INC",
+        "marketCap": 58885386240.0,
+        "sector": "Energy",
+        "industry": "Oil & Gas E&P"
+      },
+      {
+        "symbol": "CTRA",
+        "companyName": "Coterra Energy Inc.",
+        "marketCap": 20482676736.0,
+        "sector": "Energy",
+        "industry": "Oil & Gas E&P"
+      },
+      {
+        "symbol": "TS",
+        "companyName": "TENARIS SA",
+        "marketCap": 20806512640.0,
+        "sector": "Energy",
+        "industry": "Oil & Gas Equipment & Services"
+      },
+      {
+        "symbol": "SU",
+        "companyName": "SUNCOR ENERGY INC",
+        "marketCap": 54511177728.0,
+        "sector": "Energy",
+        "industry": "Oil & Gas Integrated"
+      },
+      {
+        "symbol": "PBR",
+        "companyName": "PETROBRAS - PETROLEO BRASILEIRO SA",
+        "marketCap": 80812351488.0,
+        "sector": "Energy",
+        "industry": "Oil & Gas Integrated"
+      },
+      {
+        "symbol": "SHEL",
+        "companyName": "Shell plc",
+        "marketCap": 210964381696.0,
+        "sector": "Energy",
+        "industry": "Oil & Gas Integrated"
+      },
+      {
+        "symbol": "EQNR",
+        "companyName": "EQUINOR ASA",
+        "marketCap": 57544077312.0,
+        "sector": "Energy",
+        "industry": "Oil & Gas Integrated"
+      },
+      {
+        "symbol": "TTE",
+        "companyName": "TotalEnergies SE",
+        "marketCap": 141623427072.0,
+        "sector": "Energy",
+        "industry": "Oil & Gas Integrated"
+      },
+      {
+        "symbol": "CVE",
+        "companyName": "CENOVUS ENERGY INC.",
+        "marketCap": 33691152384.0,
+        "sector": "Energy",
+        "industry": "Oil & Gas Integrated"
+      }
+    ],
+    "mid": [
+      {
+        "symbol": "TGS",
+        "companyName": "GAS TRANSPORTER OF THE SOUTH INC",
+        "marketCap": 5337774080.0,
+        "sector": "Energy",
+        "industry": "Oil & Gas Integrated"
+      },
+      {
+        "symbol": "UGP",
+        "companyName": "ULTRAPAR HOLDINGS INC",
+        "marketCap": 4406147072.0,
+        "sector": "Energy",
+        "industry": "Oil & Gas Refining & Marketing"
+      },
+      {
+        "symbol": "MGY",
+        "companyName": "Magnolia Oil & Gas Corp",
+        "marketCap": 4415448576.0,
+        "sector": "Energy",
+        "industry": "Oil & Gas E&P"
+      },
+      {
+        "symbol": "BSM",
+        "companyName": "Black Stone Minerals, L.P.",
+        "marketCap": 2972429568.0,
+        "sector": "Energy",
+        "industry": "Oil & Gas E&P"
+      },
+      {
+        "symbol": "CIVI",
+        "companyName": "CIVITAS RESOURCES, INC.",
+        "marketCap": 2505354496.0,
+        "sector": "Energy",
+        "industry": "Oil & Gas E&P"
+      },
+      {
+        "symbol": "GPOR",
+        "companyName": "GULFPORT ENERGY CORP",
+        "marketCap": 4297799168.0,
+        "sector": "Energy",
+        "industry": "Oil & Gas E&P"
+      },
+      {
+        "symbol": "APA",
+        "companyName": "APA Corp",
+        "marketCap": 8933927936.0,
+        "sector": "Energy",
+        "industry": "Oil & Gas E&P"
+      },
+      {
+        "symbol": "VIST",
+        "companyName": "Vista Energy, S.A.B. de C.V.",
+        "marketCap": 5125245440.0,
+        "sector": "Energy",
+        "industry": "Oil & Gas E&P"
+      },
+      {
+        "symbol": "ARLP",
+        "companyName": "ALLIANCE RESOURCE PARTNERS LP",
+        "marketCap": 3129790976.0,
+        "sector": "Energy",
+        "industry": "Thermal Coal"
+      },
+      {
+        "symbol": "MTDR",
+        "companyName": "Matador Resources Co",
+        "marketCap": 5278563840.0,
+        "sector": "Energy",
+        "industry": "Oil & Gas E&P"
+      }
+    ],
+    "small": [
+      {
+        "symbol": "SD",
+        "companyName": "SANDRIDGE ENERGY INC",
+        "marketCap": 519980768.0,
+        "sector": "Energy",
+        "industry": "Oil & Gas E&P"
+      },
+      {
+        "symbol": "NRP",
+        "companyName": "NATURAL RESOURCE PARTNERS LP",
+        "marketCap": 1381799424.0,
+        "sector": "Energy",
+        "industry": "Thermal Coal"
+      },
+      {
+        "symbol": "TNK",
+        "companyName": "TEEKAY TANKERS LTD.",
+        "marketCap": 1991862016.0,
+        "sector": "Energy",
+        "industry": "Oil & Gas Midstream"
+      },
+      {
+        "symbol": "REPX",
+        "companyName": "Riley Exploration Permian, Inc.",
+        "marketCap": 603737024.0,
+        "sector": "Energy",
+        "industry": "Oil & Gas E&P"
+      },
+      {
+        "symbol": "TK",
+        "companyName": "TEEKAY CORP LTD",
+        "marketCap": 827962304.0,
+        "sector": "Energy",
+        "industry": "Oil & Gas Midstream"
+      },
+      {
+        "symbol": "EFXT",
+        "companyName": "Enerflex Ltd.",
+        "marketCap": 1714735360.0,
+        "sector": "Energy",
+        "industry": "Oil & Gas Equipment & Services"
+      },
+      {
+        "symbol": "PNRG",
+        "companyName": "PRIMEENERGY RESOURCES CORP",
+        "marketCap": 302772896.0,
+        "sector": "Energy",
+        "industry": "Oil & Gas E&P"
+      },
+      {
+        "symbol": "VET",
+        "companyName": "VERMILION ENERGY INC.",
+        "marketCap": 1425983744.0,
+        "sector": "Energy",
+        "industry": "Oil & Gas E&P"
+      },
+      {
+        "symbol": "LPG",
+        "companyName": "DORIAN LPG LTD.",
+        "marketCap": 1061528448.0,
+        "sector": "Energy",
+        "industry": "Oil & Gas Midstream"
+      },
+      {
+        "symbol": "HNRG",
+        "companyName": "HALLADOR ENERGY CO",
+        "marketCap": 893591872.0,
+        "sector": "Energy",
+        "industry": "Thermal Coal"
+      }
+    ]
+  },
+  "Financial Services": {
+    "large": [
+      {
+        "symbol": "ACGLO",
+        "companyName": "ARCH CAPITAL GROUP LTD.",
+        "marketCap": 12291516416.0,
+        "sector": "Financial Services",
+        "industry": "Insurance-Diversified"
+      },
+      {
+        "symbol": "FUTU",
+        "companyName": "Futu Holdings Ltd",
+        "marketCap": 23621339136.0,
+        "sector": "Financial Services",
+        "industry": "Capital Markets"
+      },
+      {
+        "symbol": "RNR",
+        "companyName": "RENAISSANCERE HOLDINGS LTD",
+        "marketCap": 12292284416.0,
+        "sector": "Financial Services",
+        "industry": "Insurance-Reinsurance"
+      },
+      {
+        "symbol": "ACGL",
+        "companyName": "ARCH CAPITAL GROUP LTD.",
+        "marketCap": 35052847104.0,
+        "sector": "Financial Services",
+        "industry": "Insurance-Diversified"
+      },
+      {
+        "symbol": "ALL",
+        "companyName": "ALLSTATE CORP",
+        "marketCap": 56121364480.0,
+        "sector": "Financial Services",
+        "industry": "Insurance-Property & Casualty"
+      },
+      {
+        "symbol": "PFG",
+        "companyName": "PRINCIPAL FINANCIAL GROUP INC",
+        "marketCap": 18895218688.0,
+        "sector": "Financial Services",
+        "industry": "Asset Management"
+      },
+      {
+        "symbol": "PGR",
+        "companyName": "PROGRESSIVE CORP/OH/",
+        "marketCap": 134162448384.0,
+        "sector": "Financial Services",
+        "industry": "Insurance-Property & Casualty"
+      },
+      {
+        "symbol": "WF",
+        "companyName": "WOORI FINANCIAL GROUP INC.",
+        "marketCap": 13444843520.0,
+        "sector": "Financial Services",
+        "industry": "Banks-Regional"
+      },
+      {
+        "symbol": "CINF",
+        "companyName": "CINCINNATI FINANCIAL CORP",
+        "marketCap": 26207123456.0,
+        "sector": "Financial Services",
+        "industry": "Insurance-Property & Casualty"
+      },
+      {
+        "symbol": "BAP",
+        "companyName": "CREDICORP LTD",
+        "marketCap": 20413810688.0,
+        "sector": "Financial Services",
+        "industry": "Banks-Regional"
+      }
+    ],
+    "mid": [
+      {
+        "symbol": "ADX",
+        "companyName": "ADAMS DIVERSIFIED EQUITY FUND, INC.",
+        "marketCap": 2723236608.0,
+        "sector": "Financial Services",
+        "industry": "Asset Management"
+      },
+      {
+        "symbol": "CLM",
+        "companyName": "Cornerstone Strategic Investment Fund, Inc.",
+        "marketCap": 2353445120.0,
+        "sector": "Financial Services",
+        "industry": "Asset Management"
+      },
+      {
+        "symbol": "QFIN",
+        "companyName": "Qfin Holdings, Inc.",
+        "marketCap": 2697207552.0,
+        "sector": "Financial Services",
+        "industry": "Credit Services"
+      },
+      {
+        "symbol": "SLDE",
+        "companyName": "Slide Insurance Holdings, Inc.",
+        "marketCap": 2119651584.0,
+        "sector": "Financial Services",
+        "industry": "Insurance-Property & Casualty"
+      },
+      {
+        "symbol": "HG",
+        "companyName": "Hamilton Insurance Group, Ltd.",
+        "marketCap": 2712463872.0,
+        "sector": "Financial Services",
+        "industry": "Insurance-Reinsurance"
+      },
+      {
+        "symbol": "NAD",
+        "companyName": "Nuveen Quality Municipal Income Fund",
+        "marketCap": 2810192128.0,
+        "sector": "Financial Services",
+        "industry": "Asset Management"
+      },
+      {
+        "symbol": "NEA",
+        "companyName": "Nuveen AMT-Free Quality Municipal Income Fund",
+        "marketCap": 3462331904.0,
+        "sector": "Financial Services",
+        "industry": "Asset Management"
+      },
+      {
+        "symbol": "PFS",
+        "companyName": "PROVIDENT FINANCIAL SERVICES INC",
+        "marketCap": 2505371392.0,
+        "sector": "Financial Services",
+        "industry": "Banks-Regional"
+      },
+      {
+        "symbol": "HCI",
+        "companyName": "HCI Group, Inc.",
+        "marketCap": 2303646464.0,
+        "sector": "Financial Services",
+        "industry": "Insurance-Property & Casualty"
+      },
+      {
+        "symbol": "BFH",
+        "companyName": "BREAD FINANCIAL HOLDINGS, INC.",
+        "marketCap": 3088488192.0,
+        "sector": "Financial Services",
+        "industry": "Credit Services"
+      }
+    ],
+    "small": [
+      {
+        "symbol": "TWN",
+        "companyName": "TAIWAN FUND INC",
+        "marketCap": 336624800.0,
+        "sector": "Financial Services",
+        "industry": "Asset Management"
+      },
+      {
+        "symbol": "IFN",
+        "companyName": "INDIA FUND, INC.",
+        "marketCap": 582979008.0,
+        "sector": "Financial Services",
+        "industry": "Asset Management"
+      },
+      {
+        "symbol": "GAM",
+        "companyName": "GENERAL AMERICAN INVESTORS CO INC",
+        "marketCap": 1376860928.0,
+        "sector": "Financial Services",
+        "industry": "Asset Management"
+      },
+      {
+        "symbol": "HQH",
+        "companyName": "abrdn Healthcare Investors",
+        "marketCap": 1051928512.0,
+        "sector": "Financial Services",
+        "industry": "Asset Management"
+      },
+      {
+        "symbol": "USA",
+        "companyName": "LIBERTY ALL STAR EQUITY FUND",
+        "marketCap": 1806966144.0,
+        "sector": "Financial Services",
+        "industry": "Asset Management"
+      },
+      {
+        "symbol": "HQL",
+        "companyName": "abrdn Life Sciences Investors",
+        "marketCap": 510175584.0,
+        "sector": "Financial Services",
+        "industry": "Asset Management"
+      },
+      {
+        "symbol": "NFJ",
+        "companyName": "Virtus Dividend, Interest & Premium Strategy Fund",
+        "marketCap": 1237160704.0,
+        "sector": "Financial Services",
+        "industry": "Asset Management"
+      },
+      {
+        "symbol": "PEO",
+        "companyName": "ADAMS NATURAL RESOURCES FUND, INC.",
+        "marketCap": 581871360.0,
+        "sector": "Financial Services",
+        "industry": "Asset Management"
+      },
+      {
+        "symbol": "ASG",
+        "companyName": "LIBERTY ALL STAR GROWTH FUND INC.",
+        "marketCap": 332718176.0,
+        "sector": "Financial Services",
+        "industry": "Asset Management"
+      },
+      {
+        "symbol": "BCAT",
+        "companyName": "BlackRock Capital Allocation Term Trust",
+        "marketCap": 1505620608.0,
+        "sector": "Financial Services",
+        "industry": "Asset Management"
+      }
+    ]
+  },
+  "Healthcare": {
+    "large": [
+      {
+        "symbol": "INCY",
+        "companyName": "INCYTE CORP",
+        "marketCap": 20507869184.0,
+        "sector": "Healthcare",
+        "industry": "Biotechnology"
+      },
+      {
+        "symbol": "GMAB",
+        "companyName": "GENMAB A/S",
+        "marketCap": 20061075456.0,
+        "sector": "Healthcare",
+        "industry": "Biotechnology"
+      },
+      {
+        "symbol": "ASND",
+        "companyName": "Ascendis Pharma A/S",
+        "marketCap": 12972972032.0,
+        "sector": "Healthcare",
+        "industry": "Biotechnology"
+      },
+      {
+        "symbol": "SNY",
+        "companyName": "Sanofi",
+        "marketCap": 121753247744.0,
+        "sector": "Healthcare",
+        "industry": "Drug Manufacturers-General"
+      },
+      {
+        "symbol": "EXEL",
+        "companyName": "EXELIXIS, INC.",
+        "marketCap": 11890674688.0,
+        "sector": "Healthcare",
+        "industry": "Biotechnology"
+      },
+      {
+        "symbol": "GMED",
+        "companyName": "GLOBUS MEDICAL INC",
+        "marketCap": 12295612416.0,
+        "sector": "Healthcare",
+        "industry": "Medical Devices"
+      },
+      {
+        "symbol": "GSK",
+        "companyName": "GSK plc",
+        "marketCap": 96623919104.0,
+        "sector": "Healthcare",
+        "industry": "Drug Manufacturers-General"
+      },
+      {
+        "symbol": "ARGX",
+        "companyName": "ARGENX SE",
+        "marketCap": 56794689536.0,
+        "sector": "Healthcare",
+        "industry": "Biotechnology"
+      },
+      {
+        "symbol": "UHS",
+        "companyName": "UNIVERSAL HEALTH SERVICES INC",
+        "marketCap": 15504294912.0,
+        "sector": "Healthcare",
+        "industry": "Medical Care Facilities"
+      },
+      {
+        "symbol": "VRTX",
+        "companyName": "VERTEX PHARMACEUTICALS INC / MA",
+        "marketCap": 111173550080.0,
+        "sector": "Healthcare",
+        "industry": "Biotechnology"
+      }
+    ],
+    "mid": [
+      {
+        "symbol": "MENS",
+        "companyName": "Jyong Biotech Ltd.",
+        "marketCap": 2067952512.0,
+        "sector": "Healthcare",
+        "industry": "Biotechnology"
+      },
+      {
+        "symbol": "LFST",
+        "companyName": "LifeStance Health Group, Inc.",
+        "marketCap": 2528501760.0,
+        "sector": "Healthcare",
+        "industry": "Medical Care Facilities"
+      },
+      {
+        "symbol": "HRMY",
+        "companyName": "Harmony Biosciences Holdings, Inc.",
+        "marketCap": 2032575616.0,
+        "sector": "Healthcare",
+        "industry": "Biotechnology"
+      },
+      {
+        "symbol": "APLS",
+        "companyName": "Apellis Pharmaceuticals, Inc.",
+        "marketCap": 2694987008.0,
+        "sector": "Healthcare",
+        "industry": "Biotechnology"
+      },
+      {
+        "symbol": "LGND",
+        "companyName": "LIGAND PHARMACEUTICALS INC",
+        "marketCap": 3998931712.0,
+        "sector": "Healthcare",
+        "industry": "Biotechnology"
+      },
+      {
+        "symbol": "MD",
+        "companyName": "Pediatrix Medical Group, Inc.",
+        "marketCap": 2097858176.0,
+        "sector": "Healthcare",
+        "industry": "Medical Care Facilities"
+      },
+      {
+        "symbol": "ALHC",
+        "companyName": "Alignment Healthcare, Inc.",
+        "marketCap": 3843762176.0,
+        "sector": "Healthcare",
+        "industry": "Healthcare Plans"
+      },
+      {
+        "symbol": "PTCT",
+        "companyName": "PTC THERAPEUTICS, INC.",
+        "marketCap": 6903991296.0,
+        "sector": "Healthcare",
+        "industry": "Biotechnology"
+      },
+      {
+        "symbol": "BHC",
+        "companyName": "Bausch Health Companies Inc.",
+        "marketCap": 2355530752.0,
+        "sector": "Healthcare",
+        "industry": "Drug Manufacturers-Specialty & Generic"
+      },
+      {
+        "symbol": "ARQT",
+        "companyName": "Arcutis Biotherapeutics, Inc.",
+        "marketCap": 3754385664.0,
+        "sector": "Healthcare",
+        "industry": "Biotechnology"
+      }
+    ],
+    "small": [
+      {
+        "symbol": "CRMD",
+        "companyName": "CorMedix Inc.",
+        "marketCap": 772920576.0,
+        "sector": "Healthcare",
+        "industry": "Biotechnology"
+      },
+      {
+        "symbol": "NUTX",
+        "companyName": "Nutex Health, Inc.",
+        "marketCap": 814048256.0,
+        "sector": "Healthcare",
+        "industry": "Medical Care Facilities"
+      },
+      {
+        "symbol": "POM",
+        "companyName": "POMDOCTOR Ltd",
+        "marketCap": 511680512.0,
+        "sector": "Healthcare",
+        "industry": "Pharmaceutical Retailers"
+      },
+      {
+        "symbol": "IRWD",
+        "companyName": "IRONWOOD PHARMACEUTICALS INC",
+        "marketCap": 569375232.0,
+        "sector": "Healthcare",
+        "industry": "Drug Manufacturers-Specialty & Generic"
+      },
+      {
+        "symbol": "INNV",
+        "companyName": "InnovAge Holding Corp.",
+        "marketCap": 716397952.0,
+        "sector": "Healthcare",
+        "industry": "Medical Care Facilities"
+      },
+      {
+        "symbol": "BCRX",
+        "companyName": "BIOCRYST PHARMACEUTICALS INC",
+        "marketCap": 1511700352.0,
+        "sector": "Healthcare",
+        "industry": "Drug Manufacturers-Specialty & Generic"
+      },
+      {
+        "symbol": "XERS",
+        "companyName": "Xeris Biopharma Holdings, Inc.",
+        "marketCap": 1191336320.0,
+        "sector": "Healthcare",
+        "industry": "Biotechnology"
+      },
+      {
+        "symbol": "BGM",
+        "companyName": "BGM Group Ltd.",
+        "marketCap": 1544799872.0,
+        "sector": "Healthcare",
+        "industry": "Drug Manufacturers-Specialty & Generic"
+      },
+      {
+        "symbol": "RIGL",
+        "companyName": "RIGEL PHARMACEUTICALS INC",
+        "marketCap": 916461376.0,
+        "sector": "Healthcare",
+        "industry": "Biotechnology"
+      },
+      {
+        "symbol": "AZTA",
+        "companyName": "Azenta, Inc.",
+        "marketCap": 1630745344.0,
+        "sector": "Healthcare",
+        "industry": "Medical Instruments & Supplies"
+      }
+    ]
+  },
+  "Industrials": {
+    "large": [
+      {
+        "symbol": "MLI",
+        "companyName": "MUELLER INDUSTRIES INC",
+        "marketCap": 12197067776.0,
+        "sector": "Industrials",
+        "industry": "Metal Fabrication"
+      },
+      {
+        "symbol": "ZTO",
+        "companyName": "ZTO Express (Cayman) Inc.",
+        "marketCap": 16441119744.0,
+        "sector": "Industrials",
+        "industry": "Integrated Freight & Logistics"
+      },
+      {
+        "symbol": "RYAAY",
+        "companyName": "RYANAIR HOLDINGS PLC",
+        "marketCap": 35833991168.0,
+        "sector": "Industrials",
+        "industry": "Airlines"
+      },
+      {
+        "symbol": "LTM",
+        "companyName": "LATAM AIRLINES GROUP S.A.",
+        "marketCap": 13847219200.0,
+        "sector": "Industrials",
+        "industry": "Airlines"
+      },
+      {
+        "symbol": "MAS",
+        "companyName": "MASCO CORP /DE/",
+        "marketCap": 13581419520.0,
+        "sector": "Industrials",
+        "industry": "Building Products & Equipment"
+      },
+      {
+        "symbol": "PAC",
+        "companyName": "Pacific Airport Group",
+        "marketCap": 12020604928.0,
+        "sector": "Industrials",
+        "industry": "Airports & Air Services"
+      },
+      {
+        "symbol": "SNA",
+        "companyName": "Snap-on Inc",
+        "marketCap": 17738153984.0,
+        "sector": "Industrials",
+        "industry": "Tools & Accessories"
+      },
+      {
+        "symbol": "DAL",
+        "companyName": "DELTA AIR LINES, INC.",
+        "marketCap": 41854910464.0,
+        "sector": "Industrials",
+        "industry": "Airlines"
+      },
+      {
+        "symbol": "EME",
+        "companyName": "EMCOR Group, Inc.",
+        "marketCap": 27534139392.0,
+        "sector": "Industrials",
+        "industry": "Engineering & Construction"
+      },
+      {
+        "symbol": "STRL",
+        "companyName": "STERLING INFRASTRUCTURE, INC.",
+        "marketCap": 10576987136.0,
+        "sector": "Industrials",
+        "industry": "Engineering & Construction"
+      }
+    ],
+    "mid": [
+      {
+        "symbol": "ASR",
+        "companyName": "SOUTHEAST AIRPORT GROUP",
+        "marketCap": 9110216704.0,
+        "sector": "Industrials",
+        "industry": "Airports & Air Services"
+      },
+      {
+        "symbol": "SKYW",
+        "companyName": "SKYWEST INC",
+        "marketCap": 4099200512.0,
+        "sector": "Industrials",
+        "industry": "Airlines"
+      },
+      {
+        "symbol": "ZIM",
+        "companyName": "ZIM Integrated Shipping Services Ltd.",
+        "marketCap": 2458537728.0,
+        "sector": "Industrials",
+        "industry": "Marine Shipping"
+      },
+      {
+        "symbol": "KFY",
+        "companyName": "KORN FERRY",
+        "marketCap": 3445754880.0,
+        "sector": "Industrials",
+        "industry": "Staffing & Employment Services"
+      },
+      {
+        "symbol": "AZZ",
+        "companyName": "AZZ INC",
+        "marketCap": 3168617472.0,
+        "sector": "Industrials",
+        "industry": "Specialty Business Services"
+      },
+      {
+        "symbol": "MATX",
+        "companyName": "Matson, Inc.",
+        "marketCap": 3464367616.0,
+        "sector": "Industrials",
+        "industry": "Marine Shipping"
+      },
+      {
+        "symbol": "MWA",
+        "companyName": "Mueller Water Products, Inc.",
+        "marketCap": 3789903360.0,
+        "sector": "Industrials",
+        "industry": "Specialty Industrial Machinery"
+      },
+      {
+        "symbol": "GEO",
+        "companyName": "GEO GROUP INC",
+        "marketCap": 2230585600.0,
+        "sector": "Industrials",
+        "industry": "Security & Protection Services"
+      },
+      {
+        "symbol": "CPA",
+        "companyName": "Copa Holdings, S.A.",
+        "marketCap": 5010619392.0,
+        "sector": "Industrials",
+        "industry": "Airlines"
+      },
+      {
+        "symbol": "AOS",
+        "companyName": "SMITH A O CORP",
+        "marketCap": 9245750272.0,
+        "sector": "Industrials",
+        "industry": "Specialty Industrial Machinery"
+      }
+    ],
+    "small": [
+      {
+        "symbol": "CRESY",
+        "companyName": "CRESUD INC",
+        "marketCap": 802252736.0,
+        "sector": "Industrials",
+        "industry": "Conglomerates"
+      },
+      {
+        "symbol": "GSL",
+        "companyName": "Global Ship Lease, Inc.",
+        "marketCap": 1255907584.0,
+        "sector": "Industrials",
+        "industry": "Marine Shipping"
+      },
+      {
+        "symbol": "BLBD",
+        "companyName": "Blue Bird Corp",
+        "marketCap": 1656155264.0,
+        "sector": "Industrials",
+        "industry": "Farm & Heavy Construction Machinery"
+      },
+      {
+        "symbol": "IIIN",
+        "companyName": "INSTEEL INDUSTRIES INC",
+        "marketCap": 593755392.0,
+        "sector": "Industrials",
+        "industry": "Metal Fabrication"
+      },
+      {
+        "symbol": "ESEA",
+        "companyName": "EUROSEAS LTD.",
+        "marketCap": 422428640.0,
+        "sector": "Industrials",
+        "industry": "Marine Shipping"
+      },
+      {
+        "symbol": "DAC",
+        "companyName": "Danaos Corp",
+        "marketCap": 1790688896.0,
+        "sector": "Industrials",
+        "industry": "Marine Shipping"
+      },
+      {
+        "symbol": "CDLR",
+        "companyName": "Cadeler A/S",
+        "marketCap": 1534222848.0,
+        "sector": "Industrials",
+        "industry": "Engineering & Construction"
+      },
+      {
+        "symbol": "WNC",
+        "companyName": "WABASH NATIONAL Corp",
+        "marketCap": 345518592.0,
+        "sector": "Industrials",
+        "industry": "Farm & Heavy Construction Machinery"
+      },
+      {
+        "symbol": "EBF",
+        "companyName": "ENNIS, INC.",
+        "marketCap": 449152608.0,
+        "sector": "Industrials",
+        "industry": "Business Equipment & Supplies"
+      },
+      {
+        "symbol": "PRG",
+        "companyName": "PROG Holdings, Inc.",
+        "marketCap": 1138122112.0,
+        "sector": "Industrials",
+        "industry": "Rental & Leasing Services"
+      }
+    ]
+  },
+  "Real Estate": {
+    "large": [
+      {
+        "symbol": "VICI",
+        "companyName": "VICI PROPERTIES INC.",
+        "marketCap": 30803144704.0,
+        "sector": "Real Estate",
+        "industry": "REIT-Diversified"
+      },
+      {
+        "symbol": "OHI",
+        "companyName": "OMEGA HEALTHCARE INVESTORS INC",
+        "marketCap": 13947695104.0,
+        "sector": "Real Estate",
+        "industry": "REIT-Healthcare Facilities"
+      },
+      {
+        "symbol": "GLPI",
+        "companyName": "Gaming & Leisure Properties, Inc.",
+        "marketCap": 12319352832.0,
+        "sector": "Real Estate",
+        "industry": "REIT-Specialty"
+      },
+      {
+        "symbol": "AGNC",
+        "companyName": "AGNC Investment Corp.",
+        "marketCap": 11252875264.0,
+        "sector": "Real Estate",
+        "industry": "REIT-Mortgage"
+      },
+      {
+        "symbol": "NLY",
+        "companyName": "ANNALY CAPITAL MANAGEMENT INC",
+        "marketCap": 15573111808.0,
+        "sector": "Real Estate",
+        "industry": "REIT-Mortgage"
+      },
+      {
+        "symbol": "JLL",
+        "companyName": "JONES LANG LASALLE INC",
+        "marketCap": 15431593984.0,
+        "sector": "Real Estate",
+        "industry": "Real Estate Services"
+      },
+      {
+        "symbol": "SBAC",
+        "companyName": "SBA COMMUNICATIONS CORP",
+        "marketCap": 20701995008.0,
+        "sector": "Real Estate",
+        "industry": "REIT-Specialty"
+      },
+      {
+        "symbol": "PSA",
+        "companyName": "Public Storage",
+        "marketCap": 48171614208.0,
+        "sector": "Real Estate",
+        "industry": "REIT-Industrial"
+      },
+      {
+        "symbol": "CCI",
+        "companyName": "CROWN CASTLE INC.",
+        "marketCap": 39750524928.0,
+        "sector": "Real Estate",
+        "industry": "REIT-Specialty"
+      },
+      {
+        "symbol": "HST",
+        "companyName": "HOST HOTELS & RESORTS, INC.",
+        "marketCap": 12280642560.0,
+        "sector": "Real Estate",
+        "industry": "REIT-Hotel & Motel"
+      }
+    ],
+    "mid": [
+      {
+        "symbol": "AGNCM",
+        "companyName": "AGNC Investment Corp.",
+        "marketCap": 8688297984.0,
+        "sector": "Real Estate",
+        "industry": "REIT-Mortgage"
+      },
+      {
+        "symbol": "AGNCN",
+        "companyName": "AGNC Investment Corp.",
+        "marketCap": 8692745216.0,
+        "sector": "Real Estate",
+        "industry": "REIT-Mortgage"
+      },
+      {
+        "symbol": "IHS",
+        "companyName": "IHS Holding Ltd",
+        "marketCap": 2382200576.0,
+        "sector": "Real Estate",
+        "industry": "Real Estate Services"
+      },
+      {
+        "symbol": "RYN",
+        "companyName": "RAYONIER INC",
+        "marketCap": 3462940160.0,
+        "sector": "Real Estate",
+        "industry": "REIT-Specialty"
+      },
+      {
+        "symbol": "HHH",
+        "companyName": "Howard Hughes Holdings Inc.",
+        "marketCap": 5317984768.0,
+        "sector": "Real Estate",
+        "industry": "Real Estate-Development"
+      },
+      {
+        "symbol": "APLE",
+        "companyName": "Apple Hospitality REIT, Inc.",
+        "marketCap": 2817809152.0,
+        "sector": "Real Estate",
+        "industry": "REIT-Hotel & Motel"
+      },
+      {
+        "symbol": "EPRT",
+        "companyName": "ESSENTIAL PROPERTIES REALTY TRUST, INC.",
+        "marketCap": 6290791424.0,
+        "sector": "Real Estate",
+        "industry": "REIT-Retail"
+      },
+      {
+        "symbol": "FCPT",
+        "companyName": "Four Corners Property Trust, Inc.",
+        "marketCap": 2550211840.0,
+        "sector": "Real Estate",
+        "industry": "REIT-Retail"
+      },
+      {
+        "symbol": "CTRE",
+        "companyName": "CareTrust REIT, Inc.",
+        "marketCap": 8380460544.0,
+        "sector": "Real Estate",
+        "industry": "REIT-Healthcare Facilities"
+      },
+      {
+        "symbol": "TRNO",
+        "companyName": "Terreno Realty Corp",
+        "marketCap": 6486306816.0,
+        "sector": "Real Estate",
+        "industry": "REIT-Industrial"
+      }
+    ],
+    "small": [
+      {
+        "symbol": "IRS",
+        "companyName": "IRSA INVESTMENTS & REPRESENTATIONS INC",
+        "marketCap": 1306547584.0,
+        "sector": "Real Estate",
+        "industry": "Real Estate Services"
+      },
+      {
+        "symbol": "NREF",
+        "companyName": "NexPoint Real Estate Finance, Inc.",
+        "marketCap": 329567840.0,
+        "sector": "Real Estate",
+        "industry": "REIT-Mortgage"
+      },
+      {
+        "symbol": "STRW",
+        "companyName": "Strawberry Fields REIT, Inc.",
+        "marketCap": 696653568.0,
+        "sector": "Real Estate",
+        "industry": "REIT-Healthcare Facilities"
+      },
+      {
+        "symbol": "IIPR",
+        "companyName": "INNOVATIVE INDUSTRIAL PROPERTIES INC",
+        "marketCap": 1385736192.0,
+        "sector": "Real Estate",
+        "industry": "REIT-Industrial"
+      },
+      {
+        "symbol": "CBL",
+        "companyName": "CBL & ASSOCIATES PROPERTIES INC",
+        "marketCap": 1033786688.0,
+        "sector": "Real Estate",
+        "industry": "REIT-Retail"
+      },
+      {
+        "symbol": "SILA",
+        "companyName": "Sila Realty Trust, Inc.",
+        "marketCap": 1319461888.0,
+        "sector": "Real Estate",
+        "industry": "REIT-Healthcare Facilities"
+      },
+      {
+        "symbol": "IVR",
+        "companyName": "Invesco Mortgage Capital Inc.",
+        "marketCap": 581753664.0,
+        "sector": "Real Estate",
+        "industry": "REIT-Mortgage"
+      },
+      {
+        "symbol": "FOR",
+        "companyName": "Forestar Group Inc.",
+        "marketCap": 1297489792.0,
+        "sector": "Real Estate",
+        "industry": "Real Estate-Development"
+      },
+      {
+        "symbol": "RMAX",
+        "companyName": "RE/MAX Holdings, Inc.",
+        "marketCap": 432733824.0,
+        "sector": "Real Estate",
+        "industry": "Real Estate Services"
+      },
+      {
+        "symbol": "TWO",
+        "companyName": "TWO HARBORS INVESTMENT CORP.",
+        "marketCap": 1056140032.0,
+        "sector": "Real Estate",
+        "industry": "REIT-Mortgage"
+      }
+    ]
+  },
+  "Technology": {
+    "large": [
+      {
+        "symbol": "ERIC",
+        "companyName": "ERICSSON LM TELEPHONE CO",
+        "marketCap": 31999553536.0,
+        "sector": "Technology",
+        "industry": "Communication Equipment"
+      },
+      {
+        "symbol": "KSPI",
+        "companyName": "Joint Stock Co Kaspi.kz",
+        "marketCap": 15555332096.0,
+        "sector": "Technology",
+        "industry": "Software-Infrastructure"
+      },
+      {
+        "symbol": "ZM",
+        "companyName": "Zoom Communications, Inc.",
+        "marketCap": 25156737024.0,
+        "sector": "Technology",
+        "industry": "Software-Application"
+      },
+      {
+        "symbol": "UMC",
+        "companyName": "UNITED MICROELECTRONICS CORP",
+        "marketCap": 18732474368.0,
+        "sector": "Technology",
+        "industry": "Semiconductors"
+      },
+      {
+        "symbol": "YMM",
+        "companyName": "Full Truck Alliance Co. Ltd.",
+        "marketCap": 11870899200.0,
+        "sector": "Technology",
+        "industry": "Software-Application"
+      },
+      {
+        "symbol": "WIT",
+        "companyName": "WIPRO LTD",
+        "marketCap": 29463879680.0,
+        "sector": "Technology",
+        "industry": "Information Technology Services"
+      },
+      {
+        "symbol": "TSM",
+        "companyName": "TAIWAN SEMICONDUCTOR MANUFACTURING CO LTD",
+        "marketCap": 1511918010368.0,
+        "sector": "Technology",
+        "industry": "Semiconductors"
+      },
+      {
+        "symbol": "PTC",
+        "companyName": "PTC INC.",
+        "marketCap": 21015232512.0,
+        "sector": "Technology",
+        "industry": "Software-Application"
+      },
+      {
+        "symbol": "NXT",
+        "companyName": "Nextpower Inc.",
+        "marketCap": 13906233344.0,
+        "sector": "Technology",
+        "industry": "Solar"
+      },
+      {
+        "symbol": "DELL",
+        "companyName": "Dell Technologies Inc.",
+        "marketCap": 89660956672.0,
+        "sector": "Technology",
+        "industry": "Computer Hardware"
+      }
+    ],
+    "mid": [
+      {
+        "symbol": "DAVE",
+        "companyName": "Dave Inc./DE",
+        "marketCap": 2947400960.0,
+        "sector": "Technology",
+        "industry": "Software-Application"
+      },
+      {
+        "symbol": "COMM",
+        "companyName": "CommScope Holding Company, Inc.",
+        "marketCap": 4373371392.0,
+        "sector": "Technology",
+        "industry": "Communication Equipment"
+      },
+      {
+        "symbol": "CALX",
+        "companyName": "CALIX, INC",
+        "marketCap": 3663100672.0,
+        "sector": "Technology",
+        "industry": "Software-Infrastructure"
+      },
+      {
+        "symbol": "GRND",
+        "companyName": "Grindr Inc.",
+        "marketCap": 2463073280.0,
+        "sector": "Technology",
+        "industry": "Software-Application"
+      },
+      {
+        "symbol": "DBX",
+        "companyName": "DROPBOX, INC.",
+        "marketCap": 7814430720.0,
+        "sector": "Technology",
+        "industry": "Software-Infrastructure"
+      },
+      {
+        "symbol": "PGY",
+        "companyName": "Pagaya Technologies Ltd.",
+        "marketCap": 2005878656.0,
+        "sector": "Technology",
+        "industry": "Software-Infrastructure"
+      },
+      {
+        "symbol": "CRUS",
+        "companyName": "CIRRUS LOGIC, INC.",
+        "marketCap": 6177314304.0,
+        "sector": "Technology",
+        "industry": "Semiconductors"
+      },
+      {
+        "symbol": "NICE",
+        "companyName": "NICE Ltd.",
+        "marketCap": 6548942336.0,
+        "sector": "Technology",
+        "industry": "Software-Application"
+      },
+      {
+        "symbol": "APPN",
+        "companyName": "APPIAN CORP",
+        "marketCap": 2990891264.0,
+        "sector": "Technology",
+        "industry": "Software-Infrastructure"
+      },
+      {
+        "symbol": "DLO",
+        "companyName": "dLocal Ltd",
+        "marketCap": 3961138176.0,
+        "sector": "Technology",
+        "industry": "Software-Infrastructure"
+      }
+    ],
+    "small": [
+      {
+        "symbol": "YB",
+        "companyName": "Yuanbao Inc.",
+        "marketCap": 922940288.0,
+        "sector": "Technology",
+        "industry": "Software-Application"
+      },
+      {
+        "symbol": "YALA",
+        "companyName": "Yalla Group Ltd",
+        "marketCap": 1126378752.0,
+        "sector": "Technology",
+        "industry": "Software-Application"
+      },
+      {
+        "symbol": "NTCT",
+        "companyName": "NETSCOUT SYSTEMS INC",
+        "marketCap": 1940565888.0,
+        "sector": "Technology",
+        "industry": "Software-Infrastructure"
+      },
+      {
+        "symbol": "CRCT",
+        "companyName": "Cricut, Inc.",
+        "marketCap": 1007090688.0,
+        "sector": "Technology",
+        "industry": "Computer Hardware"
+      },
+      {
+        "symbol": "TASK",
+        "companyName": "TaskUs, Inc.",
+        "marketCap": 1037090176.0,
+        "sector": "Technology",
+        "industry": "Information Technology Services"
+      },
+      {
+        "symbol": "IBEX",
+        "companyName": "IBEX Ltd",
+        "marketCap": 473909920.0,
+        "sector": "Technology",
+        "industry": "Information Technology Services"
+      },
+      {
+        "symbol": "ITRN",
+        "companyName": "Ituran Location & Control Ltd.",
+        "marketCap": 796538944.0,
+        "sector": "Technology",
+        "industry": "Scientific & Technical Instruments"
+      },
+      {
+        "symbol": "KARO",
+        "companyName": "Karooooo Ltd.",
+        "marketCap": 1391125248.0,
+        "sector": "Technology",
+        "industry": "Software-Application"
+      },
+      {
+        "symbol": "ARRY",
+        "companyName": "Array Technologies, Inc.",
+        "marketCap": 1147135744.0,
+        "sector": "Technology",
+        "industry": "Solar"
+      },
+      {
+        "symbol": "XNET",
+        "companyName": "Xunlei Ltd",
+        "marketCap": 452299648.0,
+        "sector": "Technology",
+        "industry": "Software-Infrastructure"
+      }
+    ]
+  },
+  "Utilities": {
+    "large": [
+      {
+        "symbol": "KEP",
+        "companyName": "KOREA ELECTRIC POWER CORP",
+        "marketCap": 23380330496.0,
+        "sector": "Utilities",
+        "industry": "Utilities-Regulated Electric"
+      },
+      {
+        "symbol": "EIX",
+        "companyName": "EDISON INTERNATIONAL",
+        "marketCap": 22660110336.0,
+        "sector": "Utilities",
+        "industry": "Utilities-Regulated Electric"
+      },
+      {
+        "symbol": "SBS",
+        "companyName": "COMPANHIA DE SANEAMENTO BASICO DO ESTADO DE SAO PAULO-SABESP",
+        "marketCap": 18010746880.0,
+        "sector": "Utilities",
+        "industry": "Utilities-Regulated Water"
+      },
+      {
+        "symbol": "PEG",
+        "companyName": "PUBLIC SERVICE ENTERPRISE GROUP INC",
+        "marketCap": 41689337856.0,
+        "sector": "Utilities",
+        "industry": "Utilities-Regulated Electric"
+      },
+      {
+        "symbol": "ED",
+        "companyName": "CONSOLIDATED EDISON INC",
+        "marketCap": 36223500288.0,
+        "sector": "Utilities",
+        "industry": "Utilities-Regulated Electric"
+      },
+      {
+        "symbol": "BIP",
+        "companyName": "Brookfield Infrastructure Partners L.P.",
+        "marketCap": 16732802048.0,
+        "sector": "Utilities",
+        "industry": "Utilities-Diversified"
+      },
+      {
+        "symbol": "NGG",
+        "companyName": "NATIONAL GRID PLC",
+        "marketCap": 75524538368.0,
+        "sector": "Utilities",
+        "industry": "Utilities-Regulated Electric"
+      },
+      {
+        "symbol": "EVRG",
+        "companyName": "Evergy, Inc.",
+        "marketCap": 17876127744.0,
+        "sector": "Utilities",
+        "industry": "Utilities-Regulated Electric"
+      },
+      {
+        "symbol": "AEE",
+        "companyName": "AMEREN CORP",
+        "marketCap": 28767133696.0,
+        "sector": "Utilities",
+        "industry": "Utilities-Regulated Electric"
+      },
+      {
+        "symbol": "EXC",
+        "companyName": "EXELON CORP",
+        "marketCap": 47590600704.0,
+        "sector": "Utilities",
+        "industry": "Utilities-Regulated Electric"
+      }
+    ],
+    "mid": [
+      {
+        "symbol": "CEPU",
+        "companyName": "CENTRAL PUERTO S.A.",
+        "marketCap": 2714722816.0,
+        "sector": "Utilities",
+        "industry": "Utilities-Regulated Electric"
+      },
+      {
+        "symbol": "CIG",
+        "companyName": "ENERGY CO OF MINAS GERAIS",
+        "marketCap": 6942177792.0,
+        "sector": "Utilities",
+        "industry": "Utilities-Diversified"
+      },
+      {
+        "symbol": "BIPC",
+        "companyName": "Brookfield Infrastructure Corp",
+        "marketCap": 5435538432.0,
+        "sector": "Utilities",
+        "industry": "Utilities-Regulated Gas"
+      },
+      {
+        "symbol": "OGE",
+        "companyName": "OGE ENERGY CORP.",
+        "marketCap": 9436886016.0,
+        "sector": "Utilities",
+        "industry": "Utilities-Regulated Electric"
+      },
+      {
+        "symbol": "AWR",
+        "companyName": "AMERICAN STATES WATER CO",
+        "marketCap": 2855962880.0,
+        "sector": "Utilities",
+        "industry": "Utilities-Regulated Water"
+      },
+      {
+        "symbol": "UGI",
+        "companyName": "UGI CORP /PA/",
+        "marketCap": 8484579328.0,
+        "sector": "Utilities",
+        "industry": "Utilities-Regulated Gas"
+      },
+      {
+        "symbol": "PAM",
+        "companyName": "Pampa Energy Inc.",
+        "marketCap": 5199923200.0,
+        "sector": "Utilities",
+        "industry": "Utilities-Independent Power Producers"
+      },
+      {
+        "symbol": "HE",
+        "companyName": "HAWAIIAN ELECTRIC INDUSTRIES INC",
+        "marketCap": 2030016896.0,
+        "sector": "Utilities",
+        "industry": "Utilities-Regulated Electric"
+      },
+      {
+        "symbol": "SWX",
+        "companyName": "Southwest Gas Holdings, Inc.",
+        "marketCap": 5994873344.0,
+        "sector": "Utilities",
+        "industry": "Utilities-Regulated Gas"
+      },
+      {
+        "symbol": "KEN",
+        "companyName": "Kenon Holdings Ltd.",
+        "marketCap": 3112326400.0,
+        "sector": "Utilities",
+        "industry": "Utilities-Independent Power Producers"
+      }
+    ],
+    "small": [
+      {
+        "symbol": "GNE",
+        "companyName": "Genie Energy Ltd.",
+        "marketCap": 386744992.0,
+        "sector": "Utilities",
+        "industry": "Utilities-Regulated Electric"
+      },
+      {
+        "symbol": "NKLR",
+        "companyName": "Terra Innovatum Global N.V.",
+        "marketCap": 327602432.0,
+        "sector": "Utilities",
+        "industry": "Utilities-Regulated Electric"
+      },
+      {
+        "symbol": "EDN",
+        "companyName": "EDENOR",
+        "marketCap": 1715131008.0,
+        "sector": "Utilities",
+        "industry": "Utilities-Regulated Electric"
+      },
+      {
+        "symbol": "SPH",
+        "companyName": "SUBURBAN PROPANE PARTNERS LP",
+        "marketCap": 1293375360.0,
+        "sector": "Utilities",
+        "industry": "Utilities-Regulated Gas"
+      },
+      {
+        "symbol": "ARTNA",
+        "companyName": "ARTESIAN RESOURCES CORP",
+        "marketCap": 325638016.0,
+        "sector": "Utilities",
+        "industry": "Utilities-Regulated Water"
+      },
+      {
+        "symbol": "UTL",
+        "companyName": "UNITIL CORP",
+        "marketCap": 899859968.0,
+        "sector": "Utilities",
+        "industry": "Utilities-Diversified"
+      },
+      {
+        "symbol": "HTO",
+        "companyName": "H2O AMERICA",
+        "marketCap": 1662430208.0,
+        "sector": "Utilities",
+        "industry": "Utilities-Regulated Water"
+      },
+      {
+        "symbol": "CWCO",
+        "companyName": "Consolidated Water Co. Ltd.",
+        "marketCap": 545329600.0,
+        "sector": "Utilities",
+        "industry": "Utilities-Regulated Water"
+      },
+      {
+        "symbol": "MSEX",
+        "companyName": "MIDDLESEX WATER CO",
+        "marketCap": 940913600.0,
+        "sector": "Utilities",
+        "industry": "Utilities-Regulated Water"
+      },
+      {
+        "symbol": "XIFR",
+        "companyName": "XPLR Infrastructure, LP",
+        "marketCap": 895499264.0,
+        "sector": "Utilities",
+        "industry": "Utilities-Renewable"
+      }
+    ]
+  },
+  "__meta__": {
+    "schema_version": "v3",
+    "generated_at": "2025-12-03T23:12:26.650755Z",
+    "includes": [
+      "valuation_ratios",
+      "profitability_metrics",
+      "financial_health_metrics",
+      "cash_flow_metrics",
+      "growth_metrics",
+      "valuation_extras",
+      "dividend_yield",
+      "shares_outstanding"
+    ],
+    "top_per_bucket": 10,
+    "source_stocks_file": "data\\sector-stocks.json",
+    "source_metrics_file": "data\\sector-metrics.json"
+  }
+}
