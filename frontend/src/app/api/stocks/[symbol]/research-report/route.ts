@@ -416,7 +416,7 @@ export async function GET(request: Request, context: RouteContext) {
         const newsData = await newsRes.json();
         const articles = Array.isArray(newsData.articles) ? newsData.articles : [];
         const trimmed = articles
-          .map((item: any) => {
+          .map((item: { summary?: string; date?: string; headline?: string; source?: string; url?: string }) => {
             const summary =
               typeof item.summary === 'string' && item.summary.trim()
                 ? item.summary.trim().slice(0, 800)
@@ -429,7 +429,7 @@ export async function GET(request: Request, context: RouteContext) {
               url: typeof item.url === 'string' ? item.url : undefined,
             };
           })
-          .filter((item) => item.headline.length > 0);
+          .filter((item: { headline: string }) => item.headline.length > 0);
 
         if (trimmed.length > 0) {
           researchInput.news = {
