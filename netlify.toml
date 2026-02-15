@@ -1,7 +1,7 @@
 [build]
   base    = "frontend"
   command = "npm run build"
-  # Override UI (must differ from base). Plugin writes to repo root; from base this is parent dir
+  # Must differ from base (overrides UI). Plugin writes to repo root .netlify/output
   publish = "../.netlify/output"
 
 [build.environment]
