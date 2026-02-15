@@ -1,7 +1,8 @@
 [build]
   base    = "frontend"
   command = "npm run build"
-  # Do not set publish — @netlify/plugin-nextjs sets and creates it
+  # Override UI (must differ from base). Plugin writes to repo root; from base this is parent dir
+  publish = "../.netlify/output"
 
 [build.environment]
   NODE_VERSION = "20"
