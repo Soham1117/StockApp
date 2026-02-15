@@ -1,8 +1,6 @@
 [build]
-  base    = "frontend"
-  command = "npm run build"
-  # With base=frontend, publish is relative to base. Plugin creates .netlify/output inside frontend
-  publish = ".netlify/output"
+  command = "cd frontend && npm run build"
+  publish = "frontend/.next"
 
 [build.environment]
   NODE_VERSION = "20"
