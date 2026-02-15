@@ -1,9 +1,6 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/frontend/node_modules
-/.pnp
+# Dependencies
+node_modules/
+.pnp
 .pnp.*
 .yarn/*
 !.yarn/patches
@@ -11,87 +8,64 @@
 !.yarn/releases
 !.yarn/versions
 
-# testing
-/coverage
-
-# next.js (frontend)
-/.next/
-/frontend/.next/
-/out/
-/frontend/out/
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# env files (can opt-in for committing if needed)
-.env*
-
-# vercel
-.vercel
-
-# typescript
+# Build / output
+.next/
+out/
+build/
 *.tsbuildinfo
 next-env.d.ts
+
+# Env (secrets – do not commit)
+.env
+.env.*
+!.env.example
 
 # Python
 __pycache__/
 *.py[cod]
 *$py.class
-*.so
 .Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-share/python-wheels/
+*.so
+*.egg
 *.egg-info/
+.eggs/
+dist/
+eggs/
 .installed.cfg
 *.egg
 MANIFEST
-
-# Virtual Environments
-.env
-.venv
-env/
+.venv/
 venv/
 ENV/
 env.bak/
 venv.bak/
 
-# FastAPI / Python app specific
-fastapi_app/.venv/
-fastapi_app/__pycache__/
-fastapi_app/data/
-fastapi_app/local_data/
-fastapi_app/.cache/
-fastapi_app/quantdash.db
-fastapi_app/*.db
+# Backend (FastAPI) – generated and local
+backend/.venv/
+backend/__pycache__/
+backend/data/
+backend/local_data/
+backend/.cache/
+backend/*.db
+*.db
 
-# Cursor
+# IDE / tools
 .cursor/
+.vercel/
 
 # OS
+.DS_Store
 Thumbs.db
+*.pem
 
-# Data Cache
+# Logs / debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+/coverage
+
+# Large/cache data at repo root
 data/sec_filings/
 data/sec_insights/
 data/transcript_insights/
