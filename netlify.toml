@@ -1,7 +1,8 @@
 [build]
   base    = "frontend"
   command = "npm run build"
-  # Publish is set by @netlify/plugin-nextjs → .netlify/output
+  # Must differ from base; plugin writes to .netlify/output (repo root)
+  publish = ".netlify/output"
 
 [build.environment]
   NODE_VERSION = "20"
