@@ -1,5 +1,5 @@
 # FastAPI Windows Setup Script
-# Run this from the fastapi_app directory
+# Run this from the backend directory
 
 Write-Host "========================================" -ForegroundColor Cyan
 Write-Host "FastAPI Windows Setup with uv" -ForegroundColor Cyan

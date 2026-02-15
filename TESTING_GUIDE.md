@@ -12,7 +12,7 @@ All components are integrated and ready to test. The comprehensive analysis syst
 
 **Terminal 1 - FastAPI Backend:**
 ```powershell
-cd "d:\Personal Projects\StockApp\fastapi_app"
+cd "d:\Personal Projects\StockApp\backend"
 .\.venv\Scripts\Activate.ps1
 uvicorn main:app --reload
 ```

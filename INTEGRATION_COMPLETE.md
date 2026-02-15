@@ -82,27 +82,27 @@ The report now contains:
 ## 📁 Files Modified
 
 ### Backend (FastAPI)
-1. **[valuation_models.py](fastapi_app/valuation_models.py)** - NEW
+1. **[valuation_models.py](backend/valuation_models.py)** - NEW
    - `calculate_dcf_lite()` - 5-year FCF projection with terminal value
    - `calculate_relative_valuation_percentiles()` - Peer comparison scoring
    - `calculate_peg_ratio()` - P/E to growth
 
-2. **[factor_scoring.py](fastapi_app/factor_scoring.py)** - NEW
+2. **[factor_scoring.py](backend/factor_scoring.py)** - NEW
    - 6-factor scoring: valuation, quality, growth, momentum, sentiment, risk
    - Percentile-based ranking (0-100 vs peers)
    - Composite score with configurable weights
 
-3. **[sentiment_analysis.py](fastapi_app/sentiment_analysis.py)** - NEW
+3. **[sentiment_analysis.py](backend/sentiment_analysis.py)** - NEW
    - FinBERT batch sentiment analysis
    - Aggregate sentiment metrics
    - Analyst rating score calculator
 
-4. **[investment_signal.py](fastapi_app/investment_signal.py)** - NEW
+4. **[investment_signal.py](backend/investment_signal.py)** - NEW
    - Multi-factor decision logic
    - BUY_CANDIDATE / WATCHLIST / AVOID classification
    - Confidence levels + human-readable reasoning
 
-5. **[main.py:3165-3443](fastapi_app/main.py#L3165)** - ADDED ENDPOINT
+5. **[main.py:3165-3443](backend/main.py#L3165)** - ADDED ENDPOINT
    - `POST /analysis/comprehensive`
    - Orchestrates all calculations
    - Returns combined DCF + factors + signal

@@ -27,45 +27,63 @@ A Bloomberg-inspired stock screening and valuation dashboard built with Next.js 
 ## Prerequisites
 
 - Node.js 18+
+- Python 3.x (for backend)
 - npm or yarn
 - API Keys:
   - [Finnhub](https://finnhub.io/register) (free tier available)
 
+## Project structure
+
+- **`frontend/`** – Next.js app (UI, API routes that proxy to backend)
+- **`backend/`** – FastAPI app (DefeatBeta wrapper, auth, data)
+- **`scripts/`**, **`data/`**, **`defeatbeta_api/`** – shared at repo root
+
 ## Setup
 
-### 1. Install Dependencies
+### Frontend
 
 \`\`\`bash
+cd frontend
 npm install
+cp ../.env.example .env.local   # or create from frontend/.env.example if present
 \`\`\`
 
-### 2. Configure Environment Variables
-
-Copy the example environment file:
-
-\`\`\`bash
-cp .env.example .env.local
-\`\`\`
-
-Edit `.env.local` and add your API key:
+Edit `frontend/.env.local` with at least:
 
 \`\`\`env
 FINNHUB_API_KEY=your_finnhub_api_key_here
 FASTAPI_BASE_URL=http://localhost:8000
 SEC_USER_AGENT="Your Name (your-email@example.com)"
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
 \`\`\`
 
-**Important**:
-- Finnhub free tier provides 250 API calls/day
-- DefeatBeta data is accessed via the FastAPI wrapper
-
-### 3. Run Development Server
+Run the dev server:
 
 \`\`\`bash
+cd frontend
 npm run dev
 \`\`\`
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000).
+
+### Backend
+
+\`\`\`bash
+cd backend
+python -m venv .venv
+.venv\Scripts\activate   # Windows
+# or: source .venv/bin/activate   # macOS/Linux
+pip install -r requirements.txt
+\`\`\`
+
+Configure `backend/.env` (or copy from repo root `.env.example`). Then:
+
+\`\`\`bash
+cd backend
+uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+\`\`\`
+
+**Important**: Run both frontend and backend for full functionality. Finnhub free tier: 250 API calls/day. DefeatBeta data is served via the backend.
 
 ## Usage
 
@@ -106,10 +124,10 @@ QuantDash is optimized for free API tiers through aggressive caching:
 
 With this caching strategy, you can run multiple analyses per day without exceeding free tier limits (250 calls/day).
 
-## Project Structure
+## Frontend structure (inside `frontend/`)
 
 \`\`\`
-src/
+frontend/src/
 ├── app/
 │   ├── api/              # API routes
 │   │   ├── industry/     # Industry-specific endpoints
@@ -165,19 +183,24 @@ Score range: -100 (strong value) to +100 (strong growth)
 
 ## Building for Production
 
+**Frontend** (e.g. for Netlify):
+
 \`\`\`bash
+cd frontend
 npm run build
 npm start
 \`\`\`
+
+**Backend**: run on your host (e.g. EC2/Lightsail) with `uvicorn main:app --host 0.0.0.0 --port 8000`.
 
 ## Troubleshooting
 
 ### API Key Errors
 
 If you see "API key not configured" errors:
-1. Verify `.env.local` file exists in project root
-2. Confirm all three keys are set correctly
-3. Restart the dev server after adding keys
+1. Verify `frontend/.env.local` exists and has FINNHUB_API_KEY, FASTAPI_BASE_URL, SEC_USER_AGENT
+2. Ensure the backend is running at FASTAPI_BASE_URL
+3. Restart the frontend dev server after changing env
 
 ### No Data for Industry
 

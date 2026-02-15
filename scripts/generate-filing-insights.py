@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """
 Offline batch script to extract key sections from SEC filings, call Gemini to
-summarize them into structured JSON, and persist the result via
-fastapi_app.sec_insights.
+summarize them into structured JSON, and persist the result via backend.sec_insights.
 """
 
 import argparse
@@ -11,7 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.append(str(ROOT))
-from fastapi_app.insight_jobs import generate_filing_insights_for_symbol  # type: ignore
+from backend.insight_jobs import generate_filing_insights_for_symbol  # type: ignore
 
 
 

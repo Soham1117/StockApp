@@ -113,7 +113,7 @@ def _ensure_finbert_loaded():
 ### Run Pyrefly to Find Issues
 
 ```bash
-cd fastapi_app
+cd backend
 pip install pyrefly
 pyrefly check main.py
 ```

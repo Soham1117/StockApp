@@ -21,7 +21,7 @@ This guide shows how to run the FastAPI app on Windows using `uv` instead of Doc
 
 ### 1. Navigate to FastAPI directory
 ```powershell
-cd fastapi_app
+cd backend
 ```
 
 ### 2. Create virtual environment with `uv`
@@ -60,7 +60,7 @@ uv pip install "transformers==4.40.0" "huggingface_hub==0.24.0"
 Since you have a local `defeatbeta_api` directory in the project root, you can install it in editable mode:
 
 ```powershell
-# From the project root (not fastapi_app)
+# From the project root (not backend)
 cd ..
 uv pip install -e .
 ```
@@ -72,7 +72,7 @@ uv pip install --no-deps "defeatbeta-api==0.0.27"
 
 ### 7. Install remaining dependencies
 ```powershell
-cd fastapi_app
+cd backend
 uv pip install -r requirements.txt
 ```
 
@@ -117,7 +117,7 @@ The `--reload` flag enables auto-reload on code changes (useful for development)
 # From project root
 cd ..
 uv pip install -e .
-cd fastapi_app
+cd backend
 ```
 
 ### Issue 2: DuckDB extension installation fails
@@ -160,7 +160,7 @@ uvicorn main:app --host 0.0.0.0 --port 8001
 
 ## Quick Start Script
 
-Create `run.ps1` in `fastapi_app/`:
+Create `run.ps1` in `backend/`:
 
 ```powershell
 # run.ps1

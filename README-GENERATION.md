@@ -24,7 +24,7 @@ Two JSON files are generated in the `data/` directory:
 
 ```bash
 # Make sure FastAPI is running first
-cd fastapi_app
+cd backend
 uvicorn main:app --host 0.0.0.0 --port 8000
 
 # In another terminal, run the generation script

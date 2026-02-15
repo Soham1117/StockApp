@@ -35,11 +35,11 @@ _BACKTEST_CONTEXT: Dict[str, Any] = {}
 
 def load_fastapi_backtest():
     repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-    fastapi_path = os.path.join(repo_root, "fastapi_app", "main.py")
+    fastapi_path = os.path.join(repo_root, "backend", "main.py")
     if not os.path.exists(fastapi_path):
-        raise FileNotFoundError(f"fastapi_app/main.py not found at {fastapi_path}")
+        raise FileNotFoundError(f"backend/main.py not found at {fastapi_path}")
 
-    fastapi_dir = os.path.join(repo_root, "fastapi_app")
+    fastapi_dir = os.path.join(repo_root, "backend")
     if fastapi_dir not in sys.path:
         sys.path.insert(0, fastapi_dir)
 

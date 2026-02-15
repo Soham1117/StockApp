@@ -18,7 +18,7 @@ param(
 
 $ErrorActionPreference = "Stop"
 $ProjectRoot = "D:\Personal Projects\StockApp"
-$FastAPIDir = "$ProjectRoot\fastapi_app"
+$FastAPIDir = "$ProjectRoot\backend"
 $LocalDataPath = "$FastAPIDir\local_data"
 $VenvPackages = "$FastAPIDir\.venv\Lib\site-packages\defeatbeta_api"
 

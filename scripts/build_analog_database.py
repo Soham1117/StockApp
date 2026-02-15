@@ -13,7 +13,7 @@ Usage:
 """
 import sys
 from pathlib import Path
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "fastapi_app"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "backend"))
 
 import argparse
 import json
@@ -24,7 +24,7 @@ import numpy as np
 from scipy.spatial import KDTree
 
 
-DATA_DIR = Path(__file__).resolve().parents[1] / "fastapi_app" / "data"
+DATA_DIR = Path(__file__).resolve().parents[1] / "backend" / "data"
 LOOKBACK_PERIODS = [90, 180, 360, 720, 1800, 3600]
 
 

@@ -28,7 +28,7 @@ def main() -> None:
   parser.add_argument("--symbol", required=True, help="Ticker symbol (e.g., KD)")
   parser.add_argument(
     "--file",
-    default=str(Path("fastapi_app") / "data" / "sec" / "company_tickers.json"),
+    default=str(Path("backend") / "data" / "sec" / "company_tickers.json"),
     help="Path to company_tickers.json",
   )
   args = parser.parse_args()

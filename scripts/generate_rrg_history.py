@@ -23,7 +23,7 @@ from typing import Dict, List
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT_ROOT))
 
-from fastapi_app.rrg_history import (
+from backend.rrg_history import (
     calculate_rrg_for_date,
     generate_weekly_dates,
     generate_monthly_dates,

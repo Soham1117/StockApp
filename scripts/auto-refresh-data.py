@@ -25,7 +25,7 @@ from typing import Any, Dict, Optional
 
 # Set environment variables for local setup
 ROOT = Path(__file__).resolve().parent.parent
-FASTAPI_DIR = ROOT / "fastapi_app"
+FASTAPI_DIR = ROOT / "backend"
 LOCAL_DATA_DIR = FASTAPI_DIR / "local_data"
 
 # Configure environment variables for local file usage

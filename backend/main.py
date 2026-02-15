@@ -7,9 +7,9 @@ import os
 import sys
 
 # Load environment variables from .env files BEFORE any other imports
-# Try loading from both fastapi_app/.env and project root .env/.env.local
+# Try loading from both backend/.env and project root .env/.env.local
 REPO_ROOT = Path(__file__).resolve().parents[1]
-FASTAPI_ROOT = Path(__file__).resolve().parent
+BACKEND_ROOT = Path(__file__).resolve().parent
 
 # Load .env files (order matters - later files override earlier ones)
 try:
@@ -17,9 +17,9 @@ try:
     # Load from project root first (lower priority)
     load_dotenv(REPO_ROOT / ".env", override=False)
     load_dotenv(REPO_ROOT / ".env.local", override=False)
-    # Load from fastapi_app directory (higher priority)
-    load_dotenv(FASTAPI_ROOT / ".env", override=True)
-    load_dotenv(FASTAPI_ROOT / ".env.local", override=True)
+    # Load from backend directory (higher priority)
+    load_dotenv(BACKEND_ROOT / ".env", override=True)
+    load_dotenv(BACKEND_ROOT / ".env.local", override=True)
 except ImportError:
     # python-dotenv not installed, skip loading .env files
     pass
@@ -752,7 +752,7 @@ class TranscriptInsightGenerateRequest(BaseModel):
 
 
 STOCKS_JSON_PATH = Path(__file__).resolve().parents[1] / "stocks.json"
-# Project root is one level above fastapi_app (parents[1]); data lives under that.
+# Project root is one level above backend (parents[1]); data lives under that.
 DATA_DIR = Path(__file__).resolve().parents[1] / "data"
 SECTOR_METRICS_PATH = DATA_DIR / "sector-metrics.json"
 ETF_PRICES_PATH = DATA_DIR / "etf-prices.json"

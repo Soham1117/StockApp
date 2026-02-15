@@ -19,9 +19,9 @@ from pathlib import Path
 # Set up paths
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent
-FASTAPI_DIR = PROJECT_ROOT / "fastapi_app"
+FASTAPI_DIR = PROJECT_ROOT / "backend"
 
-# Add repo root and fastapi_app to path so local packages are preferred.
+# Add repo root and backend to path so local packages are preferred.
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 if str(FASTAPI_DIR) not in sys.path:
@@ -72,7 +72,7 @@ SECTOR_ETFS = [
 BENCHMARK = "SPY"
 LOOKBACK_PERIODS = [90, 180, 360, 720, 1800, 3600]
 
-OUTPUT_DIR = Path(__file__).resolve().parents[1] / "fastapi_app" / "data"
+OUTPUT_DIR = Path(__file__).resolve().parents[1] / "backend" / "data"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 

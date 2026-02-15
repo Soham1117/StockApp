@@ -1,7 +1,7 @@
 # Download DefeatBeta parquet files locally to avoid HuggingFace rate limits
 # Run weekly after data updates
 
-$localDataPath = "d:\Personal Projects\StockApp\fastapi_app\local_data"
+$localDataPath = "d:\Personal Projects\StockApp\backend\local_data"
 
 # Create directory if it doesn't exist
 if (-not (Test-Path $localDataPath)) {

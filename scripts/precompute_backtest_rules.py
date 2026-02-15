@@ -3,7 +3,7 @@
 Precompute all backtest rule combinations in one run and store results.
 
 This is a thin wrapper around scripts/search_backtest_rules.py that writes
-fixed outputs into fastapi_app/data so the UI can load them later.
+fixed outputs into backend/data so the UI can load them later.
 """
 
 import argparse
@@ -35,17 +35,17 @@ def _build_args(data_dir: str, extra_args: List[str]) -> List[str]:
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Precompute backtest rule combinations and store results in fastapi_app/data."
+        description="Precompute backtest rule combinations and store results in backend/data."
     )
     parser.add_argument(
         "--data-dir",
         default="",
-        help="Output directory for results (default: fastapi_app/data).",
+        help="Output directory for results (default: backend/data).",
     )
     args, extra_args = parser.parse_known_args()
 
     repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-    data_dir = args.data_dir or os.path.join(repo_root, "fastapi_app", "data")
+    data_dir = args.data_dir or os.path.join(repo_root, "backend", "data")
     os.makedirs(data_dir, exist_ok=True)
 
     search_module = _load_search_module()

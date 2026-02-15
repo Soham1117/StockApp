@@ -18,7 +18,7 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT_ROOT))
 
-from fastapi_app.rrg_arima import train_all_models
+from backend.rrg_arima import train_all_models
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]

@@ -11,7 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.append(str(ROOT))
 
-from fastapi_app.insight_jobs import generate_transcript_insights_for_symbol  # type: ignore
+from backend.insight_jobs import generate_transcript_insights_for_symbol  # type: ignore
 
 
 def main() -> None:

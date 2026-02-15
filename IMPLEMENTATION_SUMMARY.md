@@ -2,7 +2,7 @@
 
 ## ✅ What Was Implemented
 
-### 1. **DCF-Lite Valuation Model** ([valuation_models.py](fastapi_app/valuation_models.py))
+### 1. **DCF-Lite Valuation Model** ([valuation_models.py](backend/valuation_models.py))
 - Calculates intrinsic value using projected free cash flows
 - 5-year projection with decaying growth rate (conservative)
 - Terminal value calculation with Gordon Growth Model
@@ -13,7 +13,7 @@
   - Year-by-year projected FCF with present values
 - Inputs: Revenue TTM, FCF margin, growth rate, WACC (default 10%), terminal growth (default 3%)
 
-### 2. **6-Factor Scoring System** ([factor_scoring.py](fastapi_app/factor_scoring.py))
+### 2. **6-Factor Scoring System** ([factor_scoring.py](backend/factor_scoring.py))
 Percentile-based scoring (0-100) vs industry peers:
 
 - **Valuation Factor**: P/E, P/S, P/B, EV/EBIT, EV/EBITDA (lower = better)
@@ -26,14 +26,14 @@ Percentile-based scoring (0-100) vs industry peers:
 **Composite Score**: Weighted average of all 6 factors
 - Default weights: Valuation 20%, Quality 20%, Growth 20%, Momentum 10%, Sentiment 10%, Risk 20%
 
-### 3. **News Sentiment Analysis** ([sentiment_analysis.py](fastapi_app/sentiment_analysis.py))
+### 3. **News Sentiment Analysis** ([sentiment_analysis.py](backend/sentiment_analysis.py))
 - Uses FinBERT model (already loaded for transcripts)
 - Analyzes headlines and article summaries
 - Outputs: sentiment label (positive/negative/neutral), score (-1 to +1), confidence
 - Aggregation: avg sentiment, recent sentiment, positive/negative/neutral percentages
 - Analyst Rating Score: Weighted average from strong buy/buy/hold/sell/strong sell counts
 
-### 4. **Investment Signal Generator** ([investment_signal.py](fastapi_app/investment_signal.py))
+### 4. **Investment Signal Generator** ([investment_signal.py](backend/investment_signal.py))
 Generates **BUY_CANDIDATE**, **WATCHLIST**, or **AVOID** signals based on:
 
 **BUY_CANDIDATE Criteria**:
@@ -57,7 +57,7 @@ Outputs:
 - Positive/negative/neutral reasons (bullet points)
 - Human-readable recommendation text
 
-### 5. **FastAPI Comprehensive Analysis Endpoint** ([main.py:3165-3443](fastapi_app/main.py#L3165))
+### 5. **FastAPI Comprehensive Analysis Endpoint** ([main.py:3165-3443](backend/main.py#L3165))
 - **Route**: `POST /analysis/comprehensive`
 - **Input**: `{"symbols": ["AAPL", "MSFT"]}`
 - **Output**: For each symbol:
@@ -118,7 +118,7 @@ Added interfaces for:
 ### Backend (FastAPI)
 ```bash
 # Start FastAPI server
-cd fastapi_app
+cd backend
 uvicorn main:app --reload
 
 # Test comprehensive analysis

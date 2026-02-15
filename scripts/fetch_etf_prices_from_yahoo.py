@@ -1,6 +1,6 @@
 """
 Fetch daily ETF prices from Yahoo Finance and write them to data/etf-prices.json
-in the JSON shape expected by fastapi_app (see _load_etf_prices in main.py).
+in the JSON shape expected by backend (see _load_etf_prices in main.py).
 
 Run from project root:
   python scripts/fetch_etf_prices_from_yahoo.py

@@ -49,7 +49,7 @@ def get_env() -> DefeatBetaEnv:
 def get_windows_compatible_config():
     """
     DefeatBeta's DuckDB settings try to INSTALL/LOAD cache_httpfs which 404s on Windows.
-    This mirrors the workaround you already have in `fastapi_app/main.py`.
+    This mirrors the workaround you already have in `backend/main.py`.
     """
     from defeatbeta_api.client.duckdb_conf import Configuration
 

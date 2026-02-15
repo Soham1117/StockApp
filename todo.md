@@ -153,7 +153,7 @@ Comprehensive industry/sector analysis tool with customizable weightage controls
 ## Technical Considerations
 
 ### Backend
-- [ ] Modify `fastapi_app/factor_scoring.py::calculate_valuation_factor`
+- [ ] Modify `backend/factor_scoring.py::calculate_valuation_factor`
   - Add weights parameter
   - Return component scores individually
   - Calculate weighted average instead of mean

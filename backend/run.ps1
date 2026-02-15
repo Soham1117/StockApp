@@ -1,15 +1,15 @@
 # Quick start script for FastAPI on Windows
 # Make sure you've run setup-windows.ps1 first
 
-# Get the directory where this script is located (fastapi_app)
+# Get the directory where this script is located (backend)
 $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 $ProjectRoot = Split-Path -Parent $ScriptDir
 
-# Change to fastapi_app directory
+# Change to backend directory
 Push-Location $ScriptDir
 
 try {
-    # Activate virtual environment (check both fastapi_app/.venv and project root .venv)
+    # Activate virtual environment (check both backend/.venv and project root .venv)
     if (Test-Path ".\.venv\Scripts\Activate.ps1") {
         & ".\.venv\Scripts\Activate.ps1"
     } elseif (Test-Path "$ProjectRoot\.venv\Scripts\Activate.ps1") {

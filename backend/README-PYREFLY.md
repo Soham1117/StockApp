@@ -7,7 +7,7 @@ Pyrefly is a fast type checker from Meta that helps catch type errors, improve c
 ### Local Development
 
 ```bash
-cd fastapi_app
+cd backend
 pip install -r requirements-dev.txt
 ```
 
@@ -31,7 +31,7 @@ Configuration files are already created:
 ### Check Types
 
 ```bash
-# From fastapi_app directory
+# From backend directory
 pyrefly check
 
 # Check specific file
@@ -117,7 +117,7 @@ Add to your CI pipeline:
 # .github/workflows/ci.yml (example)
 - name: Type check with Pyrefly
   run: |
-    cd fastapi_app
+    cd backend
     pip install -r requirements-dev.txt
     pyrefly check
 ```

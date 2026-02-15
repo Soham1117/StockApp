@@ -6,7 +6,6 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { env } from '@/lib/env';
 import { useSavedScreens } from '@/hooks/use-saved-screens';
 import { ScreenCard } from '@/components/saved-screens/screen-card';
 import { PortfolioOverviewCard } from '@/components/portfolio/portfolio-overview-card';
@@ -31,7 +30,6 @@ export default function ProfilePage() {
   const [lastName, setLastName] = useState('');
   const [error, setError] = useState('');
   const [submitting, setSubmitting] = useState(false);
-  const apiBaseUrl = env.fastapiBaseUrl || 'http://localhost:8000';
   const emailRe = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
   const { screens, remove, update } = useSavedScreens();
 
@@ -64,7 +62,7 @@ export default function ProfilePage() {
   };
 
   useEffect(() => {
-    fetch(`${apiBaseUrl}/auth/me`, { credentials: 'include' })
+    fetch('/api/auth/me', { credentials: 'include' })
       .then(async (res) => {
         if (!res.ok) return null;
         const data = await res.json();
@@ -99,7 +97,7 @@ export default function ProfilePage() {
     }
     setSubmitting(true);
     try {
-      const res = await fetch(`${apiBaseUrl}/auth/${mode}`, {
+      const res = await fetch(`/api/auth/${mode}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
@@ -126,7 +124,7 @@ export default function ProfilePage() {
   };
 
   const handleLogout = async () => {
-    await fetch(`${apiBaseUrl}/auth/logout`, { method: 'POST', credentials: 'include' });
+    await fetch('/api/auth/logout', { method: 'POST', credentials: 'include' });
     setUser(null);
   };
 
@@ -143,7 +141,7 @@ export default function ProfilePage() {
     }
     setProfileSaving(true);
     try {
-      const res = await fetch(`${apiBaseUrl}/auth/profile`, {
+      const res = await fetch('/api/auth/profile', {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
@@ -180,7 +178,7 @@ export default function ProfilePage() {
     }
     setPasswordSaving(true);
     try {
-      const res = await fetch(`${apiBaseUrl}/auth/password`, {
+      const res = await fetch('/api/auth/password', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',

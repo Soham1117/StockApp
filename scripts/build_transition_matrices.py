@@ -13,7 +13,7 @@ Usage:
 """
 import sys
 from pathlib import Path
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "fastapi_app"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "backend"))
 
 import argparse
 import json
@@ -22,7 +22,7 @@ from collections import defaultdict
 from typing import Dict, List
 
 
-DATA_DIR = Path(__file__).resolve().parents[1] / "fastapi_app" / "data"
+DATA_DIR = Path(__file__).resolve().parents[1] / "backend" / "data"
 LOOKBACK_PERIODS = [90, 180, 360, 720, 1800, 3600]
 
 QUADRANTS = ["LEADING", "WEAKENING", "LAGGING", "IMPROVING"]
