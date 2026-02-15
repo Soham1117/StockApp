@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  turbopack: {},
+  turbopack: {
+    root: '.',
+  },
   productionBrowserSourceMaps: false,
   allowedDevOrigins: [
     'http://localhost:3000',

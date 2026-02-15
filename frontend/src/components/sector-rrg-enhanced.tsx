@@ -27,6 +27,7 @@ import {
 } from '@/components/ui/table';
 import { Play, Pause, SkipBack, SkipForward } from 'lucide-react';
 import type { RRGDataPoint } from '@/types';
+import type { RRGHistoryPoint } from '@/services/rrg-service';
 import { useRRGHistory, useRRGPredictions } from '@/hooks/use-stocks';
 import { format, subYears, parseISO } from 'date-fns';
 import { Input } from '@/components/ui/input';
@@ -342,7 +343,7 @@ export function SectorRRGEnhanced() {
       .map((symbol) => {
         const latestPoint = historyData.data
           .filter((point) => point.symbol === symbol && point.date <= currentDisplayDate)
-          .reduce<RRGDataPoint | null>((latest, point) => {
+          .reduce<RRGHistoryPoint | null>((latest, point) => {
             if (!latest || point.date > latest.date) {
               return point;
             }
