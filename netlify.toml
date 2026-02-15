@@ -1,0 +1,11 @@
+[build]
+  base    = "frontend"
+  command = "npm run build"
+  # Publish is set by @netlify/plugin-nextjs → .netlify/output
+
+[build.environment]
+  NODE_VERSION = "20"
+  NPM_FLAGS    = "--include=dev"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
