@@ -35,7 +35,16 @@
       "Bash(dir:*)",
       "Bash(npm update:*)",
       "Bash(npm audit:*)",
-      "mcp__prompt-generator__generate_custom_prompt"
+      "mcp__prompt-generator__generate_custom_prompt",
+      "Bash(source:*)",
+      "Bash(pip show:*)",
+      "Bash(/d/Personal\\\\ Projects/StockApp/backend/.venv/Scripts/python.exe -m pip:*)",
+      "Bash(/d/Personal\\\\ Projects/StockApp/backend/.venv/Scripts/python.exe:*)",
+      "Bash(ssh:*)",
+      "Bash(echo:*)",
+      "Bash(done)",
+      "Bash(python3:*)",
+      "Bash(nslookup:*)"
     ],
     "deny": [],
     "ask": []

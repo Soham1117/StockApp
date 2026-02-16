@@ -5,15 +5,11 @@ aiosqlite>=0.19.0  # Async SQLite driver
 
 duckdb
 pandas
-numpy>=1.21.6,<2.0  # NumPy 2.x incompatible with SciPy used by nltk
+numpy>=1.21.6,<2.0
 pydantic>=2.7,<3
-nltk
 requests
 beautifulsoup4
 lxml
-
-transformers==4.40.0
-huggingface-hub>=0.19.3,<1.0  # Required by transformers 4.40.0 (defeatbeta-api pulls incompatible 1.x)
 
 # defeatbeta-api extra Python deps that aren't in its own metadata
 # NOTE: defeatbeta-api==0.0.27 must be installed with --no-deps to avoid conflicts

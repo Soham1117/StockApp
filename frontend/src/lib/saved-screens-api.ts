@@ -1,8 +1,6 @@
 /**
  * Saved screens API client - replaces localStorage with backend API
  */
-import { env } from './env';
-
 export interface CustomRule {
   id: string;
   metric: string;
@@ -27,15 +25,11 @@ export interface SavedScreen {
   lastUsed: string; // ISO date string
 }
 
-const API_BASE_URL = env.fastapiBaseUrl || 'http://localhost:8000';
-
 /**
  * Get user ID (for now, using a simple approach - can be enhanced with auth later)
  */
 function getUserId(): string {
   if (typeof window === 'undefined') return 'default';
-  // For now, use a simple localStorage key for user ID
-  // In production, this would come from auth token/session
   let userId = localStorage.getItem('quantdash-user-id');
   if (!userId) {
     userId = `user-${Date.now()}`;
@@ -49,11 +43,11 @@ async function apiRequest<T>(
   options: RequestInit = {}
 ): Promise<T> {
   const userId = getUserId();
-  const url = `${API_BASE_URL}${endpoint}`;
-  
+  // Route through Next.js API proxy (server-side handles FASTAPI_BASE_URL)
+  const url = `/api${endpoint}`;
+
   const response = await fetch(url, {
     ...options,
-    credentials: 'include',
     headers: {
       'Content-Type': 'application/json',
       'X-User-ID': userId,

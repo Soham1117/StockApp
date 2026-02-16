@@ -45,8 +45,6 @@ import hashlib
 import base64
 import pandas as pd
 import numpy as np
-import nltk
-
 # Avoid DefeatBeta import-time side effects (welcome banner, network call, NLTK download).
 os.environ.setdefault("DEFEATBETA_NO_WELCOME", "1")
 os.environ.setdefault("DEFEATBETA_NO_NLTK_DOWNLOAD", "1")
@@ -63,7 +61,6 @@ from fastapi import FastAPI, HTTPException, Query, Header, Depends, Cookie, Resp
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
-from defeatbeta_api.utils.util import validate_nltk_directory
 from sec_download import download_filing
 from database import init_db, get_db, PortfolioHolding, SavedScreen, IndustryFilterDefault, User, UserSession
 from sqlalchemy.orm import Session
@@ -166,8 +163,6 @@ app.add_middleware(
 # Initialize database on startup
 init_db()
 
-# Initialize NLTK (still used for transcripts processing, sentence splitting, etc.)
-nltk.data.path.append(validate_nltk_directory("nltk"))
 
 class AuthPayload(BaseModel):
     email: str = Field(..., min_length=3)
@@ -385,25 +380,6 @@ if platform.system() == "Windows":
     # Monkey-patch the module-level function
     duckdb_client_module.get_duckdb_client = get_duckdb_client_windows_compatible
 
-# FinBERT sentiment model - lazy loaded on first use
-_FINBERT_MODEL_NAME = "ProsusAI/finbert"
-try:
-    from transformers import AutoTokenizer, AutoModelForSequenceClassification  # type: ignore
-except Exception:
-    AutoTokenizer = None  # type: ignore
-    AutoModelForSequenceClassification = None  # type: ignore
-
-try:
-    import torch  # type: ignore
-except Exception:
-    torch = None  # type: ignore
-
-_FINBERT_TOKENIZER: Optional[Any] = None
-_FINBERT_MODEL: Optional[Any] = None
-_FINBERT_ID2LABEL: Optional[Dict[int, str]] = None
-_FINBERT_LOCK = threading.Lock()
-_FINBERT_BATCH_SIZE = int(os.getenv("FINBERT_BATCH_SIZE", "16"))
-
 # Helpers to ensure responses stay JSON-serializable and avoid encoder errors
 def _normalize_news_items(records: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     cleaned: List[Dict[str, Any]] = []
@@ -441,169 +417,6 @@ def _normalize_news_items(records: List[Dict[str, Any]]) -> List[Dict[str, Any]]
     return cleaned
 
 
-def _normalize_sentiment_points(points_raw: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-    cleaned: List[Dict[str, Any]] = []
-    for p in points_raw or []:
-        if not isinstance(p, dict):
-            continue
-        date_val = p.get("date")
-        # Preserve date as string if possible
-        if isinstance(date_val, (datetime, pd.Timestamp)):
-            date_str = date_val.strftime("%Y-%m-%d")
-        else:
-            date_str = str(date_val) if date_val is not None else None
-
-        score_val = p.get("score")
-        try:
-            score = float(score_val) if score_val is not None and math.isfinite(float(score_val)) else None
-        except Exception:
-            score = None
-
-        count_val = p.get("count")
-        try:
-            count = int(count_val) if count_val is not None else 0
-        except Exception:
-            count = 0
-
-        cleaned.append({"date": date_str, "score": score, "count": count})
-    return cleaned
-
-
-def _normalize_sentiment_summary(summary_raw: Dict[str, Any]) -> Dict[str, Any]:
-    if not isinstance(summary_raw, dict):
-        return {}
-    result: Dict[str, Any] = {}
-    for key in ["avg", "last7"]:
-        val = summary_raw.get(key)
-        try:
-            fval = float(val)
-            if math.isfinite(fval):
-                result[key] = fval
-        except Exception:
-            continue
-    for key in ["days", "total_articles"]:
-        val = summary_raw.get(key)
-        try:
-            ival = int(val)
-            result[key] = ival
-        except Exception:
-            continue
-    return result
-
-
-def _ensure_finbert_loaded():
-    """Lazy-load FinBERT model on first use. Thread-safe."""
-    global _FINBERT_TOKENIZER, _FINBERT_MODEL, _FINBERT_ID2LABEL
-
-    if AutoTokenizer is None or AutoModelForSequenceClassification is None:
-        raise RuntimeError(
-            "FinBERT dependencies are not available (transformers/huggingface-hub mismatch). "
-            "Backtesting and most endpoints can still run, but sentiment endpoints require compatible versions."
-        )
-    if torch is None:
-        raise RuntimeError(
-            "FinBERT dependencies are not available (torch not installed). "
-            "Backtesting and most endpoints can still run, but sentiment endpoints require torch."
-        )
-    
-    if _FINBERT_MODEL is not None:
-        return  # Already loaded
-    
-    with _FINBERT_LOCK:
-        # Double-check after acquiring lock
-        if _FINBERT_MODEL is not None:
-            return
-        
-        try:
-            import os
-            # Use explicit cache directory from env (HF_HOME is preferred, TRANSFORMERS_CACHE is deprecated)
-            cache_dir = os.getenv("HF_HOME") or os.getenv("TRANSFORMERS_CACHE") or "/app/.cache/huggingface"
-            print(f"[FinBERT] Loading model (first use) from cache: {cache_dir}...", flush=True)
-            
-            # Use local_files_only=False to allow download, and trust_remote_code if needed
-            _FINBERT_TOKENIZER = AutoTokenizer.from_pretrained(
-                _FINBERT_MODEL_NAME,
-                cache_dir=cache_dir,
-                local_files_only=False,
-                force_download=False
-            )
-            _FINBERT_MODEL = AutoModelForSequenceClassification.from_pretrained(
-                _FINBERT_MODEL_NAME,
-                cache_dir=cache_dir,
-                local_files_only=False,
-                force_download=False
-            )
-            _FINBERT_MODEL.eval()
-            _FINBERT_ID2LABEL = _FINBERT_MODEL.config.id2label
-            
-            # Move model to GPU if available
-            if torch.cuda.is_available():
-                _FINBERT_MODEL = _FINBERT_MODEL.cuda()
-                print(f"[FinBERT] Model loaded on GPU: {torch.cuda.get_device_name(0)}", flush=True)
-            else:
-                print("[FinBERT] Model loaded on CPU", flush=True)
-        except Exception as exc:
-            print(f"[FinBERT] Failed to load model: {exc}", flush=True)
-            print("[FinBERT] Attempting to clear corrupted cache and retry...", flush=True)
-            try:
-                import shutil
-                cache_dir = os.getenv("HF_HOME") or os.getenv("TRANSFORMERS_CACHE") or "/app/.cache/huggingface"
-                
-                # Clear contents of cache directory (can't delete the directory itself if it's a volume mount)
-                if os.path.exists(cache_dir):
-                    print(f"[FinBERT] Clearing cache directory contents: {cache_dir}", flush=True)
-                    # Remove all files and subdirectories inside, but keep the directory
-                    for item in os.listdir(cache_dir):
-                        item_path = os.path.join(cache_dir, item)
-                        try:
-                            if os.path.isdir(item_path):
-                                shutil.rmtree(item_path)
-                            else:
-                                os.remove(item_path)
-                        except Exception as e:
-                            print(f"[FinBERT] Warning: Could not remove {item_path}: {e}", flush=True)
-                    print("[FinBERT] Cache cleared", flush=True)
-                
-                # Also try to remove the specific corrupted file hash if it exists
-                corrupted_hash = "1078a3396c3df57f29d26228abdce56ec20e74a9c2940d9a672f00c173930fc5"
-                corrupted_file = os.path.join(cache_dir, corrupted_hash)
-                if os.path.exists(corrupted_file):
-                    try:
-                        os.remove(corrupted_file)
-                        print(f"[FinBERT] Removed corrupted file: {corrupted_hash}", flush=True)
-                    except Exception as e:
-                        print(f"[FinBERT] Warning: Could not remove corrupted file: {e}", flush=True)
-                
-                # Retry download with force_download=True and use Hugging Face Hub
-                print("[FinBERT] Retrying model download via Hugging Face Hub (this may take 30-60 seconds)...", flush=True)
-                # Use revision="main" to ensure we get the latest version
-                _FINBERT_TOKENIZER = AutoTokenizer.from_pretrained(
-                    _FINBERT_MODEL_NAME,
-                    cache_dir=cache_dir,
-                    local_files_only=False,
-                    force_download=True,
-                    revision="main"
-                )
-                _FINBERT_MODEL = AutoModelForSequenceClassification.from_pretrained(
-                    _FINBERT_MODEL_NAME,
-                    cache_dir=cache_dir,
-                    local_files_only=False,
-                    force_download=True,
-                    revision="main"
-                )
-                _FINBERT_MODEL.eval()
-                _FINBERT_ID2LABEL = _FINBERT_MODEL.config.id2label
-                
-                if torch.cuda.is_available():
-                    _FINBERT_MODEL = _FINBERT_MODEL.cuda()
-                    print(f"[FinBERT] Model loaded successfully on GPU: {torch.cuda.get_device_name(0)}", flush=True)
-                else:
-                    print("[FinBERT] Model loaded successfully on CPU", flush=True)
-            except Exception as retry_exc:
-                print(f"[FinBERT] Retry also failed: {retry_exc}", flush=True)
-                import traceback
-                traceback.print_exc()
-                raise
 
 
 class SymbolsPayload(BaseModel):
@@ -709,21 +522,6 @@ class TranscriptsRequest(BaseModel):
     symbols: List[str] = Field(..., description="List of ticker symbols")
     page: int = Field(1, ge=1, description="Page number (1-indexed)")
     limit: int = Field(20, ge=1, le=100, description="Number of transcripts per page (max 100)")
-
-
-class SentimentTextItem(BaseModel):
-  """
-  Generic text item for sentiment scoring, used by /sentiment/from_texts.
-  The caller is responsible for providing a date string (YYYY-MM-DD) if they
-  want per-day aggregation.
-  """
-  date: Optional[str] = Field(None, description="Date string (YYYY-MM-DD) for aggregation")
-  text: str = Field(..., description="Text to analyze (e.g. headline + summary)")
-
-
-class SentimentTextBatch(BaseModel):
-  symbol: str = Field(..., description="Ticker symbol for context")
-  items: List[SentimentTextItem] = Field(..., description="Items to analyze sentiment for")
 
 
 class EarningsCalendarRequest(BaseModel):
@@ -3397,271 +3195,6 @@ def defeatbeta_news(req: NewsRequest):
         return {"symbol": symbol, "news": []}
 
 
-def _score_sentiment(text: str) -> Optional[float]:
-    result = _score_sentiment_batch([text], batch_size=1)
-    return result[0] if result else None
-
-
-def _score_sentiment_batch(
-    texts: List[str],
-    batch_size: Optional[int] = None,
-    log_prefix: Optional[str] = None,
-    start_time: Optional[datetime] = None,
-) -> List[Optional[float]]:
-    """
-    Batch FinBERT scoring to improve throughput (GPU-friendly, less tokenizer overhead).
-    Optionally logs progress using log_prefix + timing info.
-    """
-    if batch_size is None:
-        batch_size = _FINBERT_BATCH_SIZE
-
-    if not texts:
-        return []
-
-    _ensure_finbert_loaded()
-    if _FINBERT_TOKENIZER is None or _FINBERT_MODEL is None or _FINBERT_ID2LABEL is None:
-        print("[FinBERT] Model not available, skipping sentiment", flush=True)
-        return [None] * len(texts)
-
-    # Resolve label indices once per batch run
-    labels_lower = {idx: lbl.lower() for idx, lbl in _FINBERT_ID2LABEL.items()}
-    pos_idx = next((i for i, lbl in labels_lower.items() if lbl == "positive"), 2)
-    neg_idx = next((i for i, lbl in labels_lower.items() if lbl == "negative"), 0)
-
-    device = "cuda" if torch.cuda.is_available() and next(_FINBERT_MODEL.parameters()).is_cuda else "cpu"
-    results: List[Optional[float]] = [None] * len(texts)
-    total = len(texts)
-    processed = 0
-
-    for start in range(0, total, batch_size):
-        end = min(start + batch_size, total)
-        indices = list(range(start, end))
-        batch_texts = []
-        batch_map = []
-
-        for idx in indices:
-            text = texts[idx]
-            if not text or not isinstance(text, str):
-                continue
-            batch_texts.append(text)
-            batch_map.append(idx)
-
-        if not batch_texts:
-            processed = end
-            continue
-
-        inputs = _FINBERT_TOKENIZER(
-            batch_texts,
-            return_tensors="pt",
-            truncation=True,
-            max_length=256,
-            padding=True,  # dynamic padding keeps batches compact
-        )
-
-        if device == "cuda":
-            inputs = {k: v.cuda(non_blocking=True) for k, v in inputs.items()}
-
-        with torch.no_grad():
-            logits = _FINBERT_MODEL(**inputs).logits
-            probs = torch.nn.functional.softmax(logits, dim=-1)
-
-        scores = (probs[:, pos_idx] - probs[:, neg_idx]).detach().cpu().tolist()
-        for local_idx, score in enumerate(scores):
-            results[batch_map[local_idx]] = float(score)
-
-        processed = end
-        if log_prefix and start_time:
-            elapsed = (datetime.now() - start_time).total_seconds()
-            rate = processed / elapsed if elapsed > 0 else 0
-            print(
-                f"{log_prefix}: {processed}/{total} items processed "
-                f"({processed*100//total}%) | Rate: {rate:.1f} items/s",
-                flush=True,
-            )
-
-    return results
-
-
-@lru_cache(maxsize=2048)
-def _sentiment_timeseries(symbol: str, days: int) -> Dict[str, Any]:
-    """
-    Compute daily sentiment over the given lookback window using defeatbeta news.
-    """
-    start_time = datetime.now()
-    symbol = symbol.upper()
-    print(f"[FinBERT] Starting sentiment analysis for {symbol} (last {days} days)...", flush=True)
-    
-    df = _get_defeatbeta_news_df(symbol)
-    if df is None or df.empty:
-        print(f"[FinBERT] No news data found for {symbol}", flush=True)
-        return {"symbol": symbol, "points": [], "summary": {}}
-
-    cutoff = datetime.utcnow() - timedelta(days=days)
-    df = df.copy()
-    df["report_date"] = pd.to_datetime(df["report_date"], errors="coerce")
-    df = df[df["report_date"].notna()]
-    df = df[df["report_date"] >= cutoff]
-
-    if df.empty:
-        print(f"[FinBERT] No news articles in date range for {symbol}", flush=True)
-        return {"symbol": symbol, "points": [], "summary": {}}
-
-    total_articles = len(df)
-    print(f"[FinBERT] Processing {total_articles} articles for {symbol}...", flush=True)
-    
-    texts = [f"{row.get('title','')} {row.get('news','')}" for _, row in df.iterrows()]
-    sentiments = _score_sentiment_batch(
-        texts,
-        batch_size=_FINBERT_BATCH_SIZE,
-        log_prefix=f"[FinBERT] {symbol}",
-        start_time=start_time,
-    )
-
-    df["sentiment"] = sentiments
-    df = df[df["sentiment"].notna()]
-    if df.empty:
-        print(f"[FinBERT] No valid sentiment scores for {symbol}", flush=True)
-        return {"symbol": symbol, "points": [], "summary": {}}
-
-    df["date"] = df["report_date"].dt.date
-    daily = df.groupby("date").agg(
-        score=("sentiment", "mean"),
-        count=("sentiment", "count"),
-    ).reset_index().sort_values("date")
-
-    points_raw = [
-        {
-          "date": d.strftime("%Y-%m-%d"),
-          "score": round(float(s), 4),
-          "count": int(c),
-        }
-        for d, s, c in zip(daily["date"], daily["score"], daily["count"])
-    ]
-
-    points = _normalize_sentiment_points(points_raw)
-
-    summary = {
-        "avg": round(float(daily["score"].mean()), 4),
-        "last7": round(float(daily.tail(7)["score"].mean()), 4),
-        "days": days,
-        "total_articles": int(df.shape[0]),
-    }
-
-    elapsed = (datetime.now() - start_time).total_seconds()
-    print(f"[FinBERT] Completed sentiment analysis for {symbol}: {len(points)} daily points, "
-          f"{summary['total_articles']} articles, {elapsed:.2f}s total", flush=True)
-    
-    return {
-        "symbol": symbol,
-        "points": points,
-        "summary": _normalize_sentiment_summary(summary),
-    }
-
-
-@app.post("/sentiment")
-def sentiment(req: NewsRequest):
-    """
-    Return daily sentiment scores over the lookback window (default 365 days).
-    Uses defeatbeta news only to avoid Finnhub rate limits; scored with VADER.
-    """
-    try:
-        data = _sentiment_timeseries(req.symbol, req.days)
-        return data
-    except Exception as exc:
-        print(f"[sentiment] failed for {req.symbol}: {exc}", flush=True)
-        return {"symbol": req.symbol.upper(), "points": [], "summary": {}}
-
-
-@app.post("/sentiment/from_texts")
-def sentiment_from_texts(req: SentimentTextBatch):
-    """
-    Compute sentiment timeseries from arbitrary text items supplied by the caller.
-
-    This is used by the Next.js app to compute sentiment over the union of
-    Finnhub and defeatbeta news (headlines + summaries) instead of only
-    defeatbeta's internal news table.
-    """
-    start_time = datetime.now()
-    symbol = req.symbol.upper()
-    items = req.items or []
-
-    if not items:
-        print(f"[FinBERT] No items provided for {symbol}", flush=True)
-        return {"symbol": symbol, "points": [], "summary": {}}
-
-    total_items = len(items)
-    print(f"[FinBERT] Starting sentiment analysis for {symbol}: {total_items} text items...", flush=True)
-
-    scored: List[Dict[str, Any]] = []
-    texts = [item.text for item in items]
-    scores = _score_sentiment_batch(
-        texts,
-        batch_size=_FINBERT_BATCH_SIZE,
-        log_prefix=f"[FinBERT] {symbol}",
-        start_time=start_time,
-    )
-
-    for item, score in zip(items, scores):
-        if score is None:
-            continue
-        scored.append(
-            {
-                "date": item.date,
-                "score": score,
-            }
-        )
-
-    if not scored:
-        return {"symbol": symbol, "points": [], "summary": {}}
-
-    # Aggregate by date (YYYY-MM-DD). If no date provided, group under 'unknown'.
-    by_date: Dict[str, List[float]] = {}
-    for row in scored:
-        date_str = row.get("date") or "unknown"
-        by_date.setdefault(date_str, []).append(row["score"])
-
-    points_raw: List[Dict[str, Any]] = []
-    for date_str, scores in sorted(by_date.items(), key=lambda kv: kv[0]):
-        if not scores:
-            continue
-        avg_score = float(sum(scores) / len(scores))
-        points_raw.append(
-            {
-                "date": date_str,
-                "score": round(avg_score, 4),
-                "count": len(scores),
-            }
-        )
-
-    points = _normalize_sentiment_points(points_raw)
-
-    if not points:
-        return {"symbol": symbol, "points": [], "summary": {}}
-
-    # Summary: overall avg and last-7-days average over the last 7 distinct dates
-    scores_all = [p["score"] for p in points]
-    avg_all = float(sum(scores_all) / len(scores_all))
-    last7 = points[-7:]
-    avg_last7 = float(sum(p["score"] for p in last7) / len(last7))
-
-    summary = {
-        "avg": round(avg_all, 4),
-        "last7": round(avg_last7, 4),
-        "days": len(points),
-        "total_articles": len(scored),
-    }
-
-    elapsed = (datetime.now() - start_time).total_seconds()
-    print(f"[FinBERT] Completed sentiment analysis for {symbol}: {len(points)} daily points, "
-          f"{summary['total_articles']}/{len(items)} items scored, {elapsed:.2f}s total", flush=True)
-
-    return {
-        "symbol": symbol,
-        "points": points,
-        "summary": _normalize_sentiment_summary(summary),
-    }
-
-
 @app.post("/filings/download")
 def filings_download(req: FilingDownloadRequest):
     """
@@ -5995,7 +5528,6 @@ def comprehensive_analysis(payload: SymbolsPayload):
     Generate comprehensive analysis including:
     - 6-factor scores
     - DCF-Lite valuation
-    - News sentiment
     - Investment signal (BUY/WATCHLIST/AVOID)
     """
     from valuation_models import calculate_dcf_lite
@@ -6202,8 +5734,7 @@ def comprehensive_analysis(payload: SymbolsPayload):
                 risk_count_low=low_severity_risks
             )
 
-            # Sentiment & Momentum (placeholder - would need price/news data)
-            sentiment_factor = {"score": None, "interpretation": "insufficient_data"}
+            # Momentum (placeholder - would need price data)
             momentum_factor = {"score": None, "interpretation": "insufficient_data"}
 
             # Composite Score
@@ -6212,7 +5743,7 @@ def comprehensive_analysis(payload: SymbolsPayload):
                 quality_factor.get("score"),
                 growth_factor.get("score"),
                 momentum_factor.get("score"),
-                sentiment_factor.get("score"),
+                None,  # sentiment removed
                 risk_factor.get("score")
             )
 
@@ -6240,7 +5771,6 @@ def comprehensive_analysis(payload: SymbolsPayload):
                     "quality": quality_factor,
                     "growth": growth_factor,
                     "momentum": momentum_factor,
-                    "sentiment": sentiment_factor,
                     "risk": risk_factor,
                     "composite": composite
                 },

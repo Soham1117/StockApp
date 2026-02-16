@@ -8,22 +8,4 @@ services:
     container_name: defeatbeta-api
     ports:
       - "8000:8000"
-    # GPU support (requires nvidia-docker2 installed on host)
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: 1
-              capabilities: [gpu]
-    # Persist Hugging Face model cache (won't re-download on rebuild)
-    volumes:
-      - defeatbeta-hf-cache:/app/.cache/huggingface
-    environment:
-      - HF_HOME=/app/.cache/huggingface
     restart: unless-stopped
-
-volumes:
-  defeatbeta-hf-cache:
-    driver: local
-
