@@ -73,3 +73,4 @@ yarn-error.log*
 data/sec_filings/
 data/sec_insights/
 data/transcript_insights/
+deploy-backend.sh
