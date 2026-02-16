@@ -38,6 +38,7 @@ async function resolveDataDir(): Promise<string> {
   const candidates = [
     path.join(cwd, '..', 'data'),       // running from frontend/ (dev)
     path.join(cwd, 'data'),             // running from repo root
+    path.join(cwd, 'data-generated'),   // copied by prebuild (Netlify/production)
   ];
 
   for (const dir of candidates) {

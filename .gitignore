@@ -12,6 +12,7 @@ node_modules/
 !.yarn/versions
 
 # Build / output
+frontend/data-generated/
 .next/
 out/
 build/

@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "dev:mobile": "next dev -H 0.0.0.0",
+    "prebuild": "node -e \"const fs=require('fs');const p=require('path');const src=p.join(__dirname,'..','data');const dst=p.join(__dirname,'data-generated');fs.mkdirSync(dst,{recursive:true});['ticker-universe.json','sector-stocks.json','sector-stocks-top30.json'].forEach(f=>{const s=p.join(src,f);if(fs.existsSync(s))fs.copyFileSync(s,p.join(dst,f))});console.log('Copied data files to data-generated/')\"",
     "build": "next build",
     "start": "next start",
     "test:export-utils": "node tests/export-utils.test.js",
