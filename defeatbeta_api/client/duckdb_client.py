@@ -123,6 +123,11 @@ class DuckDBClient:
             start_time = time.perf_counter()
             with self._get_cursor() as cursor:
                 result = cursor.sql(sql).df()
+                # Normalize datetime columns to ns precision to prevent
+                # merge_asof dtype mismatches (DuckDB returns us, pandas expects ns)
+                for col in result.columns:
+                    if pd.api.types.is_datetime64_any_dtype(result[col]):
+                        result[col] = result[col].astype('datetime64[ns]')
                 end_time = time.perf_counter()
                 duration = end_time - start_time
                 self.logger.debug(

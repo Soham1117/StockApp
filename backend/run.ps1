@@ -9,15 +9,6 @@ $ProjectRoot = Split-Path -Parent $ScriptDir
 Push-Location $ScriptDir
 
 try {
-    # Activate virtual environment (check both backend/.venv and project root .venv)
-    if (Test-Path ".\.venv\Scripts\Activate.ps1") {
-        & ".\.venv\Scripts\Activate.ps1"
-    } elseif (Test-Path "$ProjectRoot\.venv\Scripts\Activate.ps1") {
-        & "$ProjectRoot\.venv\Scripts\Activate.ps1"
-    } else {
-        Write-Host "Error: Virtual environment not found. Run setup-windows.ps1 first." -ForegroundColor Red
-        exit 1
-    }
 
     # Set environment variables (use absolute paths)
     $env:HF_HOME = "$ScriptDir\.cache\huggingface"
@@ -40,7 +31,7 @@ try {
     Write-Host "Press Ctrl+C to stop" -ForegroundColor Yellow
     Write-Host ""
 
-    uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+    python -m uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 }
 finally {
     # Restore original directory

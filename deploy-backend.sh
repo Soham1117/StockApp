@@ -67,14 +67,26 @@ $SCP_CMD "$LOCAL_BACKEND/requirements.txt" "$HOST:$REMOTE_DIR/requirements.txt"
 
 # ── 3. Upload data files (RRG history, ETF prices, etc.) ──────
 LOCAL_DATA="$(dirname "$0")/data"
-echo "--- Uploading data files..."
+echo "--- Uploading repo-level data files..."
 if [ -d "$LOCAL_DATA" ]; then
   for f in "$LOCAL_DATA"/*.json; do
     [ -f "$f" ] && $SCP_CMD "$f" "$HOST:$REMOTE_DIR/data/$(basename "$f")"
   done
-  echo "Data files uploaded"
+  echo "Repo data files uploaded"
 else
   echo "Warning: No local data/ directory found, skipping"
+fi
+
+# ── 3b. Upload backend data files (RRG models, transitions, analogs) ──
+LOCAL_BACKEND_DATA="$LOCAL_BACKEND/data"
+echo "--- Uploading backend data files (RRG models)..."
+if [ -d "$LOCAL_BACKEND_DATA" ]; then
+  for f in "$LOCAL_BACKEND_DATA"/rrg_*.json "$LOCAL_BACKEND_DATA"/rrg_*.pkl; do
+    [ -f "$f" ] && $SCP_CMD "$f" "$HOST:$REMOTE_DIR/data/$(basename "$f")"
+  done
+  echo "Backend data files uploaded"
+else
+  echo "Warning: No backend/data/ directory found, skipping RRG models"
 fi
 
 # ── 4. Upload defeatbeta_api package (tar to preserve directory structure)
@@ -115,6 +127,15 @@ $SSH_CMD "
       curl -fSL -o \"\$FILE\" \"\$BASE_URL/\$FILE\"
     fi
   done
+
+  # Also download company_tickers.json (used by CompanyMeta)
+  FILE='company_tickers.json'
+  if [ -f \"\$FILE\" ]; then
+    echo \"  [skip] \$FILE already exists\"
+  else
+    echo \"  [download] \$FILE ...\"
+    curl -fSL -o \"\$FILE\" \"\$BASE_URL/\$FILE\"
+  fi
 
   echo 'Parquet files ready'
 "

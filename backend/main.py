@@ -1482,87 +1482,21 @@ def _get_info(symbol: str) -> Dict[str, Any]:
 def _compute_market_cap(symbol: str) -> Optional[float]:
     """
     Get market cap from defeatbeta_api.
-    Primary method: summary()['market_cap'] - this is the most reliable source.
-    Fallback: Calculate from price × shares outstanding if summary() fails.
+    Primary: Ticker.market_capitalization() (price × shares, computed by the API).
     """
     t = _get_ticker(symbol)
-    
-    # Method 1: summary() method - contains market_cap column (PRIMARY METHOD)
+
+    # Use the v0.0.42 market_capitalization() method directly
     try:
-        summary = getattr(t, "summary", None)
-        if summary and callable(summary):
-            summary_df = summary()
-            if isinstance(summary_df, pd.DataFrame) and not summary_df.empty:
-                # Check for market_cap column (exact match first, then patterns)
-                if "market_cap" in summary_df.columns:
-                    val = summary_df.iloc[0]["market_cap"]  # summary() returns single row
-                    if pd.notna(val):
-                        try:
-                            mc = _sanitize_float(float(val))
-                            if (
-                                os.getenv("MARKET_CAP_DEBUG") in ("1", "true", "TRUE", "yes", "YES", "on", "ON")
-                                and mc is not None
-                            ):
-                                print(
-                                    f"[market_cap] {symbol} found via summary()['market_cap']: ${mc:,.0f}",
-                                    flush=True,
-                                )
-                            return mc
-                        except (ValueError, TypeError):
-                            pass
-                
-                # Fallback: check other column name patterns
-                for col in summary_df.columns:
-                    if any(pattern in col.lower() for pattern in ["market_cap", "mkt_cap", "marketcap"]):
-                        val = summary_df.iloc[0][col]
-                        if pd.notna(val):
-                            try:
-                                mc = _sanitize_float(float(val))
-                                if (
-                                    os.getenv("MARKET_CAP_DEBUG") in ("1", "true", "TRUE", "yes", "YES", "on", "ON")
-                                    and mc is not None
-                                ):
-                                    print(
-                                        f"[market_cap] {symbol} found via summary() column '{col}': ${mc:,.0f}",
-                                        flush=True,
-                                    )
-                                return mc
-                            except (ValueError, TypeError):
-                                continue
+        mc_df = t.market_capitalization()
+        if mc_df is not None and isinstance(mc_df, pd.DataFrame) and not mc_df.empty:
+            val = mc_df.iloc[-1].get("market_capitalization")
+            if val is not None and pd.notna(val):
+                return _sanitize_float(float(val))
     except Exception as e:
         if os.getenv("MARKET_CAP_DEBUG") in ("1", "true", "TRUE", "yes", "YES", "on", "ON"):
-            print(f"[market_cap] summary() failed for {symbol}: {e}", flush=True)
-    
-    # Method 2: Calculate market cap from price × shares outstanding (FALLBACK)
-    try:
-        # Get current price
-        price_df = t.price()
-        if price_df is not None and not price_df.empty and "close" in price_df.columns:
-            current_price = float(price_df.iloc[-1]["close"])
-            
-            # Try to get shares outstanding from balance sheet
-            balance_sheet = t.annual_balance_sheet()
-            if balance_sheet is not None and not balance_sheet.empty:
-                # Look for shares outstanding columns
-                shares_cols = [col for col in balance_sheet.columns if any(pattern in col.lower() for pattern in ["shares", "outstanding", "common_stock"])]
-                if symbol in ["AAPL", "MSFT", "NVDA"]:
-                    print(f"[market_cap] {symbol} balance_sheet columns: {list(balance_sheet.columns)[:10]}", flush=True)
-                    print(f"[market_cap] {symbol} shares columns found: {shares_cols}", flush=True)
-                
-                # Try common column names for shares outstanding
-                for col_name in ["shares_outstanding", "common_stock_shares_outstanding", "sharesOutstanding", "shares"]:
-                    if col_name in balance_sheet.columns:
-                        shares = balance_sheet.iloc[-1][col_name]
-                        if pd.notna(shares) and shares > 0:
-                            market_cap = _sanitize_float(current_price * float(shares))
-                            if market_cap is not None and symbol in ["AAPL", "MSFT", "NVDA"]:
-                                print(f"[market_cap] {symbol} calculated: ${current_price:.2f} × {shares:,.0f} shares = ${market_cap:,.0f}", flush=True)
-                            return market_cap
-    except Exception as e:
-        if symbol in ["AAPL", "MSFT", "NVDA"]:
-            print(f"[market_cap] calculation failed for {symbol}: {e}", flush=True)
-    
-    
+            print(f"[market_cap] market_capitalization() failed for {symbol}: {e}", flush=True)
+
     return None
 
 

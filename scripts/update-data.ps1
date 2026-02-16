@@ -20,7 +20,7 @@ $ErrorActionPreference = "Stop"
 $ProjectRoot = "D:\Personal Projects\StockApp"
 $FastAPIDir = "$ProjectRoot\backend"
 $LocalDataPath = "$FastAPIDir\local_data"
-$VenvPackages = "$FastAPIDir\.venv\Lib\site-packages\defeatbeta_api"
+
 
 Write-Host ""
 Write-Host "=============================================" -ForegroundColor Cyan
@@ -42,15 +42,11 @@ if (-not $SkipDownload) {
 
     $tables = @(
         "stock_profile",
-        "stock_summary",
-        "stock_prices",
         "stock_officers",
         "stock_tailing_eps",
         "stock_earning_calendar",
-        "stock_revenue_estimates",
-        "stock_earning_estimates",
-        "stock_historical_eps",
         "stock_statement",
+        "stock_prices",
         "stock_dividend_events",
         "stock_split_events",
         "exchange_rate",
@@ -58,10 +54,11 @@ if (-not $SkipDownload) {
         "stock_earning_call_transcripts",
         "stock_news",
         "stock_revenue_breakdown",
-        "stock_shares_outstanding"
+        "stock_shares_outstanding",
+        "stock_sec_filing"
     )
 
-    $baseUrl = "https://huggingface.co/datasets/bwzheng2010/yahoo-finance-data/resolve/main/data"
+    $baseUrl = "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data/resolve/main/data"
     $downloaded = 0
     $failed = 0
     $downloadStart = Get-Date
@@ -87,6 +84,20 @@ if (-not $SkipDownload) {
         }
     }
 
+    # Also download company_tickers.json (non-parquet, used by CompanyMeta)
+    Write-Host "  [extra] company_tickers.json... " -NoNewline
+    try {
+        $url = "$baseUrl/company_tickers.json"
+        $output = "$LocalDataPath\company_tickers.json"
+        Invoke-WebRequest -Uri $url -OutFile $output -UseBasicParsing
+        $size = [math]::Round((Get-Item $output).Length / 1MB, 2)
+        Write-Host "OK ($size MB)" -ForegroundColor Green
+    }
+    catch {
+        Write-Host "FAILED" -ForegroundColor Red
+        Write-Host "    Error: $_" -ForegroundColor Red
+    }
+
     $downloadTime = ((Get-Date) - $downloadStart).TotalMinutes
     Write-Host ""
     Write-Host "  Download complete: $downloaded succeeded, $failed failed ($([math]::Round($downloadTime, 1)) min)" -ForegroundColor Cyan
@@ -99,22 +110,9 @@ if (-not $SkipDownload) {
 # =============================================================================
 # Step 2: Patch installed defeatbeta_api to use local files
 # =============================================================================
-Write-Host "[Step 2/5] Patching defeatbeta_api to use local files..." -ForegroundColor Yellow
-
-# Copy modified files from local defeatbeta_api to installed package
-$filesToCopy = @(
-    @{ src = "$ProjectRoot\defeatbeta_api\client\hugging_face_client.py"; dst = "$VenvPackages\client\hugging_face_client.py" },
-    @{ src = "$ProjectRoot\defeatbeta_api\__init__.py"; dst = "$VenvPackages\__init__.py" }
-)
-
-foreach ($file in $filesToCopy) {
-    if (Test-Path $file.src) {
-        Copy-Item -Path $file.src -Destination $file.dst -Force
-        Write-Host "  Copied: $($file.src | Split-Path -Leaf)" -ForegroundColor Green
-    } else {
-        Write-Host "  Warning: Source not found: $($file.src)" -ForegroundColor Yellow
-    }
-}
+Write-Host "[Step 2/5] Using custom defeatbeta_api v0.0.42-local from project root..." -ForegroundColor Yellow
+Write-Host "  Local package: $ProjectRoot\defeatbeta_api" -ForegroundColor Green
+Write-Host "  (No patching needed - PyPI version is uninstalled)" -ForegroundColor DarkGray
 Write-Host ""
 
 # =============================================================================
@@ -134,7 +132,7 @@ cd '$FastAPIDir'
 `$env:HF_HOME = '$FastAPIDir\.cache\huggingface'
 `$env:DEFEATBETA_LOCAL_DATA = '$LocalDataPath'
 Write-Host 'FastAPI starting with local data...' -ForegroundColor Cyan
-uvicorn main:app --host 0.0.0.0 --port 8000
+python -m uvicorn main:app --host 0.0.0.0 --port 8000
 "@
 
     Start-Process powershell -ArgumentList "-NoExit", "-Command", $fastapiScript

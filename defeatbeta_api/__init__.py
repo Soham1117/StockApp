@@ -1,5 +1,6 @@
 import os
 
+import pandas as pd
 import pyfiglet
 
 from defeatbeta_api.__version__ import __version__
@@ -7,6 +8,37 @@ from defeatbeta_api.client.hugging_face_client import HuggingFaceClient
 import nltk
 
 from defeatbeta_api.utils.util import validate_nltk_directory
+
+# ---------------------------------------------------------------------------
+# Monkey-patch pd.merge_asof to auto-normalize datetime merge keys.
+# DuckDB returns datetime64[us], pandas 2.x pd.to_datetime() may return
+# datetime64[s] or datetime64[us] depending on input.  merge_asof requires
+# identical resolutions.  This patch normalises both sides to datetime64[ns]
+# before calling the original implementation.
+# ---------------------------------------------------------------------------
+_original_merge_asof = pd.merge_asof
+
+def _patched_merge_asof(left, right, on=None, left_on=None, right_on=None, **kwargs):
+    left = left.copy()
+    right = right.copy()
+    if on is not None:
+        for col in ([on] if isinstance(on, str) else on):
+            if col in left.columns and pd.api.types.is_datetime64_any_dtype(left[col]):
+                left[col] = left[col].astype("datetime64[ns]")
+            if col in right.columns and pd.api.types.is_datetime64_any_dtype(right[col]):
+                right[col] = right[col].astype("datetime64[ns]")
+    else:
+        if left_on is not None:
+            for col in ([left_on] if isinstance(left_on, str) else left_on):
+                if col in left.columns and pd.api.types.is_datetime64_any_dtype(left[col]):
+                    left[col] = left[col].astype("datetime64[ns]")
+        if right_on is not None:
+            for col in ([right_on] if isinstance(right_on, str) else right_on):
+                if col in right.columns and pd.api.types.is_datetime64_any_dtype(right[col]):
+                    right[col] = right[col].astype("datetime64[ns]")
+    return _original_merge_asof(left, right, on=on, left_on=left_on, right_on=right_on, **kwargs)
+
+pd.merge_asof = _patched_merge_asof
 
 if not os.getenv("DEFEATBETA_NO_NLTK_DOWNLOAD"):
     nltk.download('punkt_tab', download_dir=validate_nltk_directory())

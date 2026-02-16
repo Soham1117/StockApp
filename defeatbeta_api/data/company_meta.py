@@ -1,4 +1,5 @@
 import logging
+import os
 from typing import Optional, Dict, List
 
 import pandas as pd
@@ -16,12 +17,20 @@ class CompanyMeta:
         self.duckdb_client = get_duckdb_client(http_proxy=self.http_proxy, log_level=log_level, config=config)
         self.log_level = log_level
 
+    def _get_url(self) -> str:
+        local_data = os.getenv("DEFEATBETA_LOCAL_DATA")
+        if local_data:
+            local_path = os.path.join(local_data, "company_tickers.json")
+            if os.path.exists(local_path):
+                return local_path
+        return self.COMPANY_TICKERS_URL
+
     def _get_all_companies(self) -> pd.DataFrame:
-        sql = load_sql("select_all_companies", url=self.COMPANY_TICKERS_URL)
+        sql = load_sql("select_all_companies", url=self._get_url())
         return self.duckdb_client.query(sql)
 
     def _get_company_by_symbol(self, symbol: str) -> pd.DataFrame:
-        sql = load_sql("select_company_by_symbol", url=self.COMPANY_TICKERS_URL, symbol=symbol)
+        sql = load_sql("select_company_by_symbol", url=self._get_url(), symbol=symbol)
         return self.duckdb_client.query(sql)
 
     def get_company_info(self, symbol: str) -> Optional[dict]:

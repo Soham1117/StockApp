@@ -11,15 +11,11 @@ if (-not (Test-Path $localDataPath)) {
 
 $tables = @(
     "stock_profile",
-    "stock_summary",
-    "stock_prices",
     "stock_officers",
     "stock_tailing_eps",
     "stock_earning_calendar",
-    "stock_revenue_estimates",
-    "stock_earning_estimates",
-    "stock_historical_eps",
     "stock_statement",
+    "stock_prices",
     "stock_dividend_events",
     "stock_split_events",
     "exchange_rate",
@@ -27,10 +23,11 @@ $tables = @(
     "stock_earning_call_transcripts",
     "stock_news",
     "stock_revenue_breakdown",
-    "stock_shares_outstanding"
+    "stock_shares_outstanding",
+    "stock_sec_filing"
 )
 
-$baseUrl = "https://huggingface.co/datasets/bwzheng2010/yahoo-finance-data/resolve/main/data"
+$baseUrl = "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data/resolve/main/data"
 
 Write-Host "========================================"
 Write-Host "Downloading DefeatBeta parquet files"
@@ -61,6 +58,19 @@ foreach ($table in $tables) {
         Write-Host " FAILED: $_" -ForegroundColor Red
         $failed++
     }
+}
+
+# Also download company_tickers.json (non-parquet, used by CompanyMeta)
+Write-Host "[extra] Downloading company_tickers.json..." -NoNewline
+try {
+    $url = "$baseUrl/company_tickers.json"
+    $output = "$localDataPath\company_tickers.json"
+    Invoke-WebRequest -Uri $url -OutFile $output -UseBasicParsing
+    $size = [math]::Round((Get-Item $output).Length / 1MB, 2)
+    Write-Host " OK ($size MB)" -ForegroundColor Green
+}
+catch {
+    Write-Host " FAILED: $_" -ForegroundColor Red
 }
 
 $totalTime = ((Get-Date) - $startTime).TotalMinutes
