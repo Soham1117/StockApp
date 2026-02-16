@@ -9,7 +9,7 @@ from defeatbeta_api.utils.const import tables
 
 class HuggingFaceClient:
     def __init__(self, max_retries: int = 3, timeout: int = 30):
-        self.base_url = "https://huggingface.co/datasets/bwzheng2010/yahoo-finance-data"
+        self.base_url = "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data"
         self.local_data_path = os.getenv("DEFEATBETA_LOCAL_DATA")
         self.timeout = timeout
         self.session = requests.Session()

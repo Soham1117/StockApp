@@ -549,9 +549,10 @@ class TranscriptInsightGenerateRequest(BaseModel):
     limit: int = Field(1, ge=1, le=5, description="Max quarters to process")
 
 
-STOCKS_JSON_PATH = Path(__file__).resolve().parents[1] / "stocks.json"
-# Project root is one level above backend (parents[1]); data lives under that.
-DATA_DIR = Path(__file__).resolve().parents[1] / "data"
+_MAIN_DIR = Path(__file__).resolve().parent
+# Data dir: check sibling data/ first (VPS layout), then parent/data/ (local dev)
+DATA_DIR = _MAIN_DIR / "data" if (_MAIN_DIR / "data").is_dir() else _MAIN_DIR.parent / "data"
+STOCKS_JSON_PATH = _MAIN_DIR.parent / "stocks.json"
 SECTOR_METRICS_PATH = DATA_DIR / "sector-metrics.json"
 ETF_PRICES_PATH = DATA_DIR / "etf-prices.json"
 
@@ -1799,8 +1800,11 @@ def rrg_history(
     Data is pre-computed by scripts/recalculate_rrg_history.py (preferred) or
     scripts/generate_rrg_history.py (legacy).
     """
-    LEGACY_HISTORY_PATH = Path(__file__).resolve().parents[1] / "data" / "rrg-history.json"
-    CORRECTED_HISTORY_PATH = Path(__file__).resolve().parent / "data" / f"rrg_history_{lookback_days}d.json"
+    _backend_dir = Path(__file__).resolve().parent
+    CORRECTED_HISTORY_PATH = _backend_dir / "data" / f"rrg_history_{lookback_days}d.json"
+    # Legacy path: check sibling data/ dir first, then parent (for local dev)
+    LEGACY_HISTORY_PATH = _backend_dir / "data" / "rrg-history.json"
+    LEGACY_HISTORY_PATH_ALT = _backend_dir.parent / "data" / "rrg-history.json"
 
     debug_rrg = os.getenv("RRG_DEBUG") in ("1", "true", "TRUE", "yes", "YES", "on", "ON")
     
@@ -1817,6 +1821,9 @@ def rrg_history(
             }
         elif LEGACY_HISTORY_PATH.exists():
             with open(LEGACY_HISTORY_PATH, "r", encoding="utf-8") as f:
+                history_data = json.load(f)
+        elif LEGACY_HISTORY_PATH_ALT.exists():
+            with open(LEGACY_HISTORY_PATH_ALT, "r", encoding="utf-8") as f:
                 history_data = json.load(f)
         else:
             raise HTTPException(
@@ -1932,8 +1939,10 @@ def rrg_predict(payload: Dict[str, Any]):
     
     if not current_states:
         # Derive current states from precomputed history for the selected lookback.
-        corrected_path = Path(__file__).resolve().parent / "data" / f"rrg_history_{lookback_days}d.json"
-        legacy_path = Path(__file__).resolve().parents[1] / "data" / "rrg-history.json"
+        _predict_dir = Path(__file__).resolve().parent
+        corrected_path = _predict_dir / "data" / f"rrg_history_{lookback_days}d.json"
+        legacy_path = _predict_dir / "data" / "rrg-history.json"
+        legacy_path_alt = _predict_dir.parent / "data" / "rrg-history.json"
         points: List[Dict[str, Any]] = []
 
         try:
@@ -1942,6 +1951,10 @@ def rrg_predict(payload: Dict[str, Any]):
                 points = corrected.get("data", []) if isinstance(corrected, dict) else []
             elif legacy_path.exists():
                 legacy = json.loads(legacy_path.read_text(encoding="utf-8"))
+                points = legacy.get("data", []) if isinstance(legacy, dict) else []
+                points = [p for p in points if p.get("lookback_days") == lookback_days]
+            elif legacy_path_alt.exists():
+                legacy = json.loads(legacy_path_alt.read_text(encoding="utf-8"))
                 points = legacy.get("data", []) if isinstance(legacy, dict) else []
                 points = [p for p in points if p.get("lookback_days") == lookback_days]
         except Exception as exc:

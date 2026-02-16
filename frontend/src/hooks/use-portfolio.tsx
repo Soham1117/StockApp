@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, createContext, useContext, type ReactNode } from 'react';
 import {
   getPortfolio,
   addHolding,
@@ -10,8 +10,22 @@ import {
   type PortfolioHolding,
 } from '@/lib/portfolio-api';
 
-export function usePortfolio() {
-  // Initialize with empty portfolio to avoid SSR issues
+interface PortfolioContextValue {
+  portfolio: Portfolio;
+  holdings: PortfolioHolding[];
+  add: (holding: Omit<PortfolioHolding, 'id' | 'addedAt'>) => Promise<void>;
+  update: (symbol: string, updates: Partial<Omit<PortfolioHolding, 'symbol' | 'id' | 'addedAt'>>) => Promise<void>;
+  remove: (symbol: string) => Promise<void>;
+  getHolding: (symbol: string) => PortfolioHolding | null;
+  hasHolding: (symbol: string) => boolean;
+  getSymbols: () => string[];
+  refresh: () => Promise<void>;
+  isLoading: boolean;
+}
+
+const PortfolioContext = createContext<PortfolioContextValue | null>(null);
+
+export function PortfolioProvider({ children }: { children: ReactNode }) {
   const [portfolio, setPortfolio] = useState<Portfolio>(() => ({
     holdings: [],
     createdAt: new Date().toISOString(),
@@ -19,7 +33,7 @@ export function usePortfolio() {
   }));
   const [isLoading, setIsLoading] = useState(true);
 
-  // Load portfolio from API on mount
+  // Load portfolio from API on mount (single fetch for all consumers)
   useEffect(() => {
     const loadPortfolio = async () => {
       try {
@@ -28,7 +42,6 @@ export function usePortfolio() {
         setPortfolio(data);
       } catch (error) {
         console.error('[usePortfolio] Failed to load portfolio:', error);
-        // Keep empty portfolio on error
       } finally {
         setIsLoading(false);
       }
@@ -36,29 +49,24 @@ export function usePortfolio() {
     loadPortfolio();
   }, []);
 
-  // Refresh portfolio from API
   const refresh = useCallback(async () => {
     try {
       const data = await getPortfolio();
-      // Force a new object reference to ensure React detects the change
       setPortfolio({
         ...data,
-        holdings: [...data.holdings], // Create new array reference
+        holdings: [...data.holdings],
       });
     } catch (error) {
       console.error('[usePortfolio] Failed to refresh portfolio:', error);
     }
   }, []);
 
-  // Add holding
   const add = useCallback(
     async (holding: Omit<PortfolioHolding, 'id' | 'addedAt'>) => {
       setIsLoading(true);
       try {
         await addHolding(holding);
         await refresh();
-      } catch (error) {
-        throw error;
       } finally {
         setIsLoading(false);
       }
@@ -66,15 +74,12 @@ export function usePortfolio() {
     [refresh]
   );
 
-  // Update holding
   const update = useCallback(
     async (symbol: string, updates: Partial<Omit<PortfolioHolding, 'symbol' | 'id' | 'addedAt'>>) => {
       setIsLoading(true);
       try {
         await updateHolding(symbol, updates);
         await refresh();
-      } catch (error) {
-        throw error;
       } finally {
         setIsLoading(false);
       }
@@ -82,15 +87,12 @@ export function usePortfolio() {
     [refresh]
   );
 
-  // Remove holding
   const remove = useCallback(
     async (symbol: string) => {
       setIsLoading(true);
       try {
         await removeHolding(symbol);
         await refresh();
-      } catch (error) {
-        throw error;
       } finally {
         setIsLoading(false);
       }
@@ -98,8 +100,7 @@ export function usePortfolio() {
     [refresh]
   );
 
-  // Get holding by symbol
-  const getHolding = useCallback(
+  const getHoldingFn = useCallback(
     (symbol: string) => {
       return portfolio.holdings.find(
         h => h.symbol.toUpperCase() === symbol.toUpperCase()
@@ -108,29 +109,41 @@ export function usePortfolio() {
     [portfolio]
   );
 
-  // Check if symbol is in portfolio
-  const hasHolding = useCallback(
+  const hasHoldingFn = useCallback(
     (symbol: string) => {
-      return getHolding(symbol) !== null;
+      return getHoldingFn(symbol) !== null;
     },
-    [getHolding]
+    [getHoldingFn]
   );
 
-  // Get all symbols
   const getSymbols = useCallback(() => {
     return portfolio.holdings.map(h => h.symbol.toUpperCase());
   }, [portfolio]);
 
-  return {
+  const value: PortfolioContextValue = {
     portfolio,
     holdings: portfolio.holdings,
     add,
     update,
     remove,
-    getHolding,
-    hasHolding,
+    getHolding: getHoldingFn,
+    hasHolding: hasHoldingFn,
     getSymbols,
     refresh,
     isLoading,
   };
+
+  return (
+    <PortfolioContext.Provider value={value}>
+      {children}
+    </PortfolioContext.Provider>
+  );
+}
+
+export function usePortfolio(): PortfolioContextValue {
+  const context = useContext(PortfolioContext);
+  if (!context) {
+    throw new Error('usePortfolio must be used within a PortfolioProvider');
+  }
+  return context;
 }

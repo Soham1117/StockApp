@@ -1,16 +1,16 @@
 import logging
+import os
 import sys
 import time
 from contextlib import contextmanager
 from threading import Lock
 from typing import Optional
-import platform
 
 import duckdb
 import pandas as pd
 
-from defeatbeta_api import data_update_time
 from defeatbeta_api.client.duckdb_conf import Configuration
+from defeatbeta_api.client.hugging_face_client import HuggingFaceClient
 
 _instance = None
 _lock = Lock()
@@ -60,27 +60,54 @@ class DuckDBClient:
             raise
 
     def _validate_httpfs_cache(self):
-        try:
-            # On Windows, the cache_httpfs extension is not available; skip cache validation.
-            if platform.system() == "Windows":
-                return
-
-            current_spec = self.query(
-                "SELECT * FROM 'https://huggingface.co/datasets/bwzheng2010/yahoo-finance-data/resolve/main/spec.json'"
-            )
-            current_update_time = current_spec['update_time'].dt.strftime('%Y-%m-%d').iloc[0]
-            if current_update_time != data_update_time:
-                self.logger.debug(f"Current update time: {current_update_time}, Remote update time: {data_update_time}")
-                self.query(
-                    "SELECT cache_httpfs_clear_cache()"
-                )
-        except Exception as e:
-            # Cache validation should never block normal operation.
-            # Common failure cases:
-            # - 429 rate limiting on spec.json
-            # - cache_httpfs extension not installed/available
-            self.logger.error(f"Failed to validate httpfs cache (continuing): {str(e)}")
+        """Validate httpfs cache against remote data, clear cache if outdated.
+        Skipped when using local parquet files (DEFEATBETA_LOCAL_DATA is set)."""
+        if os.getenv("DEFEATBETA_LOCAL_DATA"):
+            self.logger.info("Using local parquet files, skipping httpfs cache validation")
             return
+
+        spec_url = "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data/resolve/main/spec.json"
+
+        try:
+            # Get remote update_time via HTTP request (bypasses cache)
+            remote_update_time = HuggingFaceClient().get_data_update_time()
+
+            # Get cached update_time via DuckDB (may use httpfs cache)
+            cached_spec = self.query(f"SELECT * FROM '{spec_url}'")
+            cached_update_time = cached_spec['update_time'].dt.strftime('%Y-%m-%d').iloc[0]
+
+            # Compare and clear cache if outdated
+            if cached_update_time != remote_update_time:
+                self.logger.info(
+                    f"Cache outdated. Cached: {cached_update_time}, Remote: {remote_update_time}"
+                )
+                self._clear_cache()
+
+                # Re-fetch data to update cache with latest remote data
+                self.logger.info("Refreshing cache with latest remote data...")
+                refreshed_spec = self.query(f"SELECT * FROM '{spec_url}'")
+                refreshed_update_time = refreshed_spec['update_time'].dt.strftime('%Y-%m-%d').iloc[0]
+
+                # Verify the cache now contains the latest data
+                if refreshed_update_time == remote_update_time:
+                    self.logger.info(
+                        f"Cache refreshed and verified successfully. Update time: {refreshed_update_time}"
+                    )
+                else:
+                    self.logger.warning(
+                        f"Cache refresh verification failed. Expected: {remote_update_time}, Got: {refreshed_update_time}"
+                    )
+            else:
+                self.logger.info(f"Cache is up-to-date. Update time: {cached_update_time}")
+
+        except Exception as e:
+            self.logger.error(f"Failed to validate httpfs cache: {str(e)}")
+            raise
+
+    def _clear_cache(self):
+        """Clear httpfs cache."""
+        self.query("SELECT cache_httpfs_clear_cache()")
+        self.logger.info("httpfs cache cleared")
 
     @contextmanager
     def _get_cursor(self):

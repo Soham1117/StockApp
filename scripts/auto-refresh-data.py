@@ -21,7 +21,7 @@ import os
 import subprocess
 import sys
 from pathlib import Path
-from typing import Any, Dict, Optional
+from typing import Optional
 
 # Set environment variables for local setup
 ROOT = Path(__file__).resolve().parent.parent
@@ -97,7 +97,7 @@ def main():
     # Verify local data directory exists
     if not LOCAL_DATA_DIR.exists():
         print(f"[auto-refresh] WARNING: Local data directory not found: {LOCAL_DATA_DIR}", file=sys.stderr)
-        print(f"[auto-refresh] Please run scripts/download-parquet-data.ps1 first to download parquet files", file=sys.stderr)
+        print("[auto-refresh] Please run scripts/download-parquet-data.ps1 first to download parquet files", file=sys.stderr)
         sys.exit(1)
     
     print(f"[auto-refresh] Using local data directory: {LOCAL_DATA_DIR}")

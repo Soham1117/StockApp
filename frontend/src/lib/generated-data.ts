@@ -27,6 +27,32 @@ let tickerUniverseCache: TickerUniverseData | null = null;
 let sectorStocksCache: SectorStocksData | null = null;
 
 /**
+ * Resolve the data directory. Tries multiple paths to work in dev, production,
+ * and serverless (Netlify) environments.
+ */
+async function resolveDataDir(): Promise<string> {
+  const fs = await import('fs/promises');
+  const path = await import('path');
+  const cwd = process.cwd();
+
+  const candidates = [
+    path.join(cwd, '..', 'data'),       // running from frontend/ (dev)
+    path.join(cwd, 'data'),             // running from repo root
+  ];
+
+  for (const dir of candidates) {
+    try {
+      await fs.access(path.join(dir, 'ticker-universe.json'));
+      return dir;
+    } catch {
+      // try next
+    }
+  }
+
+  throw new Error('Cannot find data directory with ticker-universe.json');
+}
+
+/**
  * Load ticker-universe.json
  */
 export async function loadTickerUniverse(): Promise<TickerUniverseData> {
@@ -35,11 +61,9 @@ export async function loadTickerUniverse(): Promise<TickerUniverseData> {
   }
 
   try {
-    // Data lives at repo root data/; when running from frontend/ cwd is frontend so go up one level
     const fs = await import('fs/promises');
     const path = await import('path');
-    const cwd = process.cwd();
-    const dataDir = cwd.endsWith('frontend') ? path.join(cwd, '..', 'data') : path.join(cwd, 'data');
+    const dataDir = await resolveDataDir();
     const filePath = path.join(dataDir, 'ticker-universe.json');
     const content = await fs.readFile(filePath, 'utf-8');
     tickerUniverseCache = JSON.parse(content) as TickerUniverseData;
@@ -63,8 +87,7 @@ export async function loadSectorStocks(topOnly: boolean = false): Promise<Sector
   try {
     const fs = await import('fs/promises');
     const path = await import('path');
-    const cwd = process.cwd();
-    const dataDir = cwd.endsWith('frontend') ? path.join(cwd, '..', 'data') : path.join(cwd, 'data');
+    const dataDir = await resolveDataDir();
     const fileName = topOnly ? 'sector-stocks-top30.json' : 'sector-stocks.json';
     const filePath = path.join(dataDir, fileName);
     const content = await fs.readFile(filePath, 'utf-8');
